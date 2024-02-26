@@ -1,1 +1,1 @@
-# Simple-Unity-RPG
+# Simple-Unity-2D-RPG
