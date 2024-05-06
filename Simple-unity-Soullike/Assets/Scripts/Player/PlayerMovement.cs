@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,8 +12,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _playerSpd = 5;
     private Vector2 _playerDir;
 
-    [Header("Player")]
-    [SerializeField] private Rigidbody2D _rigidbody;
+    private Rigidbody2D _playerRigidBody;
+    private Animator _playerAnimator;
+
+    private const string _vertical = "Vertical";
+    private const string _horizontal = "Horizontal";
+
+
 
     #region events
 
@@ -28,15 +34,23 @@ public class PlayerMovement : MonoBehaviour
     private void OnMovement(Vector2 movement)
     {
         _playerDir = movement.normalized;
-
     }
     #endregion
-  
+
+    private void Awake()
+    {
+        _playerAnimator = GetComponent<Animator>();
+        _playerRigidBody = GetComponent<Rigidbody2D>();
+    }
     void FixedUpdate()
     {
-        _rigidbody.MovePosition(_rigidbody.position + _playerDir * _playerSpd * Time.fixedDeltaTime);
+        Flip();
+        _playerRigidBody.MovePosition(_playerRigidBody.position + _playerDir * _playerSpd * Time.fixedDeltaTime);
+        _playerAnimator.SetFloat(_horizontal, _playerDir.x);
+        _playerAnimator.SetFloat(_vertical, _playerDir.y);
     }
 
+    #region functions
     void Flip()
     {
         if (_playerDir.x > 0)
@@ -48,5 +62,6 @@ public class PlayerMovement : MonoBehaviour
             transform.eulerAngles = new Vector2(0f, 180f);
         }
     }
+    #endregion 
 
 }
