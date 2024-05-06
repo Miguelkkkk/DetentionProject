@@ -83,7 +83,7 @@
                 {
                     "name": "ANALOG Gamepad",
                     "id": "642a3b51-2e97-4a62-b94d-fb777b5086cb",
-                    "path": "2DVector",
+                    "path": "2DVector(mode=2)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -127,7 +127,7 @@
                 {
                     "name": "right",
                     "id": "c21539e4-be94-42e3-90c5-59263d429bea",
-                    "path": "<Gamepad>/leftStick/down",
+                    "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
