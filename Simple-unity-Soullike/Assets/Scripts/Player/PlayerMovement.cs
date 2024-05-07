@@ -16,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     private const string _vertical = "Vertical";
     private const string _horizontal = "Horizontal";
-
-
+    private const string _lastVertical = "LastVertical";
+    private const string _lastHorizontal = "LastHorizontal";
 
     #region events
 
@@ -47,6 +47,12 @@ public class PlayerMovement : MonoBehaviour
         _playerRigidBody.MovePosition(_playerRigidBody.position + _playerDir * _playerSpd * Time.fixedDeltaTime);
         _playerAnimator.SetFloat(_horizontal, _playerDir.x);
         _playerAnimator.SetFloat(_vertical, _playerDir.y);
+
+        if (_playerDir != Vector2.zero) 
+        {
+            _playerAnimator.SetFloat(_lastHorizontal, _playerDir.x);
+            _playerAnimator.SetFloat(_lastVertical, _playerDir.y);
+        }
     }
 
     #region functions
