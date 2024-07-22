@@ -4,5 +4,6 @@ using UnityEngine;
 
 public interface IInteractable
 {
+    CircleCollider2D InteractCollider { get; set; }
     void Interact();
 }
