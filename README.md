@@ -38,7 +38,9 @@
 
 > **Orientador:** Matheus Luz Rocha <br>
 
->**Co-Orientador:** Ivan Fontainha De Alvarenga
+> **Co-Orientador:** Ivan Fontainha De Alvarenga
+
+> **Co-Orientador:** Thiago Augusto Alves
 
 ---
 
