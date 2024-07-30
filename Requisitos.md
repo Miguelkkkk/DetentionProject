@@ -11,18 +11,18 @@
 
 ### Requisitos Não Funcionais
 
-1. As animações do jogo serão feitas usando a plataforma Aseprite.
-2. A evolução do jogo deve acontecer por meio dos atributos do jogador e a dificuldade dos inimigos.
-3. O jogo deve ter animações fluídas e/ou sons para as ações executadas pelo jogador.
-4. O jogo deverá ser desenvolvido na linguagem de programação C# e na plataforma Unity na versão 2022.3.
-5. O jogo deverá ser feito em um estilo 16 bits.
-6. O jogo deverá possuir uma câmera no estilo Top-Down.
-7. O jogo deverá ser feito no estilo 2D.
++  As animações do jogo serão feitas usando a plataforma Aseprite.
++  A evolução do jogo deve acontecer por meio dos atributos do jogador e a dificuldade dos inimigos.
++  O jogo deve ter animações fluídas e/ou sons para as ações executadas pelo jogador.
++  O jogo deverá ser desenvolvido na linguagem de programação C# e na plataforma Unity na versão 2022.3.
++  O jogo deverá ser feito em um estilo 16 bits.
++  O jogo deverá possuir uma câmera no estilo Top-Down.
++  O jogo deverá ser feito no estilo 2D.
 
 ### Regras de Negócio
 
-1. O jogo deverá possuir uma classificação indicativa de 12 anos.
-2. O jogo deverá ser disponibilizado de forma gratuita.
-3. O jogo deverá ser disponibilizado para a plataforma Windows.
-4. O jogo deverá ser offline.
-5. O jogo deverá ser singleplayer.
++  O jogo deverá possuir uma classificação indicativa de 12 anos.
++  O jogo deverá ser disponibilizado de forma gratuita.
++  O jogo deverá ser disponibilizado para a plataforma Windows.
++  O jogo deverá ser offline.
++  O jogo deverá ser singleplayer.
