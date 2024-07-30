@@ -1,13 +1,13 @@
 ### Requisitos Funcionais
 
-1. O jogo deve produzir estágios nos quais colocará o jogador para resolver um problema.
-2. O personagem deve conseguir se mover, atacar e interagir com o ambiente e NPCs.
-3. O personagem deve conseguir usar itens e consumíveis.
-4. O personagem deve possuir acesso ao seu inventário, onde haverá seus itens e seus atributos.
-5. O personagem e os inimigos devem tomar dano.
-6. O jogo deve possuir evolução aparente para o jogador.
-7. O jogo deve possuir inimigos para o jogador enfrentar.
-8. O jogo deve ter músicas para acompanhar a jornada do jogador.
++ O jogo deve produzir estágios nos quais colocará o jogador para resolver um problema.
++  O personagem deve conseguir se mover, atacar e interagir com o ambiente e NPCs.
++  O personagem deve conseguir usar itens e consumíveis.
++  O personagem deve possuir acesso ao seu inventário, onde haverá seus itens e seus atributos.
++  O personagem e os inimigos devem tomar dano.
++  O jogo deve possuir evolução aparente para o jogador.
++  O jogo deve possuir inimigos para o jogador enfrentar.
++  O jogo deve ter músicas para acompanhar a jornada do jogador.
 
 ### Requisitos Não Funcionais
 
