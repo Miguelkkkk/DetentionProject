@@ -4,7 +4,7 @@
   Este trabalho de conclusão de curso está sendo desenvolvido por Miguel dos Santos, Luan Seta e Isabela Mageste. Nosso objetivo consiste em criar um jogo envolvente que mistura ação e elementos de RPG, ambientado no cenário de uma escola.
 
 ### Temática 
-  A título do TCC é: Dificuldades Do Desenvolvimento De Jogos Indie No Brasil, e a temática é baseada em relatar o processo de criar um jogo digital com um orçamento limitado no Brasil.
+  A título do TCC é: Dificuldades do Desenvolvimento de Jogos Indie no Brasil, e a temática é baseada em relatar o processo de criar um jogo digital com um orçamento limitado no Brasil.
 
 ### Sobre o Jogo 
   O jogo é um Action RPG que se passa em uma escola, no qual os jogadores irão enfrentar diversos desafios e inimigos enquanto exploram o mapa. Com uma história curta e envolvente, nosso jogo tem como objetivo oferecer uma experiência divertida e desafiadora.
