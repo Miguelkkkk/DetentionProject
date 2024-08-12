@@ -17,7 +17,6 @@ public class SceneField
         get { return m_SceneName; }
     }
 
-    // makes it work with the existing Unity methods (LoadLevel/LoadScene)
     public static implicit operator string(SceneField sceneField)
     {
         return sceneField.SceneName;
