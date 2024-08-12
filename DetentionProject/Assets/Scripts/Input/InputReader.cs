@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 
-[CreateAssetMenu(menuName = "Input/Input Reader", fileName ="Input Reader")]
+[CreateAssetMenu(menuName = "Events/Input Reader", fileName ="Input Reader")]
 public class InputReader : ScriptableObject
 {
     [field: SerializeField] private InputActionAsset _inputasset;
