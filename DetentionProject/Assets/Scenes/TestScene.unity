@@ -321,7 +321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 456016695}
   m_Layer: 0
-  m_Name: spheres_grid
+  m_Name: //spheres_grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1664,7 +1664,7 @@ GameObject:
   - component: {fileID: 1577687078}
   - component: {fileID: 1577687079}
   m_Layer: 5
-  m_Name: Health_Bar
+  m_Name: '#Health_Bar'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1943,7 +1943,7 @@ GameObject:
   - component: {fileID: 1912547719}
   - component: {fileID: 1912547720}
   m_Layer: 5
-  m_Name: Stamina_Bar
+  m_Name: '&Stamina_Bar'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
