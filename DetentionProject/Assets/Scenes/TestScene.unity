@@ -1487,6 +1487,7 @@ GameObject:
   - component: {fileID: 1474930659}
   - component: {fileID: 1474930660}
   - component: {fileID: 1474930657}
+  - component: {fileID: 1474930661}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1636,6 +1637,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Input: {fileID: 11400000, guid: 7a281e4b1b6e1f64abd29923d0acf93a, type: 2}
+--- !u!114 &1474930661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474930654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7982869ec68e9004590bcbfcacdd154c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHealthChanged: {fileID: 11400000, guid: 6eaa44a80731f0148a236ccde2678ad5, type: 2}
+  maxHealth: 100
 --- !u!1 &1577687075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,6 +1662,7 @@ GameObject:
   - component: {fileID: 1577687076}
   - component: {fileID: 1577687077}
   - component: {fileID: 1577687078}
+  - component: {fileID: 1577687079}
   m_Layer: 5
   m_Name: Health_Bar
   m_TagString: Untagged
@@ -1719,9 +1735,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 10
+  m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 10
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1738,8 +1754,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1577687077}
-  maxHealth: 100
-  currentHealth: 100
+--- !u!114 &1577687079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577687075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb593a21d1b80641aeec4858bee6432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 6eaa44a80731f0148a236ccde2678ad5, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1577687078}
+        m_TargetAssemblyTypeName: HealthBar, Assembly-CSharp
+        m_MethodName: SetHealth
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1601261631
 GameObject:
   m_ObjectHideFlags: 0

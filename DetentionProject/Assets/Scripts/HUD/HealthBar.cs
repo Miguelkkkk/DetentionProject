@@ -6,29 +6,15 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public Slider slider;
-    public float maxHealth = 100f;
-    public float currentHealth = 100f;
 
-    void Start()
+    //futaramente inicializar a max health durante o awake em algum lugar do código
+    public void SetMaxHealth(float newMaxHealth)
     {
-        slider.maxValue = maxHealth;
-        slider.value = currentHealth;
+        slider.maxValue = newMaxHealth;
     }
 
-    public void SetHealth(float health)
+    public void SetHealth(int health)
     {
-        currentHealth = Mathf.Clamp(health, 0, maxHealth);
-        slider.value = currentHealth;
-    }
-    public void UpdateHealth(float health) {
-
-        if (currentHealth + health < maxHealth)
-        {
-            currentHealth += health;
-        }
-        else {
-            currentHealth = maxHealth;
-        }
-        slider.value = currentHealth;
+        slider.value = health;
     }
 }
