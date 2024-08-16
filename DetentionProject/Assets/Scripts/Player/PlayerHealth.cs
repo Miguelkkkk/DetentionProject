@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 {
 
     [Header("Events")]
-    public GameEvent onHealthChanged;
+    public GameEvent onPlayerHealthChanged;
 
     [Header("Health")]
     [SerializeField] private int maxHealth;
@@ -20,16 +20,18 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     public void Update()
     {
+        //teste de dano
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            TakeDamage(20);
+            TakeDamage(1);
         }
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        onHealthChanged.Raise(this, (float)currentHealth);
-        Debug.Log("foi");
+        Debug.Log("Evento raise chamado com currentHealth: " + currentHealth);
+        onPlayerHealthChanged.Raise(this, currentHealth);
     }
 }
+

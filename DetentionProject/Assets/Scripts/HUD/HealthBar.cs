@@ -7,8 +7,7 @@ public class HealthBar : MonoBehaviour
 {
     public Slider slider;
 
-    //futaramente inicializar a max health durante o awake em algum lugar do código
-    public void SetMaxHealth(float newMaxHealth)
+    public void SetMaxHealth(int newMaxHealth)
     {
         slider.maxValue = newMaxHealth;
     }
@@ -16,5 +15,13 @@ public class HealthBar : MonoBehaviour
     public void SetHealth(int health)
     {
         slider.value = health;
+    }
+
+    public void UpdateHealth(Component sender, object data)
+    {
+        if (data is int health)
+        {
+            SetHealth(health);
+        }
     }
 }
