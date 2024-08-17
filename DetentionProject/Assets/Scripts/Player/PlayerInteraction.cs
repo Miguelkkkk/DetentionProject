@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInterction : MonoBehaviour
+public class PlayerInteraction : MonoBehaviour
 {
     [Header("Input")]
     public InputReader Input;
+
+    [Header("Events")]
+    public GameEvent onPlayerInteracted;
 
     #region events
     private void OnEnable()
@@ -19,7 +22,7 @@ public class PlayerInterction : MonoBehaviour
     }
 
     private void onInteract() {
-        Debug.Log("interacted");
+        onPlayerInteracted.Raise(this);
     }
     
     #endregion

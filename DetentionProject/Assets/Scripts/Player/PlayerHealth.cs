@@ -24,13 +24,13 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(1);
+            CinemachineShake.Instance.shakeCamera(5f, .2f);
         }
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log("Evento raise chamado com currentHealth: " + currentHealth);
         onPlayerHealthChanged.Raise(this, currentHealth);
     }
 }
