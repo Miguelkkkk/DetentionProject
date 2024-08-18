@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(1);
-            CinemachineShake.Instance.shakeCamera(5f, .2f);
+            CinemachineShake.Instance.shakeCamera(6f, .2f);
         }
     }
 
