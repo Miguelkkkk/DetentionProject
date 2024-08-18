@@ -5,24 +5,20 @@ using UnityEngine;
 public class Interactor : MonoBehaviour
 {
     public bool isInRange;
-   
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player")){ 
+        if (collision.gameObject.CompareTag("Player"))
+        {
             isInRange = true;
-            Debug.Log("Is on range ");
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = false;
-            Debug.Log("Exit the range ");
-
         }
     }
-
-
 }
