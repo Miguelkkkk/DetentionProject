@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: afaea64706166dd4ebd403fe0de47d3a
+guid: bc1e1b7fd01bcf44ab06d2d9bb59c6a5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,28 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TS_stone_0
+      name: TS_dungeon_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb13d3b23676da143bf7110178d8e199
+      internalID: -591080947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_dungeon_1
       rect:
         serializedVersion: 2
         x: 16
@@ -111,14 +132,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efe2fd2443c6eaf4495f3e9fdafc6f64
-      internalID: -1545258357
+      spriteID: c5f3d21747dee3d43865804253edc274
+      internalID: 965522570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_1
+      name: TS_dungeon_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285c658c4b95be542923a81bfa422b91
+      internalID: 1804234587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_dungeon_3
       rect:
         serializedVersion: 2
         x: 48
@@ -132,17 +174,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2bd1b99281cef6459abccbfc42cd3d0
-      internalID: 1135043796
+      spriteID: 5b21ced1692944b41a3f4b834ef30af0
+      internalID: -215844106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_2
+      name: TS_dungeon_4
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 176
         width: 16
         height: 16
@@ -153,17 +195,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30833abcd9c6ea04aa0e2835a15124ea
-      internalID: 23758946
+      spriteID: cb23677f3a57e244c82bd2e3bc81edd8
+      internalID: 743829224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_3
+      name: TS_dungeon_5
       rect:
         serializedVersion: 2
-        x: 144
+        x: 80
         y: 176
         width: 16
         height: 16
@@ -174,18 +216,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad36d28a78914e94caa33679b5d4b1d4
-      internalID: -1699097790
+      spriteID: f35f3773d7c1c3a4d8c0c335cee9e17d
+      internalID: -258444077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_4
+      name: TS_dungeon_6
       rect:
         serializedVersion: 2
-        x: 160
-        y: 176
+        x: 0
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -195,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cb5303684a94354f95ee3cea6584a01
-      internalID: -1849779418
+      spriteID: 70de4b1bb0c5160448574764f4fe8a11
+      internalID: 1380606027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_5
+      name: TS_dungeon_7
       rect:
         serializedVersion: 2
         x: 16
@@ -216,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c52e038bf55b7d458550592c8f8482a
-      internalID: 1394461511
+      spriteID: b6f37625cb869b642a09daab39bf59e6
+      internalID: 20577026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_6
+      name: TS_dungeon_8
       rect:
         serializedVersion: 2
         x: 48
@@ -237,17 +279,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02a3e647ebd789b46868fb5c4cfd62e2
-      internalID: -134736444
+      spriteID: 354934f7fce000546bf8c8bed6de0505
+      internalID: -287880773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_7
+      name: TS_dungeon_9
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 160
         width: 16
         height: 16
@@ -258,17 +300,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a25efa956a063e14f82f9b43fe811258
-      internalID: 251217808
+      spriteID: c185788025e304e48bfc785f815ef263
+      internalID: 26474014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_8
+      name: TS_dungeon_10
       rect:
         serializedVersion: 2
-        x: 160
+        x: 80
         y: 160
         width: 16
         height: 16
@@ -279,17 +321,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf9d4a637b237da4a837fc4f1e50711d
-      internalID: 1432819995
+      spriteID: 8771ad4371b9f5841bee610c8f44ebed
+      internalID: -1351046478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_9
+      name: TS_dungeon_11
       rect:
         serializedVersion: 2
-        x: 128
+        x: 0
         y: 144
         width: 16
         height: 16
@@ -300,17 +342,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b261af2cf2d34bf48afc64f2c0a925c9
-      internalID: -128306172
+      spriteID: e3fabc68e69ab4f429654708fab49ec2
+      internalID: 838336349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_10
+      name: TS_dungeon_12
       rect:
         serializedVersion: 2
-        x: 144
+        x: 16
         y: 144
         width: 16
         height: 16
@@ -321,17 +363,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89151fa644070d24d86ee7b7de0c8ae4
-      internalID: 501955616
+      spriteID: c38eb56371481ae46b928aff239d5002
+      internalID: 1040895207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_11
+      name: TS_dungeon_13
       rect:
         serializedVersion: 2
-        x: 160
+        x: 32
         y: 144
         width: 16
         height: 16
@@ -342,14 +384,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27942cc14175b774cb96d3568d8d69ad
-      internalID: 1543260778
+      spriteID: c1998984f95685e44b96512e08e5e0db
+      internalID: 2116364039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_12
+      name: TS_dungeon_14
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a0a42140e23c24dbb5b185e6eafc7c
+      internalID: -2137984384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_dungeon_15
       rect:
         serializedVersion: 2
         x: 0
@@ -363,14 +426,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3c418e2d4a1b994fb250d2ddb2a0768
-      internalID: 1850696844
+      spriteID: a717dd3e1cb6b0045bf66823341649d2
+      internalID: 1902766265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_13
+      name: TS_dungeon_16
       rect:
         serializedVersion: 2
         x: 16
@@ -384,14 +447,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4d87f926273e2843bbce63f209c8c93
-      internalID: 1357574543
+      spriteID: 52c4744e31ea25b40b5c0573292cc7d2
+      internalID: 626449824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_14
+      name: TS_dungeon_17
       rect:
         serializedVersion: 2
         x: 32
@@ -405,14 +468,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e819927bf3f763f4e806df83e72ea7cf
-      internalID: -1064329279
+      spriteID: cfec6c2a2a03e7741a8c4920f03b572e
+      internalID: 835811396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_15
+      name: TS_dungeon_18
       rect:
         serializedVersion: 2
         x: 48
@@ -426,18 +489,102 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 874088a8d4a18b14097f9d66d8cb932a
-      internalID: 480217152
+      spriteID: 025b83779d85d544f8f797363c771b28
+      internalID: -683205407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_16
+      name: TS_dungeon_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a814241b4dd162a43b038098fda30a10
+      internalID: -1616917290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_dungeon_20
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38283ce10c3921648822591702e106b8
+      internalID: -81510985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_dungeon_21
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b498fdaad709ab8448cdd76b5cec2131
+      internalID: 1643029875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_dungeon_22
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff94c3397aeb7849b3e7946d15eb1aa
+      internalID: 1165483124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_dungeon_23
       rect:
         serializedVersion: 2
         x: 64
-        y: 128
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -447,18 +594,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc8740fdc73e18440b8596beeb21f74d
-      internalID: -2033860589
+      spriteID: 99e3aef951817534ea5713e9378a9bc6
+      internalID: -874076971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_17
+      name: TS_dungeon_24
       rect:
         serializedVersion: 2
         x: 80
-        y: 128
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -468,18 +615,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91fd0a007cb4f17498a21dc1d5c93fc7
-      internalID: -1782070614
+      spriteID: 24fe4077c8baba446a7fac63cd73021c
+      internalID: -604261436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_18
+      name: TS_dungeon_25
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
+        x: 112
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -489,18 +636,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7206b9f5e9abca948b6792f6d1ae6a49
-      internalID: 18612824
+      spriteID: 6bdd6535c623ce34ba1f2b71ce0f2654
+      internalID: -1259949599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_19
+      name: TS_dungeon_26
       rect:
         serializedVersion: 2
-        x: 144
-        y: 128
+        x: 0
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -510,18 +657,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03eb29c390c96a943a1e07d9c25dcd1b
-      internalID: -944426398
+      spriteID: 7bfb5e9321f19904280c3a4fde5b5ab0
+      internalID: -1043962314
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TS_stone_20
+      name: TS_dungeon_27
       rect:
         serializedVersion: 2
-        x: 160
-        y: 128
+        x: 16
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -531,8 +678,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be2c0450bd9f74d42920342bc3a5bdb8
-      internalID: -250439678
+      spriteID: 9deecf5f79ec57d40a668d3634a560b3
+      internalID: 835103105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_dungeon_28
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f63f8d9ba3ca24aa4505a38f9acc47
+      internalID: 516313647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_dungeon_29
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6d94c233fb0654594c8e3c0eb1113f
+      internalID: 787698525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_dungeon_30
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b853d428f29ca14892b7fc445ffa2ab
+      internalID: -26505699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_dungeon_31
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1158f7504e9ecf947847eab339f65222
+      internalID: 665463913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_dungeon_32
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 567b968d743cff54a8ee25865c34abcf
+      internalID: -159721967
       vertices: []
       indices: 
       edges: []
@@ -548,27 +800,39 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TS_stone_0: -1545258357
-      TS_stone_1: 1135043796
-      TS_stone_10: 501955616
-      TS_stone_11: 1543260778
-      TS_stone_12: 1850696844
-      TS_stone_13: 1357574543
-      TS_stone_14: -1064329279
-      TS_stone_15: 480217152
-      TS_stone_16: -2033860589
-      TS_stone_17: -1782070614
-      TS_stone_18: 18612824
-      TS_stone_19: -944426398
-      TS_stone_2: 23758946
-      TS_stone_20: -250439678
-      TS_stone_3: -1699097790
-      TS_stone_4: -1849779418
-      TS_stone_5: 1394461511
-      TS_stone_6: -134736444
-      TS_stone_7: 251217808
-      TS_stone_8: 1432819995
-      TS_stone_9: -128306172
+      TS_dungeon_0: -591080947
+      TS_dungeon_1: 965522570
+      TS_dungeon_10: -1351046478
+      TS_dungeon_11: 838336349
+      TS_dungeon_12: 1040895207
+      TS_dungeon_13: 2116364039
+      TS_dungeon_14: -2137984384
+      TS_dungeon_15: 1902766265
+      TS_dungeon_16: 626449824
+      TS_dungeon_17: 835811396
+      TS_dungeon_18: -683205407
+      TS_dungeon_19: -1616917290
+      TS_dungeon_2: 1804234587
+      TS_dungeon_20: -81510985
+      TS_dungeon_21: 1643029875
+      TS_dungeon_22: 1165483124
+      TS_dungeon_23: -874076971
+      TS_dungeon_24: -604261436
+      TS_dungeon_25: -1259949599
+      TS_dungeon_26: -1043962314
+      TS_dungeon_27: 835103105
+      TS_dungeon_28: 516313647
+      TS_dungeon_29: 787698525
+      TS_dungeon_3: -215844106
+      TS_dungeon_30: -26505699
+      TS_dungeon_31: 665463913
+      TS_dungeon_32: -159721967
+      TS_dungeon_4: 743829224
+      TS_dungeon_5: -258444077
+      TS_dungeon_6: 1380606027
+      TS_dungeon_7: 20577026
+      TS_dungeon_8: -287880773
+      TS_dungeon_9: 26474014
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
