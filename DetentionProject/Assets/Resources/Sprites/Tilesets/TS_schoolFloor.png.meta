@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1c9bbbdb4fdbb5e4f826911305ea6bb6
+guid: dcb5e3f04857c1a46991117bccb14db4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,85 +97,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chest_0
+      name: TS_schoolFloor_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 2
+        x: 16
+        y: 64
         width: 16
-        height: 14
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b8f1b76fe55a6e43b6bd8a38986a9e5
-      internalID: 148753280
+      spriteID: 426f239140b2e6f4c9dfb7cf34f11800
+      internalID: 948559071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chest_1
+      name: TS_schoolFloor_1
       rect:
         serializedVersion: 2
-        x: 19
-        y: 2
+        x: 32
+        y: 64
         width: 16
-        height: 14
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6c18ed3772439140b7fbd99f9eb305f
-      internalID: -1571930117
+      spriteID: ac2e340686644924bb465ee4d0d32918
+      internalID: -411077048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chest_2
+      name: TS_schoolFloor_2
       rect:
         serializedVersion: 2
-        x: 37
-        y: 2
+        x: 48
+        y: 64
         width: 16
-        height: 14
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc0a1cec177da484d93627cd5498f7ed
-      internalID: 1238811649
+      spriteID: 3239483d3ed98c645828be9b9612e75a
+      internalID: 1788141940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chest_3
+      name: TS_schoolFloor_3
       rect:
         serializedVersion: 2
-        x: 55
-        y: 2
+        x: 64
+        y: 64
         width: 16
-        height: 14
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 643527264dd225b40b6404195d9704b4
-      internalID: -802523537
+      spriteID: 8d4bd981dd252144ba1e43170fa30fb6
+      internalID: -903599182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_schoolFloor_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b235442407db5849b9cf6a59d5f564c
+      internalID: 1160047766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_schoolFloor_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4dfe2ffa87bd1440804f32f51410ef4
+      internalID: 2036164893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_schoolFloor_6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1670443f7c8c384e8079c18bb3f79a6
+      internalID: -735097954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_schoolFloor_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4662364151978c246994ebbd8d3bb5f3
+      internalID: 2000286215
       vertices: []
       indices: 
       edges: []
@@ -191,10 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Chest_0: 148753280
-      Chest_1: -1571930117
-      Chest_2: 1238811649
-      Chest_3: -802523537
+      TS_schoolFloor_0: 948559071
+      TS_schoolFloor_1: -411077048
+      TS_schoolFloor_2: 1788141940
+      TS_schoolFloor_3: -903599182
+      TS_schoolFloor_4: 1160047766
+      TS_schoolFloor_5: 2036164893
+      TS_schoolFloor_6: -735097954
+      TS_schoolFloor_7: 2000286215
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
