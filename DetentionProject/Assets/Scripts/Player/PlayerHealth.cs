@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     public void Update()
     {
         //teste de dano
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.M))
         {
             TakeDamage(1);
             CinemachineShake.Instance.shakeCamera(6f, .2f);
