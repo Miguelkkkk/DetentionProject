@@ -17,28 +17,22 @@ public class Idamageble : MonoBehaviour, IDamageable
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.M))
         {
             TakeDamage(1);
-            CinemachineShake.Instance.shakeCamera(6f, .2f);
         }
-        if (maxHealth == 0) 
+        if (currentHealth <= 0) 
         {
             Death();
         }
     }
-    void IDamageable.TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        print(currentHealth);
     }
-    void TestDefense(int damage, int defense)
-    {
-        if (damage > defense)
-        {
-            TakeDamage(damage);
-        }
-    }
-    void Death()
+ 
+    public void Death()
     {
         print("morreu");
     }
