@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         _playerAnimator.SetFloat(_horizontal, _playerDir.x);
         _playerAnimator.SetFloat(_vertical, _playerDir.y);
 
-        if (_playerDir != Vector2.zero) 
+        if (_playerDir != Vector2.zero)
         {
             _playerAnimator.SetFloat(_lastHorizontal, _playerDir.x);
             _playerAnimator.SetFloat(_lastVertical, _playerDir.y);
