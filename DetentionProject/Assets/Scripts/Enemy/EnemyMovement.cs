@@ -23,11 +23,12 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private LayerMask viewLayer;
 
+    [SerializeField]
     private Transform target;
 
     void Update()
     {
-        Search();
+        //Search();
         if(target != null)
         {
             Move();
@@ -72,7 +73,6 @@ public class EnemyMovement : MonoBehaviour
     private void Search()
     {
         Collider2D colider = Physics2D.OverlapCircle(this.transform.position, this.viewRadius);
-        this.target = colider.transform;
         if (colider != null)
         {
             this.target = colider.transform;
