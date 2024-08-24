@@ -28572,7 +28572,7 @@ Transform:
   m_GameObject: {fileID: 1357980387}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 1.29, z: -0.092493005}
+  m_LocalPosition: {x: 1, y: 10.16, z: -0.092493005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28731,8 +28731,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186741b669ac79a4ab82f969222f5494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Input: {fileID: 11400000, guid: 7a281e4b1b6e1f64abd29923d0acf93a, type: 2}
+  input: {fileID: 11400000, guid: 7a281e4b1b6e1f64abd29923d0acf93a, type: 2}
   _playerSpd: 10
+  _camera: {fileID: 505388618}
 --- !u!50 &1474930658
 Rigidbody2D:
   serializedVersion: 4
