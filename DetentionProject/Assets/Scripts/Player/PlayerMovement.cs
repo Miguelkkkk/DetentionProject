@@ -55,11 +55,6 @@ public class PlayerMovement : MonoBehaviour
         }
         _playerRigidBody.MovePosition(_playerRigidBody.position + _playerDir * _playerSpd * Time.fixedDeltaTime);
 
-        //if (_playerDir != Vector2.zero)
-        //{
-        //    _playerAnimator.SetFloat(_lastHorizontal, _playerDir.x);
-        //    _playerAnimator.SetFloat(_lastVertical, _playerDir.y);
-        //}
     }
 
     #region functions
