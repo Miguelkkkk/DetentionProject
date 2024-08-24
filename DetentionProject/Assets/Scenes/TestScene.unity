@@ -13831,7 +13831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 610644168}
   - component: {fileID: 610644169}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light 2D (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28758,7 +28758,7 @@ GameObject:
   - component: {fileID: 1474930657}
   - component: {fileID: 1474930661}
   - component: {fileID: 1474930662}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -29328,7 +29328,7 @@ BoxCollider2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 3
+  m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -29465,6 +29465,7 @@ MonoBehaviour:
   viewLayer:
     serializedVersion: 2
     m_Bits: 68
+  target: {fileID: 1474930656}
 --- !u!1 &1601261631
 GameObject:
   m_ObjectHideFlags: 0

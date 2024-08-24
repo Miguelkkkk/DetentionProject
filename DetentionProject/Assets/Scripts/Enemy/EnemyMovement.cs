@@ -69,14 +69,39 @@ public class EnemyMovement : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(this.transform.position, this.viewRadius);
+            
+        if(target != null)
+        {
+            Gizmos.DrawLine(this.transform.position, this.target.position);
+        }
     }
     private void Search()
     {
         Collider2D colider = Physics2D.OverlapCircle(this.transform.position, this.viewRadius);
         if (colider != null)
         {
-            this.target = colider.transform;
-            Debug.Log("O ALVO EH " + this.target);
+            Vector2 currentPos = this.transform.position;
+            Vector2 targetPos = colider.transform.position;
+            Vector2 direction = targetPos - currentPos;
+            direction = direction.normalized;
+            RaycastHit2D hit = Physics2D.Raycast(currentPos, direction);
+            if(hit.transform != null)
+            {
+                if (hit.transform.CompareTag("Player")) 
+                {
+                    this.target = hit.transform;
+                    Debug.Log("O ALVO EH " + this.target);
+                }
+                else
+                {
+                    this.target = null;
+                }
+
+            }
+            else
+            {
+                this.target = null;
+            }
         }
         else
         {
