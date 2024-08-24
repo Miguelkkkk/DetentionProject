@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    #region Fields
+    
+    [SerializeField]
+    private Transform target;
 
     [SerializeField]
     private float speed;
@@ -20,22 +22,14 @@ public class EnemyMovement : MonoBehaviour
 
     //[SerializeField]
     //private SpriteRenderer spriteRenderer;
-    #endregion 
-
-    private Transform target;
 
     void Update()
-    {
-       
-
-    }
-    private void Move()
     {
         Vector2 targetPos = this.target.position;
         Vector2 currentPos = this.transform.position;
         float distance = Vector2.Distance(currentPos, targetPos);
 
-        if (distance >= this.minDistance)
+        if (distance >= this.minDistance) 
         {
             Vector2 direction = targetPos - currentPos;
             direction = direction.normalized;
@@ -48,7 +42,10 @@ public class EnemyMovement : MonoBehaviour
             this.rigidbody.velocity = Vector2.zero;
             this.animator.SetBool("DownWalk", false);
         }
+       
+        //if(this.rigidbody.velocity.x > 0f)///direita
+        //{
+        //}
 
-        
     }
 }
