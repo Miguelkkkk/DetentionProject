@@ -5,40 +5,42 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
 
-    [SerializeField]
-    private float speed;
+    [SerializeField] private float speed;
 
-    [SerializeField]
-    private float minDistance;
+    [SerializeField] private float minDistance;
 
-    [SerializeField]
-    private float viewRadius;
+    [SerializeField] private bool isInSlimeRange;
 
-    [SerializeField]
-    private Rigidbody2D rigidbody;
+    [SerializeField] private bool isPlayerSpotted;
 
-    [SerializeField]
-    private Animator animator;
+    [SerializeField] public Transform target;
 
-    [SerializeField]
-    private LayerMask viewLayer;
+    private Rigidbody2D _enemyRigidBody;
 
-    [SerializeField]
-    private Transform target;
+    private Animator _enemyAnimator;
 
+
+    private void Awake()
+    {
+        _enemyAnimator = GetComponent<Animator>();
+        _enemyRigidBody = GetComponent<Rigidbody2D>();
+    }
     void Update()
     {
-        //Search();
-        if(target != null)
+        isInSlimeRange = GetComponentInChildren<Interactor>().isInRange;
+        if (isInSlimeRange)
+        {
+            isPlayerSpotted = true;
+            
+        }
+
+        if (isPlayerSpotted)
         {
             Move();
         }
-        else
-        {
-            StopMoving();
+        else { 
+            StopMove();
         }
-
-
     }
     private void Move()
     {
@@ -46,67 +48,52 @@ public class EnemyMovement : MonoBehaviour
         Vector2 currentPos = this.transform.position;
         float distance = Vector2.Distance(currentPos, targetPos);
 
-        if (distance >= this.minDistance)
-        {
+       
             Vector2 direction = targetPos - currentPos;
             direction = direction.normalized;
 
-            this.rigidbody.velocity = (this.speed * direction);
+            _enemyRigidBody.velocity = (this.speed * direction);
 
-            this.animator.SetBool("IsMoving", true);
-        }
-        else
-        {
-            StopMoving();
-        }
+            _enemyAnimator.SetBool("IsMoving", true);
+        
     }
-    private void StopMoving()
+    private void StopMove()
     {
-        this.rigidbody.velocity = Vector2.zero;
-        this.animator.SetBool("IsMoving", false);
+        _enemyRigidBody.velocity = Vector2.zero;
+        _enemyAnimator.SetBool("IsMoving", false);
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(this.transform.position, this.viewRadius);
-            
-        if(target != null)
-        {
-            Gizmos.DrawLine(this.transform.position, this.target.position);
-        }
-    }
-    private void Search()
-    {
-        Collider2D colider = Physics2D.OverlapCircle(this.transform.position, this.viewRadius);
-        if (colider != null)
-        {
-            Vector2 currentPos = this.transform.position;
-            Vector2 targetPos = colider.transform.position;
-            Vector2 direction = targetPos - currentPos;
-            direction = direction.normalized;
-            RaycastHit2D hit = Physics2D.Raycast(currentPos, direction);
-            if(hit.transform != null)
-            {
-                if (hit.transform.CompareTag("Player")) 
-                {
-                    this.target = hit.transform;
-                    Debug.Log("O ALVO EH " + this.target);
-                }
-                else
-                {
-                    this.target = null;
-                }
-
-            }
-            else
-            {
-                this.target = null;
-            }
-        }
-        else
-        {
-            this.target = null;
-        }
-    }
-
 }
+
+//    private void Search()
+//    {
+//        Collider2D colider = Physics2D.OverlapCircle(this.transform.position, viewRadius);
+//        if (colider != null)
+//        {
+//            Vector2 currentPos = this.transform.position;
+//            Vector2 targetPos = colider.transform.position;
+//            Vector2 direction = targetPos - currentPos;
+//            direction = direction.normalized;
+//            RaycastHit2D hit = Physics2D.Raycast(currentPos, direction);
+//            if(hit.transform != null)
+//            {
+//                if (hit.transform.CompareTag("Player")) 
+//                {
+//                    this.target = hit.transform;
+//                    Debug.Log("o alvo é " + this.target);
+//                }
+//                else
+//                {
+//                    this.target = null;
+//                }
+
+//            }
+//            else
+//            {
+//                this.target = null;
+//            }
+//        }
+//        else
+//        {
+//            this.target = null;
+//        }
+//    }

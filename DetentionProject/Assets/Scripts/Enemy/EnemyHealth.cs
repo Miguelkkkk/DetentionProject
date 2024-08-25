@@ -8,13 +8,11 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     [SerializeField] private int maxHealth;
     private int currentHealth = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.M))
