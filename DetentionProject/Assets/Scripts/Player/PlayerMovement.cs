@@ -5,11 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Input")]
-    public InputReader Input;
+    public InputReader input;
 
     [Header("Movement")]
     [SerializeField] private float _playerSpd = 5;
     private Vector2 _playerDir;
+
+    [Header("Camera")]
+    public Camera _camera;
 
     private Rigidbody2D _playerRigidBody;
     private Animator _playerAnimator;
@@ -23,12 +26,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        Input.MovementEvent += OnMovement;
+        input.MovementEvent += OnMovement;
     }
 
     private void OnDisable()
     {
-        Input.MovementEvent -= OnMovement;
+        input.MovementEvent -= OnMovement;
     }
     private void OnMovement(Vector2 movement)
     {
@@ -43,30 +46,49 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        Flip();
-        _playerRigidBody.MovePosition(_playerRigidBody.position + _playerDir * _playerSpd * Time.fixedDeltaTime);
-        _playerAnimator.SetFloat(_horizontal, _playerDir.x);
-        _playerAnimator.SetFloat(_vertical, _playerDir.y);
-
-        if (_playerDir != Vector2.zero) 
+        if (_playerDir != Vector2.zero)
         {
-            _playerAnimator.SetFloat(_lastHorizontal, _playerDir.x);
-            _playerAnimator.SetFloat(_lastVertical, _playerDir.y);
+            RotatePlayer(true);
         }
+        else {
+            RotatePlayer(false);
+        }
+        _playerRigidBody.MovePosition(_playerRigidBody.position + _playerDir * _playerSpd * Time.fixedDeltaTime);
+
     }
 
     #region functions
-    void Flip()
+
+    private void RotatePlayer(bool isMoving) {
+
+        Vector3 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mouseDir;
+        mouseDir = mousePosition - transform.position;
+        mouseDir.Normalize(); 
+        Flip(mouseDir);
+        if (isMoving)
+        {
+            _playerAnimator.SetFloat(_horizontal, mouseDir.x);
+            _playerAnimator.SetFloat(_vertical, mouseDir.y);
+        }
+        else
+        {
+            _playerAnimator.SetFloat(_horizontal, 0);
+            _playerAnimator.SetFloat(_vertical, 0);
+            _playerAnimator.SetFloat(_lastHorizontal, mouseDir.x);
+            _playerAnimator.SetFloat(_lastVertical, mouseDir.y);
+        }
+    }
+    void Flip(Vector2 direction)
     {
-        if (_playerDir.x > 0)
+        if (direction.x > 0)
         {
             transform.eulerAngles = new Vector2(0f, 0f);
         }
-        else if (_playerDir.x < 0)
+        else if (direction.x < 0)
         {
             transform.eulerAngles = new Vector2(0f, 180f);
         }
     }
     #endregion 
-
 }
