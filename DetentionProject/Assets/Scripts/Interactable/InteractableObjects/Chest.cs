@@ -5,14 +5,14 @@ using UnityEngine;
 public class Chest : MonoBehaviour, IInteractable
 {
 
-    private Animator chestanimator;
-    public bool isInChestRange;
+    private Animator _chestanimator;
+    [SerializeField]private bool isInChestRange;
 
     public CircleCollider2D InteractCollider { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
     public void Awake()
     {
-        chestanimator = GetComponent<Animator>();
+        _chestanimator = GetComponent<Animator>();
     }
     public void Update()
     {
@@ -20,8 +20,8 @@ public class Chest : MonoBehaviour, IInteractable
     }
     public void OpenChest()
     {
-        if (isInChestRange) { 
-        chestanimator.SetTrigger("ChestOpened");
+        if (isInChestRange) {
+            _chestanimator.SetTrigger("ChestOpened");
         }
     }
 
