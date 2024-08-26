@@ -8,9 +8,17 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     [SerializeField] private int maxHealth;
     private int currentHealth = 0;
 
-    void Start()
+    [SerializeField] public float knockbackForce;
+
+    private Rigidbody2D _enemyRigidBody;
+    private Animator _enemyAnimator;
+
+    void Awake()
     {
         currentHealth = maxHealth;
+        _enemyAnimator = GetComponent<Animator>();
+        _enemyRigidBody = GetComponent<Rigidbody2D>();
+     
     }
 
     void Update()
@@ -19,19 +27,35 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         {
             TakeDamage(1);
         }
-        if (currentHealth <= 0) 
-        {
-            Death();
-        }
+        
     }
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         print(currentHealth);
     }
- 
-    public void Death()
+
+    IEnumerator Death()
     {
-        print("morreu");
+        _enemyRigidBody.bodyType = RigidbodyType2D.Static;
+        _enemyAnimator.SetTrigger("Death");
+        yield return new WaitForSeconds(1);
+        this.gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //_enemyAnimator.SetTrigger("Hit");
+        if (collision.CompareTag("AttackHitBox"))
+        {
+            
+            Vector2 direction = (transform.position - collision.transform.position).normalized;
+            _enemyRigidBody.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
+            currentHealth -= 1;
+            if (currentHealth <= 0)
+            {
+                StartCoroutine(Death());
+            }
+        }
     }
 }

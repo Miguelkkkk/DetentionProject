@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  knockbackForce: 100
 --- !u!114 &6707074704993399196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,10 +165,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  minDistance: 0.5
-  target: {fileID: 0}
   isInSlimeRange: 0
   isPlayerSpotted: 0
+  target: {fileID: 0}
 --- !u!70 &2715009414176076193
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -200,9 +200,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0000371933, y: 0.031035662}
-  m_Size: {x: 0.88363457, y: 0.88363457}
-  m_Direction: 0
+  m_Offset: {x: -0.000037198264, y: -0.041627113}
+  m_Size: {x: 0.8836348, y: 0.6656515}
+  m_Direction: 1
 --- !u!1 &1306888181945795433
 GameObject:
   m_ObjectHideFlags: 0
