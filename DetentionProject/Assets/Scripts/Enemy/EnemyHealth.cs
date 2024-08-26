@@ -44,11 +44,11 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //_enemyAnimator.SetTrigger("Hit");
+    { 
         if (collision.CompareTag("AttackHitBox"))
         {
-            
+            _enemyAnimator.SetTrigger("Hit");
+
             Vector2 direction = (transform.position - collision.transform.position).normalized;
             _enemyRigidBody.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
             currentHealth -= 1;
