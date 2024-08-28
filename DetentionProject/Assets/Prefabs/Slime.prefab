@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2715009414176076193}
   m_Layer: 0
   m_Name: Slime
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 0.01
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e2f48725847324f80fd2e17853f41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  knockbackForce: 100
+  maxHealth: 8
+  knockbackForce: 15
 --- !u!114 &6707074704993399196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,8 +200,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000037198264, y: -0.041627113}
-  m_Size: {x: 0.8836348, y: 0.6656515}
+  m_Offset: {x: -0.000037186375, y: 0.058124907}
+  m_Size: {x: 1.1473855, y: 1.1473855}
   m_Direction: 1
 --- !u!1 &1306888181945795433
 GameObject:

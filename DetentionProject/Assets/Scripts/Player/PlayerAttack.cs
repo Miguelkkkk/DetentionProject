@@ -71,4 +71,14 @@ public class PlayerAttack : MonoBehaviour
         input.EnableInteract();
 
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        EnemyHealth damageable = other.GetComponent<EnemyHealth>();
+        Vector2 knockbackDirection = (other.transform.position - transform.position).normalized;
+        if (damageable != null)
+        {
+            damageable.DamageKnockback(knockbackDirection);
+        }
+    }
 }
