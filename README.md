@@ -26,7 +26,7 @@
 ### Contato
   Para dúvidas e sugestões, entre em contato conosco:
 
-> **Miguel dos Santos Miranda:** migueldossm@gmail.com <br>
+> **Miguel dos Santos Miranda:** migueldossantosmiranda2007@gmail.com <br>
 
 > **Luan Seta Ramos:** luan.seta02@gmail.com <br>
 
