@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
             _playerAnimator.SetFloat(_lastVertical, mouseDir.y);
         }
     }
-    void Flip(Vector2 direction)
+    private void Flip(Vector2 direction)
     {
         if (direction.x > 0)
         {
