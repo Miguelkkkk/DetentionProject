@@ -3199,7 +3199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLoad:
-    m_SceneAsset: {fileID: 102900000, guid: 9e64af658a82e8349bdb66d986202e78, type: 3}
+    m_SceneAsset: {fileID: 102900000, guid: de5e7101fcc7e5c4d89502ad71535045, type: 3}
     m_SceneName: TestScene
 --- !u!4 &1255429510
 Transform:
