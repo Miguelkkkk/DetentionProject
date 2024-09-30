@@ -6,9 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
     public static MainMenuManager instance;
-    [Header("Spawn To")]
-    [SerializeField] private SceneField _sceneLoad;
-
+    
     private void Awake()
     {
         if (instance == null)
@@ -22,7 +20,7 @@ public class MainMenuManager : MonoBehaviour
     }
 
     public void Play() {
-        SceneManager.LoadScene(_sceneLoad);
+        Loader.Load(Loader.Scene.TestScene);
     }
 
     public void ExitApplication() { 
