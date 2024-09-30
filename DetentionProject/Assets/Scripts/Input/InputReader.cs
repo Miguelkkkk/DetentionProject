@@ -12,10 +12,13 @@ public class InputReader : ScriptableObject
     public event UnityAction<Vector2> MovementEvent;
     public event UnityAction InteractEvent;
     public event UnityAction AttackEvent;
+    public event UnityAction RunEvent;
+    public event UnityAction RunCancelledEvent;
 
     private InputAction _movementAction;
     private InputAction _interactAction;
     private InputAction _attackAction;
+    private InputAction _runAction;
 
     private void OnEnable()
     {
@@ -49,6 +52,17 @@ public class InputReader : ScriptableObject
         _attackAction.Enable();
 
         #endregion
+
+        #region run
+
+        _runAction = _inputasset.FindAction("Run");
+
+        _runAction.started += OnRun;
+        _runAction.performed += OnRun;
+        _runAction.canceled += OnRun;
+
+        _runAction.Enable();
+        #endregion
     }
 
     private void OnDisable()
@@ -80,6 +94,15 @@ public class InputReader : ScriptableObject
 
         #endregion
 
+        #region run
+
+        _runAction.started -= OnRun;
+        _runAction.performed -= OnRun;
+        _runAction.canceled -= OnRun;
+
+        _runAction.Disable();
+        #endregion
+
     }
 
     private void OnMovement(InputAction.CallbackContext context) 
@@ -101,6 +124,19 @@ public class InputReader : ScriptableObject
             AttackEvent?.Invoke();  
         }
     }
+
+    private void OnRun(InputAction.CallbackContext context)
+    {
+        if (RunEvent != null && context.started)
+        {
+            RunEvent.Invoke();
+        }
+
+        if (RunCancelledEvent != null && context.canceled)
+        {
+            RunCancelledEvent.Invoke();
+        }
+    }
     public void EnableMovement() => _movementAction.Enable();
     public void DisableMovement() => _movementAction.Disable();
 
@@ -109,4 +145,7 @@ public class InputReader : ScriptableObject
 
     public void EnableAttack() => _attackAction.Enable();
     public void DisableAttack() => _attackAction.Disable();
+
+    public void EnableRun() => _runAction.Enable();
+    public void DisableRun() => _runAction.Disable();
 }

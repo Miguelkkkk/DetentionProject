@@ -1315,6 +1315,7 @@ GameObject:
   - component: {fileID: 1240271911}
   - component: {fileID: 1240271913}
   - component: {fileID: 1240271912}
+  - component: {fileID: 1240271914}
   m_Layer: 5
   m_Name: stamina_spr
   m_TagString: Untagged
@@ -1379,6 +1380,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240271910}
   m_CullTransparentMesh: 1
+--- !u!114 &1240271914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240271910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1819f6e40b0fb0f4da49e197379cc2ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1912547720}
 --- !u!1 &1283416848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1701,6 +1715,14 @@ PrefabInstance:
     - target: {fileID: 2812728471181154765, guid: aa7d4ae5bbd60e447987152d3bec90a1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456080391956803673, guid: aa7d4ae5bbd60e447987152d3bec90a1, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 505388618}
+    - target: {fileID: 4456080391956803673, guid: aa7d4ae5bbd60e447987152d3bec90a1, type: 3}
+      propertyPath: _playerSpd
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4720039932048146172, guid: aa7d4ae5bbd60e447987152d3bec90a1, type: 3}
       propertyPath: m_Controller

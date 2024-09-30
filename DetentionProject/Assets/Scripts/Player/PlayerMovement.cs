@@ -22,20 +22,36 @@ public class PlayerMovement : MonoBehaviour
     private const string _lastVertical = "LastVertical";
     private const string _lastHorizontal = "LastHorizontal";
 
+    private bool _isRunning = false;
+
     #region events
 
     private void OnEnable()
     {
         input.MovementEvent += OnMovement;
+        input.RunEvent += OnRun;
+        input.RunCancelledEvent += OnRunCancelled;
     }
 
     private void OnDisable()
     {
         input.MovementEvent -= OnMovement;
+        input.RunEvent -= OnRun;
+        input.RunCancelledEvent -= OnRunCancelled;
     }
     private void OnMovement(Vector2 movement)
     {
         _playerDir = movement.normalized;
+    }
+
+    private void OnRun()
+    {
+        _isRunning = true;
+    }
+
+    private void OnRunCancelled()
+    {
+        _isRunning = false;
     }
     #endregion
 
@@ -56,6 +72,8 @@ public class PlayerMovement : MonoBehaviour
             _playerAnimator.SetFloat(_lastHorizontal, _playerDir.x);
             _playerAnimator.SetFloat(_lastVertical, _playerDir.y);
         }
+
+        Run();
 
     }
 
@@ -91,6 +109,15 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.eulerAngles = new Vector2(0f, 180f);
         }
+    }
+
+    private void Run()
+    {
+        if(_isRunning == true)
+        {
+            _playerSpd = 10;
+        }
+        else { _playerSpd = 5; }
     }
     #endregion 
 }
