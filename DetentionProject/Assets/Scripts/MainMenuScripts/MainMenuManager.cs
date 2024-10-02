@@ -19,8 +19,13 @@ public class MainMenuManager : MonoBehaviour
         }
     }
 
-    public void Play() {
+    public void Continue() {
         Loader.Load(Loader.Scene.TestScene);
+    }
+
+    public void newGame()
+    {
+        SceneManager.LoadScene(1);
     }
 
     public void ExitApplication() { 

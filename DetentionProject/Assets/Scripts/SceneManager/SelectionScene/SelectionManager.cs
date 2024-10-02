@@ -22,6 +22,9 @@ public class SelectionsManager : MonoBehaviour
 
         targetPositionRight = rightImageStartPos;
         targetPositionLeft = leftImageStartPos;
+
+        imageRight.anchoredPosition = Vector2.Lerp(imageRight.anchoredPosition, targetPositionRight, Time.deltaTime * transitionSpeed);
+        imageLeft.anchoredPosition = Vector2.Lerp(imageLeft.anchoredPosition, targetPositionLeft, Time.deltaTime * transitionSpeed);
     }
 
     void Update()
@@ -33,8 +36,13 @@ public class SelectionsManager : MonoBehaviour
             targetPositionRight = new Vector2(leftImageStartPos.x - moveDistance, leftImageStartPos.y);
             targetPositionLeft = new Vector2(rightImageStartPos.x, rightImageStartPos.y);
 
-            rightImageCanvasGroup.alpha = Mathf.Lerp(rightImageCanvasGroup.alpha, 0.3f, Time.deltaTime * fadeSpeed);
+            rightImageCanvasGroup.alpha = Mathf.Lerp(rightImageCanvasGroup.alpha, 0.2f, Time.deltaTime * fadeSpeed);
             leftImageCanvasGroup.alpha = Mathf.Lerp(leftImageCanvasGroup.alpha, 1f, Time.deltaTime * fadeSpeed);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                Loader.Load(Loader.Scene.TestScene);
+            }
         }
         else if (mousePos.x < Screen.width / 2 - 100)
         {
@@ -42,18 +50,24 @@ public class SelectionsManager : MonoBehaviour
             targetPositionRight = new Vector2(leftImageStartPos.x, leftImageStartPos.y);
 
             rightImageCanvasGroup.alpha = Mathf.Lerp(rightImageCanvasGroup.alpha, 1f, Time.deltaTime * fadeSpeed);
-            leftImageCanvasGroup.alpha = Mathf.Lerp(leftImageCanvasGroup.alpha, 0.3f, Time.deltaTime * fadeSpeed);
+            leftImageCanvasGroup.alpha = Mathf.Lerp(leftImageCanvasGroup.alpha, 0.2f, Time.deltaTime * fadeSpeed);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                Loader.Load(Loader.Scene.TestScene);
+            }
         }
         else
         {
             targetPositionLeft = new Vector2(rightImageStartPos.x + moveDistance, rightImageStartPos.y);
             targetPositionRight = new Vector2(leftImageStartPos.x - moveDistance, leftImageStartPos.y);
 
-            rightImageCanvasGroup.alpha = Mathf.Lerp(rightImageCanvasGroup.alpha, 1f, Time.deltaTime * fadeSpeed);
-            leftImageCanvasGroup.alpha = Mathf.Lerp(leftImageCanvasGroup.alpha, 1f, Time.deltaTime * fadeSpeed);
+            rightImageCanvasGroup.alpha = Mathf.Lerp(rightImageCanvasGroup.alpha, 0.2f, Time.deltaTime * fadeSpeed);
+            leftImageCanvasGroup.alpha = Mathf.Lerp(leftImageCanvasGroup.alpha, 0.2f, Time.deltaTime * fadeSpeed);
         }
 
         imageRight.anchoredPosition = Vector2.Lerp(imageRight.anchoredPosition, targetPositionRight, Time.deltaTime * transitionSpeed);
         imageLeft.anchoredPosition = Vector2.Lerp(imageLeft.anchoredPosition, targetPositionLeft, Time.deltaTime * transitionSpeed);
+
     }
 }
