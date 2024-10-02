@@ -10,6 +10,7 @@ public static class Loader {
 
     public enum Scene {
         MainMenu,
+        PlayerSelection,
         Loading,
         TestScene,   
     }
