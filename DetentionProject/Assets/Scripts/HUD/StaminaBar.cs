@@ -20,7 +20,7 @@ public class StaminaBar : MonoBehaviour
     {
         if (data is int stamina)
         {
-            SetStamina(stamina);
+            SetStamina(stamina);    
         }
     }
 }

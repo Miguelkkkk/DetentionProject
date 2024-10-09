@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 
-[CreateAssetMenu(menuName = "Events/Input Reader", fileName ="Input Reader")]
+[CreateAssetMenu(menuName = "Events/Input Reader", fileName = "Input Reader")]
 public class InputReader : ScriptableObject
 {
     [field: SerializeField] private InputActionAsset _inputasset;
@@ -24,7 +24,7 @@ public class InputReader : ScriptableObject
     {
         #region movement
         _movementAction = _inputasset.FindAction("Movement");
-        
+
         _movementAction.started += OnMovement;
         _movementAction.performed += OnMovement;
         _movementAction.canceled += OnMovement;
@@ -85,7 +85,7 @@ public class InputReader : ScriptableObject
         #endregion
 
         #region attack
-        
+
         _attackAction.started -= OnAttack;
         _attackAction.performed -= OnAttack;
         _attackAction.canceled -= OnAttack;
@@ -105,14 +105,15 @@ public class InputReader : ScriptableObject
 
     }
 
-    private void OnMovement(InputAction.CallbackContext context) 
+    private void OnMovement(InputAction.CallbackContext context)
     {
         MovementEvent?.Invoke(context.ReadValue<Vector2>());
     }
 
     private void OnInteract(InputAction.CallbackContext context)
     {
-        if (MovementEvent != null && context.started) {
+        if (MovementEvent != null && context.started)
+        {
             InteractEvent.Invoke();
         }
     }
@@ -121,7 +122,7 @@ public class InputReader : ScriptableObject
     {
         if (context.performed)
         {
-            AttackEvent?.Invoke();  
+            AttackEvent?.Invoke();
         }
     }
 
