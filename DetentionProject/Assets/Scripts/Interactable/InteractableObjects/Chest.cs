@@ -6,22 +6,33 @@ public class Chest : MonoBehaviour, IInteractable
 {
 
     private Animator _chestanimator;
-    [SerializeField]private bool isInChestRange;
-
-    public CircleCollider2D InteractCollider { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+    private bool isOpened = false;
+    private SpriteRenderer _chestRenderer;
+    [SerializeField]private bool isInRange;
 
     public void Awake()
     {
         _chestanimator = GetComponent<Animator>();
+        _chestRenderer = GetComponent<SpriteRenderer>();
     }
     public void Update()
     {
-        isInChestRange = GetComponentInChildren<Interactor>().isInRange;
+        isInRange = GetComponentInChildren<Interactor>().isInRange;
+        if(isInRange && !isOpened)
+        {
+            _chestRenderer.material.SetFloat("_OutlineThickness", 1f);
+        }
+        else
+        {
+            _chestRenderer.material.SetFloat("_OutlineThickness", 0f);
+        }
     }
     public void OpenChest()
     {
-        if (isInChestRange) {
+        if (isInRange) {
             _chestanimator.SetTrigger("ChestOpened");
+            isOpened = true;
+            _chestRenderer.material.SetFloat("_OutlineThickness", 0f);
         }
     }
 
