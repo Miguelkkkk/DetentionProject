@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 
-[CreateAssetMenu(menuName = "Events/Input Reader", fileName ="Input Reader")]
+[CreateAssetMenu(menuName = "Events/Input Reader", fileName = "Input Reader")]
 public class InputReader : ScriptableObject
 {
     [field: SerializeField] private InputActionAsset _inputasset;
@@ -12,16 +12,19 @@ public class InputReader : ScriptableObject
     public event UnityAction<Vector2> MovementEvent;
     public event UnityAction InteractEvent;
     public event UnityAction AttackEvent;
+    public event UnityAction RunEvent;
+    public event UnityAction RunCancelledEvent;
 
     private InputAction _movementAction;
     private InputAction _interactAction;
     private InputAction _attackAction;
+    private InputAction _runAction;
 
     private void OnEnable()
     {
         #region movement
         _movementAction = _inputasset.FindAction("Movement");
-        
+
         _movementAction.started += OnMovement;
         _movementAction.performed += OnMovement;
         _movementAction.canceled += OnMovement;
@@ -49,6 +52,17 @@ public class InputReader : ScriptableObject
         _attackAction.Enable();
 
         #endregion
+
+        #region run
+
+        _runAction = _inputasset.FindAction("Run");
+
+        _runAction.started += OnRun;
+        _runAction.performed += OnRun;
+        _runAction.canceled += OnRun;
+
+        _runAction.Enable();
+        #endregion
     }
 
     private void OnDisable()
@@ -71,7 +85,7 @@ public class InputReader : ScriptableObject
         #endregion
 
         #region attack
-        
+
         _attackAction.started -= OnAttack;
         _attackAction.performed -= OnAttack;
         _attackAction.canceled -= OnAttack;
@@ -80,16 +94,26 @@ public class InputReader : ScriptableObject
 
         #endregion
 
+        #region run
+
+        _runAction.started -= OnRun;
+        _runAction.performed -= OnRun;
+        _runAction.canceled -= OnRun;
+
+        _runAction.Disable();
+        #endregion
+
     }
 
-    private void OnMovement(InputAction.CallbackContext context) 
+    private void OnMovement(InputAction.CallbackContext context)
     {
         MovementEvent?.Invoke(context.ReadValue<Vector2>());
     }
 
     private void OnInteract(InputAction.CallbackContext context)
     {
-        if (MovementEvent != null && context.started) {
+        if (MovementEvent != null && context.started)
+        {
             InteractEvent.Invoke();
         }
     }
@@ -98,7 +122,20 @@ public class InputReader : ScriptableObject
     {
         if (context.performed)
         {
-            AttackEvent?.Invoke();  
+            AttackEvent?.Invoke();
+        }
+    }
+
+    private void OnRun(InputAction.CallbackContext context)
+    {
+        if (RunEvent != null && context.started)
+        {
+            RunEvent.Invoke();
+        }
+
+        if (RunCancelledEvent != null && context.canceled)
+        {
+            RunCancelledEvent.Invoke();
         }
     }
     public void EnableMovement() => _movementAction.Enable();
@@ -109,4 +146,7 @@ public class InputReader : ScriptableObject
 
     public void EnableAttack() => _attackAction.Enable();
     public void DisableAttack() => _attackAction.Disable();
+
+    public void EnableRun() => _runAction.Enable();
+    public void DisableRun() => _runAction.Disable();
 }
