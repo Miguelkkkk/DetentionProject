@@ -12,8 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _playerRunSpd = 10;
     private Vector2 _playerDir;
 
-    [Header("Camera")]
-    public Camera _camera;
+    private Camera _camera;
 
     private Rigidbody2D _playerRigidBody;
     private Animator _playerAnimator;
@@ -24,6 +23,10 @@ public class PlayerMovement : MonoBehaviour
     private const string _lastHorizontal = "LastHorizontal";
 
     private bool _isRunning = false;
+
+    [Header("Stamina")]
+    [SerializeField] private PlayerStamina playerStamina; 
+
 
     #region events
 
@@ -40,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
         input.RunEvent -= OnRun;
         input.RunCancelledEvent -= OnRunCancelled;
     }
+
     private void OnMovement(Vector2 movement)
     {
         _playerDir = movement.normalized;
@@ -54,14 +58,17 @@ public class PlayerMovement : MonoBehaviour
     {
         _isRunning = false;
     }
+
     #endregion
 
     private void Awake()
     {
+        _camera = GetComponent<Camera>();
         _playerAnimator = GetComponent<Animator>();
         _playerRigidBody = GetComponent<Rigidbody2D>();
     }
-    void FixedUpdate()
+
+    private void FixedUpdate()
     {
         Flip();
         _playerRigidBody.MovePosition(_playerRigidBody.position + _playerDir * _playerSpd * Time.fixedDeltaTime);
@@ -75,7 +82,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Run();
-
     }
 
     #region functions
@@ -94,14 +100,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void Run()
     {
-        if (_isRunning == true)
+        if (_isRunning && playerStamina != null && playerStamina.CanUseStamina())
         {
             _playerSpd = _playerRunSpd;
+            playerStamina.UseStamina(); 
         }
-        else { 
-            _playerSpd = 5; 
+        else
+        {
+            _playerSpd = 5;
+            if (playerStamina != null && !_isRunning)
+            {
+                playerStamina.StartRegen(); 
+            }
         }
     }
-    #endregion 
-}
 
+    #endregion
+}

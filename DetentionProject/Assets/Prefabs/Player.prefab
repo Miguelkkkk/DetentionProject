@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 11400000, guid: 7a281e4b1b6e1f64abd29923d0acf93a, type: 2}
-  _playerSpd: 6
+  _playerSpd: 5
   _playerRunSpd: 10
   _camera: {fileID: 0}
 --- !u!70 &3642530514444396040
