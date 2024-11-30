@@ -182,8 +182,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 11400000, guid: 7a281e4b1b6e1f64abd29923d0acf93a, type: 2}
   _playerSpd: 5
-  _playerRunSpd: 10
-  _camera: {fileID: 0}
+  _playerRunSpd: 8
+  playerStamina: {fileID: 1128523461624467747}
 --- !u!70 &3642530514444396040
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
