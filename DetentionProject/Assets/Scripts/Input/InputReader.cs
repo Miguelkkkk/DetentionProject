@@ -11,13 +11,13 @@ public class InputReader : ScriptableObject
 
     public event UnityAction<Vector2> MovementEvent;
     public event UnityAction InteractEvent;
-    public event UnityAction AttackEvent;
+    public event UnityAction DodgeEvent;
     public event UnityAction RunEvent;
     public event UnityAction RunCancelledEvent;
 
     private InputAction _movementAction;
     private InputAction _interactAction;
-    private InputAction _attackAction;
+    private InputAction _dodgeAction;
     private InputAction _runAction;
 
     private void OnEnable()
@@ -42,17 +42,6 @@ public class InputReader : ScriptableObject
         _interactAction.Enable();
         #endregion
 
-        #region attack
-        _attackAction = _inputasset.FindAction("Attack");
-
-        _attackAction.started += OnAttack;
-        _attackAction.performed += OnAttack;
-        _attackAction.canceled += OnAttack;
-
-        _attackAction.Enable();
-
-        #endregion
-
         #region run
 
         _runAction = _inputasset.FindAction("Run");
@@ -62,6 +51,17 @@ public class InputReader : ScriptableObject
         _runAction.canceled += OnRun;
 
         _runAction.Enable();
+        #endregion
+
+        #region dodge
+
+        _dodgeAction = _inputasset.FindAction("DodgeRoll");
+
+        _dodgeAction.started += OnDodge;
+        _dodgeAction.performed += OnDodge;
+        _dodgeAction.canceled += OnDodge;
+
+        _dodgeAction.Enable();
         #endregion
     }
 
@@ -84,16 +84,6 @@ public class InputReader : ScriptableObject
         _interactAction.Disable();
         #endregion
 
-        #region attack
-
-        _attackAction.started -= OnAttack;
-        _attackAction.performed -= OnAttack;
-        _attackAction.canceled -= OnAttack;
-
-        _attackAction.Disable();
-
-        #endregion
-
         #region run
 
         _runAction.started -= OnRun;
@@ -103,6 +93,14 @@ public class InputReader : ScriptableObject
         _runAction.Disable();
         #endregion
 
+        #region dodge
+
+        _dodgeAction.started -= OnDodge;
+        _dodgeAction.performed -= OnDodge;
+        _dodgeAction.canceled -= OnDodge;
+
+        _dodgeAction.Disable();
+        #endregion
     }
 
     private void OnMovement(InputAction.CallbackContext context)
@@ -118,14 +116,13 @@ public class InputReader : ScriptableObject
         }
     }
 
-    private void OnAttack(InputAction.CallbackContext context)
+    private void OnDodge(InputAction.CallbackContext context) 
     {
-        if (context.performed)
+        if (DodgeEvent != null && context.started)
         {
-            AttackEvent?.Invoke();
+            DodgeEvent.Invoke();
         }
     }
-
     private void OnRun(InputAction.CallbackContext context)
     {
         if (RunEvent != null && context.started)
@@ -138,15 +135,14 @@ public class InputReader : ScriptableObject
             RunCancelledEvent.Invoke();
         }
     }
-    public void EnableMovement() => _movementAction.Enable();
-    public void DisableMovement() => _movementAction.Disable();
 
-    public void EnableInteract() => _interactAction.Enable();
-    public void DisableInteract() => _interactAction.Disable();
+    public void Disable() 
+    {
+        _inputasset.Disable();
+    }
 
-    public void EnableAttack() => _attackAction.Enable();
-    public void DisableAttack() => _attackAction.Disable();
-
-    public void EnableRun() => _runAction.Enable();
-    public void DisableRun() => _runAction.Disable();
+    public void Enable()
+    {
+        _inputasset.Enable();
+    }
 }

@@ -152,8 +152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onStaminaChanged: {fileID: 11400000, guid: de0ad3c94bdfcec478fe9be9dd1b1135, type: 2}
   maxStamina: 100
-  staminaRegenRate: 5
-  staminaUseRate: 1
+  staminaRegenRate: 30
+  staminaUseRate: 15
 --- !u!114 &218921071482217268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +183,9 @@ MonoBehaviour:
   input: {fileID: 11400000, guid: 7a281e4b1b6e1f64abd29923d0acf93a, type: 2}
   _playerSpd: 5
   _playerRunSpd: 8
+  _dodgeDistance: 8
+  _dodgeStaminaCost: 25
+  _dodgeDuration: 0.4
   playerStamina: {fileID: 1128523461624467747}
 --- !u!70 &3642530514444396040
 CapsuleCollider2D:
