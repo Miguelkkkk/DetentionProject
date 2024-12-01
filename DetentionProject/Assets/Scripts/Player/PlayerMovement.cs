@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,8 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _playerSpd = 5;
     [SerializeField] private float _playerRunSpd = 10;
     private Vector2 _playerDir;
-
-    private Camera _camera;
+    private Vector2 _lastDir = new Vector2(1,0);
 
     private Rigidbody2D _playerRigidBody;
     private Animator _playerAnimator;
@@ -22,11 +22,15 @@ public class PlayerMovement : MonoBehaviour
     private const string _lastVertical = "LastVertical";
     private const string _lastHorizontal = "LastHorizontal";
 
+    [SerializeField] private int _dodgeDistance;
+    [SerializeField] private float _dodgeStaminaCost;
+    [SerializeField] private float _dodgeDuration = 0.5f; 
+
+    private bool _isDodging = false;
     private bool _isRunning = false;
 
     [Header("Stamina")]
     [SerializeField] private PlayerStamina playerStamina; 
-
 
     #region events
 
@@ -35,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
         input.MovementEvent += OnMovement;
         input.RunEvent += OnRun;
         input.RunCancelledEvent += OnRunCancelled;
+        input.DodgeEvent += OnDodge;
+
     }
 
     private void OnDisable()
@@ -42,11 +48,29 @@ public class PlayerMovement : MonoBehaviour
         input.MovementEvent -= OnMovement;
         input.RunEvent -= OnRun;
         input.RunCancelledEvent -= OnRunCancelled;
+        input.DodgeEvent -= OnDodge;
+    }
+
+    private void OnDodge()
+    {
+        if (!_isDodging)
+        {
+            if (playerStamina.GetCurrentStamina() >= _dodgeStaminaCost)
+            {
+                _playerAnimator.SetTrigger("Dodge");
+                StartCoroutine(DodgeRoll());
+                playerStamina.UpdateStamina(-25.0f);
+            }
+        }
     }
 
     private void OnMovement(Vector2 movement)
-    {
+    { 
         _playerDir = movement.normalized;
+
+        if (_playerDir != Vector2.zero) {
+            _lastDir = _playerDir;
+        }
     }
 
     private void OnRun()
@@ -63,7 +87,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        _camera = GetComponent<Camera>();
         _playerAnimator = GetComponent<Animator>();
         _playerRigidBody = GetComponent<Rigidbody2D>();
     }
@@ -71,17 +94,19 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Flip();
-        _playerRigidBody.MovePosition(_playerRigidBody.position + _playerDir * _playerSpd * Time.fixedDeltaTime);
-        _playerAnimator.SetFloat(_horizontal, _playerDir.x);
-        _playerAnimator.SetFloat(_vertical, _playerDir.y);
 
-        if (_playerDir != Vector2.zero)
+        if (!_isDodging)
         {
-            _playerAnimator.SetFloat(_lastHorizontal, _playerDir.x);
-            _playerAnimator.SetFloat(_lastVertical, _playerDir.y);
+            _playerRigidBody.MovePosition(_playerRigidBody.position + _playerDir * _playerSpd * Time.fixedDeltaTime);
+            _playerAnimator.SetFloat(_horizontal, _playerDir.x);
+            _playerAnimator.SetFloat(_vertical, _playerDir.y);
+            Run();
         }
-
-        Run();
+        if (_playerDir != Vector2.zero)
+            {
+                _playerAnimator.SetFloat(_lastHorizontal, _playerDir.x);
+                _playerAnimator.SetFloat(_lastVertical, _playerDir.y);
+            }
     }
 
     #region functions
@@ -100,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Run()
     {
-        if (_isRunning && playerStamina != null && playerStamina.CanUseStamina())
+        if (_isRunning && playerStamina != null && playerStamina.GetCurrentStamina() > 0)
         {
             _playerSpd = _playerRunSpd;
             playerStamina.UseStamina(); 
@@ -108,12 +133,47 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             _playerSpd = 5;
-            if (playerStamina != null && !_isRunning)
+            if (playerStamina != null && !_isRunning && !_isDodging)
             {
                 playerStamina.StartRegen(); 
             }
         }
     }
+
+    private IEnumerator DodgeRoll()
+    {
+        Vector2 dodgeDirection;
+
+        if (_isDodging) yield break;
+
+        dodgeDirection = _playerDir;
+        Debug.Log(dodgeDirection);
+        if (dodgeDirection == Vector2.zero) 
+        {
+            dodgeDirection = _lastDir;
+            _playerDir = dodgeDirection;
+        }
+        else 
+        {
+            _lastDir = dodgeDirection;
+        }
+        _isDodging = true;
+
+        input.Disable();
+        
+        _playerRigidBody.AddForce(dodgeDirection * _dodgeDistance, ForceMode2D.Impulse);
+
+        yield return new WaitForSeconds(_dodgeDuration);
+
+        _playerRigidBody.velocity = Vector2.zero;
+
+        _playerDir = Vector2.zero;
+
+        input.Enable();
+
+        _isDodging = false;
+    }
+
 
     #endregion
 }

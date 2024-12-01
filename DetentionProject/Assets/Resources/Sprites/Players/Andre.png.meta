@@ -101,7 +101,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 288
+        y: 432
         width: 48
         height: 48
       alignment: 9
@@ -122,7 +122,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 288
+        y: 432
         width: 48
         height: 48
       alignment: 9
@@ -143,7 +143,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 288
+        y: 432
         width: 48
         height: 48
       alignment: 9
@@ -164,7 +164,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 288
+        y: 432
         width: 48
         height: 48
       alignment: 9
@@ -185,7 +185,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 288
+        y: 432
         width: 48
         height: 48
       alignment: 9
@@ -206,7 +206,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 288
+        y: 432
         width: 48
         height: 48
       alignment: 9
@@ -227,7 +227,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 240
+        y: 384
         width: 48
         height: 48
       alignment: 9
@@ -248,7 +248,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 240
+        y: 384
         width: 48
         height: 48
       alignment: 9
@@ -269,7 +269,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 240
+        y: 384
         width: 48
         height: 48
       alignment: 9
@@ -290,7 +290,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 240
+        y: 384
         width: 48
         height: 48
       alignment: 9
@@ -311,7 +311,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 240
+        y: 384
         width: 48
         height: 48
       alignment: 9
@@ -332,7 +332,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 240
+        y: 384
         width: 48
         height: 48
       alignment: 9
@@ -353,7 +353,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
+        y: 336
         width: 48
         height: 48
       alignment: 9
@@ -374,7 +374,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 192
+        y: 336
         width: 48
         height: 48
       alignment: 9
@@ -395,7 +395,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 192
+        y: 336
         width: 48
         height: 48
       alignment: 9
@@ -416,7 +416,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 192
+        y: 336
         width: 48
         height: 48
       alignment: 9
@@ -437,7 +437,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 192
+        y: 336
         width: 48
         height: 48
       alignment: 9
@@ -458,7 +458,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 192
+        y: 336
         width: 48
         height: 48
       alignment: 9
@@ -479,7 +479,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 144
+        y: 288
         width: 48
         height: 48
       alignment: 9
@@ -500,7 +500,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 144
+        y: 288
         width: 48
         height: 48
       alignment: 9
@@ -521,7 +521,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 144
+        y: 288
         width: 48
         height: 48
       alignment: 9
@@ -542,7 +542,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 144
+        y: 288
         width: 48
         height: 48
       alignment: 9
@@ -563,7 +563,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 144
+        y: 288
         width: 48
         height: 48
       alignment: 9
@@ -584,7 +584,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 144
+        y: 288
         width: 48
         height: 48
       alignment: 9
@@ -605,7 +605,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
+        y: 240
         width: 48
         height: 48
       alignment: 9
@@ -626,7 +626,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 96
+        y: 240
         width: 48
         height: 48
       alignment: 9
@@ -647,7 +647,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 96
+        y: 240
         width: 48
         height: 48
       alignment: 9
@@ -668,7 +668,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 96
+        y: 240
         width: 48
         height: 48
       alignment: 9
@@ -689,7 +689,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 96
+        y: 240
         width: 48
         height: 48
       alignment: 9
@@ -710,7 +710,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 96
+        y: 240
         width: 48
         height: 48
       alignment: 9
@@ -731,7 +731,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 192
         width: 48
         height: 48
       alignment: 9
@@ -752,7 +752,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 48
+        y: 192
         width: 48
         height: 48
       alignment: 9
@@ -773,7 +773,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 48
+        y: 192
         width: 48
         height: 48
       alignment: 9
@@ -794,7 +794,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 48
+        y: 192
         width: 48
         height: 48
       alignment: 9
@@ -815,7 +815,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 48
+        y: 192
         width: 48
         height: 48
       alignment: 9
@@ -836,7 +836,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 48
+        y: 192
         width: 48
         height: 48
       alignment: 9
@@ -957,6 +957,384 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Andre_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df1422f0f402544988dd644a8da23a6
+      internalID: -492150681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andre_42
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44849555a797aa349b0aca37a9bdc097
+      internalID: 1150069721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andre_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25d0b9d69db1eb42812d972cfae3003
+      internalID: 516311698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andre_44
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e207ee937781fe34b9d8bc57d717bf26
+      internalID: -2032908221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andre_45
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e39be590f6835458b133af7e5cdf67
+      internalID: -1713187760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andre_46
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 144
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae446e652216c4458a5623ec2903668
+      internalID: 862717771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andre_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef581aacd28eb764a86d2e26cafa09db
+      internalID: 2012187309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andre_48
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995406b1b05a73d4bb1d66ff241d4320
+      internalID: 295978027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andre_49
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b50853e1da22a04d8d1175985555d1d
+      internalID: -1018433614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andre_50
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d6ce3419445684892b134dbcd2687e
+      internalID: -1715467392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andre_51
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c547244c2107304ca36fe535c72499a
+      internalID: -1691122460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andre_52
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d578607eadbb6a4383531f217daa2dd
+      internalID: 1578782797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andre_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade4710c10b4def46aceabd1021ce25a
+      internalID: -1510765251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andre_54
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b814bb9de24a99e40a6a3df9778ed80b
+      internalID: -2145874082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andre_55
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471839121e542d744b6e0bbca6d64b04
+      internalID: -1132599781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andre_56
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75cfec20127a2944963b32d39858d51
+      internalID: -219806620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andre_57
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43fb54c530a50504b8a7592b99e7260e
+      internalID: -1988986839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andre_58
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711db2ff7c123a347b94cdd1bf935319
+      internalID: -26916300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -970,45 +1348,63 @@ TextureImporter:
     nameFileIdTable:
       Andre_0: -925648893
       Andre_1: -1491807261
-      Andre_10: -486339492
-      Andre_11: -522265657
-      Andre_12: -252718655
-      Andre_13: -1389027187
-      Andre_14: -1866767231
-      Andre_15: 1323656083
-      Andre_16: 100056878
-      Andre_17: 663613942
-      Andre_18: -1317151848
-      Andre_19: -1568323684
-      Andre_2: -17245310
-      Andre_20: -824247432
-      Andre_21: 744474252
-      Andre_22: -2080929738
-      Andre_23: -433361350
-      Andre_24: 955560809
-      Andre_25: 2003984003
-      Andre_26: -1532431798
-      Andre_27: 1506397492
-      Andre_28: -1797232440
-      Andre_29: 1218193411
-      Andre_3: 1641257767
-      Andre_30: 1223149612
-      Andre_31: -1192076529
-      Andre_32: -1611764473
-      Andre_33: -646542667
-      Andre_34: -147543818
-      Andre_35: -846748853
-      Andre_36: 1354412337
-      Andre_37: 296565740
-      Andre_38: -855229143
-      Andre_39: 1827399134
-      Andre_4: -435489820
-      Andre_40: 218085465
-      Andre_5: -113727758
-      Andre_6: 1516614177
-      Andre_7: 1377031448
-      Andre_8: -905998729
-      Andre_9: 234514319
+      Andre_10: -17245310
+      Andre_11: 1641257767
+      Andre_12: -435489820
+      Andre_13: -113727758
+      Andre_14: 1516614177
+      Andre_15: 1377031448
+      Andre_16: -905998729
+      Andre_17: 234514319
+      Andre_18: -486339492
+      Andre_19: -522265657
+      Andre_2: -252718655
+      Andre_20: -1389027187
+      Andre_21: -1866767231
+      Andre_22: 1323656083
+      Andre_23: 100056878
+      Andre_24: 663613942
+      Andre_25: -1317151848
+      Andre_26: -1568323684
+      Andre_27: -824247432
+      Andre_28: 744474252
+      Andre_29: -2080929738
+      Andre_3: -433361350
+      Andre_30: 955560809
+      Andre_31: 2003984003
+      Andre_32: -1532431798
+      Andre_33: 1506397492
+      Andre_34: -1797232440
+      Andre_35: 1218193411
+      Andre_36: 1223149612
+      Andre_37: -1192076529
+      Andre_38: -1611764473
+      Andre_39: -646542667
+      Andre_4: -147543818
+      Andre_40: -846748853
+      Andre_41: -492150681
+      Andre_42: 879373629
+      Andre_43: -990299663
+      Andre_44: -2095214930
+      Andre_45: 1115990639
+      Andre_46: 2085758587
+      Andre_47: 290921719
+      Andre_48: 1535060962
+      Andre_49: 658383806
+      Andre_5: 1354412337
+      Andre_50: 191826375
+      Andre_51: -124112120
+      Andre_52: -670024835
+      Andre_53: 1035034592
+      Andre_54: -468446037
+      Andre_55: 658632100
+      Andre_56: 1259083548
+      Andre_57: -1876417588
+      Andre_58: 1786343562
+      Andre_6: 296565740
+      Andre_7: -855229143
+      Andre_8: 1827399134
+      Andre_9: 218085465
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
