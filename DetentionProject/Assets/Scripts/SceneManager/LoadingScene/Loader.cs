@@ -12,6 +12,7 @@ public static class Loader {
         MainMenu,
         PlayerSelection,
         Loading,
+        Tutorial,
         TestScene,   
     }
 

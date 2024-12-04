@@ -20,7 +20,7 @@ public class MainMenuManager : MonoBehaviour
     }
 
     public void Continue() {
-        Loader.Load(Loader.Scene.TestScene);
+        Loader.Load(Loader.Scene.Tutorial);
     }
 
     public void newGame()

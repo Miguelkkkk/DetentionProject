@@ -54,7 +54,7 @@ public class SelectionsManager : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                Loader.Load(Loader.Scene.TestScene);
+                Loader.Load(Loader.Scene.Tutorial);
             }
         }
         else
