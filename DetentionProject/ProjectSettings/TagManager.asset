@@ -7,15 +7,16 @@ TagManager:
   - Chest
   - AttackHitBox
   - Enemy
+  - Damager
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Damager
   - Water
   - UI
-  - 
-  - 
+  - PlayerCollider
+  - PlayerHitbox
   - 
   - 
   - 
@@ -44,6 +45,21 @@ TagManager:
   - name: Floor
     uniqueID: 2796258675
     locked: 0
+  - name: Rug
+    uniqueID: 94033147
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Wall
+    uniqueID: 4275344133
+    locked: 0
+  - name: Objects
+    uniqueID: 365895081
+    locked: 0
+  - name: Player
+    uniqueID: 4248293691
+    locked: 0
+  - name: WallFrame
+    uniqueID: 2522746077
     locked: 0

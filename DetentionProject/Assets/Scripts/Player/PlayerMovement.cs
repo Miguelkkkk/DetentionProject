@@ -99,9 +99,9 @@ public class PlayerMovement : MonoBehaviour
         {
             _playerRigidBody.MovePosition(_playerRigidBody.position + _playerDir * _playerSpd * Time.fixedDeltaTime);
             _playerAnimator.SetFloat(_horizontal, _playerDir.x);
-            _playerAnimator.SetFloat(_vertical, _playerDir.y);
-            Run();
+            _playerAnimator.SetFloat(_vertical, _playerDir.y);     
         }
+        Run();
         if (_playerDir != Vector2.zero)
             {
                 _playerAnimator.SetFloat(_lastHorizontal, _playerDir.x);
@@ -125,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Run()
     {
-        if (_isRunning && playerStamina != null && playerStamina.GetCurrentStamina() > 0)
+        if (_isRunning && playerStamina != null && playerStamina.GetCurrentStamina() > 0 && !_isDodging)
         {
             _playerSpd = _playerRunSpd;
             playerStamina.UseStamina(); 
