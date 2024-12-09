@@ -6,12 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLife : MonoBehaviour, IDamageable
 {
+    [Header("Input")]
+    public InputReader input;
 
     [Header("Events")]
     public GameEvent onPlayerHealthChanged;
 
     [Header("Health")]
     [SerializeField] private int maxHealth;
+
+    private bool isDead = false;
 
     private int currentHealth = 0;
     private bool canTakeDamage = true;
@@ -25,11 +29,25 @@ public class PlayerLife : MonoBehaviour, IDamageable
         currentHealth -= damage;
         onPlayerHealthChanged.Raise(this, currentHealth);
         CinemachineShake.Instance.shakeCamera(6f, .2f);
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !isDead)
         {
-            SceneManager.LoadScene(0);
+            StartCoroutine(Death());
         }
     }
+
+    private IEnumerator Death() {
+       Animator animator = GetComponent<Animator>();
+       animator.SetTrigger("Death");
+       isDead = true;
+       input.Disable();
+
+       yield return new WaitForSeconds(2);
+
+       UnityEngine.SceneManagement.Scene currentScene = Loader.GetCurrentScene();
+       Loader.Load((Loader.Scene)System.Enum.Parse(typeof(Loader.Scene), currentScene.name));
+       input.Enable();
+    }
+
 
     private void OnTriggerStay2D(Collider2D collision)
     {

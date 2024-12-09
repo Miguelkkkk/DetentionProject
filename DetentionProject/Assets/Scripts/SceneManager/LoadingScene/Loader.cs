@@ -56,4 +56,9 @@ public static class Loader {
             onLoaderCallback = null;
         }
     }
+
+    public static UnityEngine.SceneManagement.Scene GetCurrentScene()
+    {
+        return SceneManager.GetActiveScene();
+    }
 }
