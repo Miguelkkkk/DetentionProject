@@ -7,15 +7,16 @@ TagManager:
   - Chest
   - AttackHitBox
   - Enemy
+  - Damager
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Damager
   - Water
   - UI
-  - 
-  - 
+  - PlayerCollider
+  - PlayerHitbox
   - 
   - 
   - 
