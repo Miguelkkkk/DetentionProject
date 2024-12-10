@@ -45,7 +45,7 @@
                     "name": "Run",
                     "type": "Value",
                     "id": "06725285-ea5f-48dc-83da-8aa04f979825",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true

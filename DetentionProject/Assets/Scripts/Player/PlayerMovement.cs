@@ -5,6 +5,8 @@ using UnityEngine.Windows;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    public ParticleSystem dust;
     [Header("Input")]
     public InputReader input;
 
@@ -65,10 +67,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void OnMovement(Vector2 movement)
-    { 
+    {
         _playerDir = movement.normalized;
 
-        if (_playerDir != Vector2.zero) {
+        if (_playerDir != Vector2.zero)
+        {
             _lastDir = _playerDir;
         }
     }
@@ -125,9 +128,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Run()
     {
-        if (_isRunning && playerStamina != null && playerStamina.GetCurrentStamina() > 0 && !_isDodging)
+        if (_isRunning && playerStamina != null && 
+            playerStamina.GetCurrentStamina() > 0 && !_isDodging && _playerDir != Vector2.zero)
         {
             _playerSpd = _playerRunSpd;
+            CreateDust();
             playerStamina.UseStamina(); 
         }
         else
@@ -159,7 +164,9 @@ public class PlayerMovement : MonoBehaviour
         _isDodging = true;
 
         input.Disable();
-        
+
+        CreateDust();
+
         _playerRigidBody.AddForce(dodgeDirection * _dodgeDistance, ForceMode2D.Impulse);
 
         yield return new WaitForSeconds(_dodgeDuration);
@@ -171,6 +178,10 @@ public class PlayerMovement : MonoBehaviour
         input.Enable();
 
         _isDodging = false;
+    }
+
+    private void CreateDust() { 
+        dust.Play();
     }
 
 
