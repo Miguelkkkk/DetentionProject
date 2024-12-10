@@ -51871,6 +51871,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1426891493}
     m_Modifications:
+    - target: {fileID: 2419590335252033593, guid: aa7d4ae5bbd60e447987152d3bec90a1, type: 3}
+      propertyPath: flashDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419590335252033593, guid: aa7d4ae5bbd60e447987152d3bec90a1, type: 3}
+      propertyPath: flashMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 987f9849e43ab9b4088754b49ed2de70, type: 2}
     - target: {fileID: 2812728471181154765, guid: aa7d4ae5bbd60e447987152d3bec90a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.85
@@ -51922,11 +51930,15 @@ PrefabInstance:
     - target: {fileID: 4172592921221524695, guid: aa7d4ae5bbd60e447987152d3bec90a1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -799399401, guid: 9995187aea39fa34399bbf38b7469246, type: 3}
+      objectReference: {fileID: -17245310, guid: 5dc29ead25661894689d82933455d43e, type: 3}
     - target: {fileID: 4172592921221524695, guid: aa7d4ae5bbd60e447987152d3bec90a1, type: 3}
       propertyPath: m_SortingLayer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4172592921221524695, guid: aa7d4ae5bbd60e447987152d3bec90a1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 987f9849e43ab9b4088754b49ed2de70, type: 2}
     - target: {fileID: 4373763001533864975, guid: aa7d4ae5bbd60e447987152d3bec90a1, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.103
@@ -51935,10 +51947,6 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1778770957}
-    - target: {fileID: 4720039932048146172, guid: aa7d4ae5bbd60e447987152d3bec90a1, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: 67e646ff5fc995b42a1e39e81ca9eefa, type: 2}
     - target: {fileID: 7841762233555622482, guid: aa7d4ae5bbd60e447987152d3bec90a1, type: 3}
       propertyPath: m_Mass
       value: 1

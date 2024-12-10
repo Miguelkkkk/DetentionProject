@@ -241,6 +241,17 @@
                 },
                 {
                     "name": "",
+                    "id": "03993ae4-bee7-4cd8-b600-b1435b1f2f5f",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DodgeRoll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "224cfeae-90f0-46c5-8a84-96581dd9a1da",
                     "path": "<Keyboard>/e",
                     "interactions": "",
