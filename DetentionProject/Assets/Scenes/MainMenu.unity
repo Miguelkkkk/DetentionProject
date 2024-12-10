@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 70878870}
   - component: {fileID: 70878869}
   - component: {fileID: 70878868}
+  - component: {fileID: 70878871}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -349,6 +350,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70878866}
   m_CullTransparentMesh: 1
+--- !u!225 &70878871
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70878866}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &118250292
 GameObject:
   m_ObjectHideFlags: 0
@@ -3478,6 +3491,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e8694098ea550b4587099b8ef2b3dee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  continueButton: {fileID: 70878866}
+  continueButtonComponent: {fileID: 70878868}
 --- !u!4 &1255429510
 Transform:
   m_ObjectHideFlags: 0
