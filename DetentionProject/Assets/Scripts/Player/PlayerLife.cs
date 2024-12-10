@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -15,6 +16,11 @@ public class PlayerLife : MonoBehaviour, IDamageable
     [Header("Health")]
     [SerializeField] private int maxHealth;
 
+    [Header("Flash")]
+    [SerializeField] private float flashDuration = 0.1f;
+
+    private bool isInTrigger = false;
+
     private bool isDead = false;
 
     private int currentHealth = 0;
@@ -23,7 +29,7 @@ public class PlayerLife : MonoBehaviour, IDamageable
     private SpriteRenderer spriteRenderer;
     private Material flashMaterial;
 
-    [SerializeField] private float flashDuration = 0.1f;
+
 
     public void Awake()
     {
@@ -40,15 +46,19 @@ public class PlayerLife : MonoBehaviour, IDamageable
 
     public void TakeDamage(int damage)
     {
+        if (isDead) return; 
+
         currentHealth -= damage;
         onPlayerHealthChanged.Raise(this, currentHealth);
         CinemachineShake.Instance.shakeCamera(6f, .2f);
         StartCoroutine(FlashEffect());
+
         if (Gamepad.current != null)
         {
             Gamepad.current.SetMotorSpeeds(0.3f, 0.3f);
             Invoke(nameof(StopVibration), 0.3f);
         }
+
         if (currentHealth <= 0 && !isDead)
         {
             StartCoroutine(Death());
@@ -60,6 +70,7 @@ public class PlayerLife : MonoBehaviour, IDamageable
         Animator animator = GetComponent<Animator>();
         animator.SetTrigger("Death");
         isDead = true;
+        canTakeDamage = false;
         input.Disable();
 
         yield return new WaitForSeconds(2);
@@ -71,51 +82,68 @@ public class PlayerLife : MonoBehaviour, IDamageable
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Damager"))
+        if (collision.gameObject.CompareTag("Damager") && canTakeDamage && !isDead)
         {
-            if (canTakeDamage)
+            if (!isInTrigger)
             {
                 StartCoroutine(DamageCooldown());
             }
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Damager"))
+        {
+            isInTrigger = false;
+
+            if (DamageCooldown() != null)
+            {
+                StopCoroutine(DamageCooldown());
+            }
+        }
+    }
+
+    private IEnumerator DamageCooldown()
+    {
+        isInTrigger = true;
+
+        while (isInTrigger && canTakeDamage && !isDead)
+        {
+            TakeDamage(1);
+            canTakeDamage = false;
+
+            yield return new WaitForSeconds(0.3f);
+            canTakeDamage = true;
+
+            if (!isInTrigger || isDead)
+            {
+                break; 
+            }
+        }
+
+        isInTrigger = false;
+    }
+
+
+
     private IEnumerator FlashEffect()
     {
         if (flashMaterial != null)
         {
-            // Define a duração do flash como 0.1 segundos
             float elapsedTime = 0f;
 
-            // Cria o efeito de flash usando Lerp para aumentar e diminuir
             while (elapsedTime < flashDuration)
             {
                 float t = elapsedTime / flashDuration;
-                // Interpola o valor entre 0 e 1, para um efeito de flash
                 flashMaterial.SetFloat("_HitEffectAmount", Mathf.Lerp(0f, 1f, t));
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
 
-            // Retorna ao valor inicial após o efeito
             flashMaterial.SetFloat("_HitEffectAmount", 0f);
         }
     }
-
-
-
-
-    private IEnumerator DamageCooldown()
-    {
-        TakeDamage(1);
-
-        canTakeDamage = false;
-
-        yield return new WaitForSeconds(0.3f);
-
-        canTakeDamage = true;
-    }
-
     void StopVibration()
     {
         if (Gamepad.current != null)

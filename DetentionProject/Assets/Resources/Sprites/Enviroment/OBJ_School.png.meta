@@ -139,27 +139,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OBJ_School_2
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 80
-        width: 14
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d146fad78cdc084e91e90ec8dfc5424
-      internalID: 367750552
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: OBJ_School_3
       rect:
         serializedVersion: 2
