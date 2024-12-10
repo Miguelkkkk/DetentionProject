@@ -272,7 +272,7 @@ Transform:
   - {fileID: 2043306207}
   - {fileID: 1993472409}
   - {fileID: 1165948343}
-  - {fileID: 815745878}
+  - {fileID: 846936598}
   - {fileID: 1251895574}
   - {fileID: 141716450}
   m_Father: {fileID: 274928098}
@@ -3188,7 +3188,7 @@ GameObject:
   - component: {fileID: 815745880}
   - component: {fileID: 815745879}
   m_Layer: 0
-  m_Name: character icon
+  m_Name: icon_image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3202,15 +3202,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815745877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.2701917}
-  m_LocalScale: {x: 44, y: 43, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 78016387}
+  m_Father: {fileID: 846936598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -149.45721, y: 78.10864}
+  m_AnchoredPosition: {x: -0.000030517578, y: 0}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &815745879
@@ -25192,6 +25192,87 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1 &846936597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 846936598}
+  - component: {fileID: 846936600}
+  - component: {fileID: 846936599}
+  m_Layer: 0
+  m_Name: character_icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &846936598
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846936597}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.2701917}
+  m_LocalScale: {x: 44, y: 43, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 815745878}
+  m_Father: {fileID: 78016387}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -149.4572, y: 78.10864}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &846936599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846936597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb593a21d1b80641aeec4858bee6432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: b808f1d39ebb34843bbf3634322f0111, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 846936600}
+        m_TargetAssemblyTypeName: ChracterIcon, Assembly-CSharp
+        m_MethodName: changeIcon
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &846936600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846936597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5c30bd4c747974429801440f5b9c8fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterIcon: {fileID: 815745879}
+  icon1: {fileID: 1003208700, guid: 6e86c6c0cb45aa546bc038fa340d51ae, type: 3}
+  icon2: {fileID: -1298297488, guid: 6e86c6c0cb45aa546bc038fa340d51ae, type: 3}
 --- !u!1 &850586081
 GameObject:
   m_ObjectHideFlags: 0
@@ -51830,6 +51911,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4042840978712402500, guid: aa7d4ae5bbd60e447987152d3bec90a1, type: 3}
+      propertyPath: defaultAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: da804928b81968c439f5b2d9f638f9c8, type: 2}
+    - target: {fileID: 4042840978712402500, guid: aa7d4ae5bbd60e447987152d3bec90a1, type: 3}
+      propertyPath: alternateAnimatorController
+      value: 
+      objectReference: {fileID: 22100000, guid: 67e646ff5fc995b42a1e39e81ca9eefa, type: 2}
     - target: {fileID: 4172592921221524695, guid: aa7d4ae5bbd60e447987152d3bec90a1, type: 3}
       propertyPath: m_Sprite
       value: 

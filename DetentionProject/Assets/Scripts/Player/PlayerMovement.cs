@@ -147,7 +147,6 @@ public class PlayerMovement : MonoBehaviour
         if (_isDodging) yield break;
 
         dodgeDirection = _playerDir;
-        Debug.Log(dodgeDirection);
         if (dodgeDirection == Vector2.zero) 
         {
             dodgeDirection = _lastDir;
