@@ -23,7 +23,7 @@ public class Elevator : InteractableObject
     private IEnumerator WaitAndLoadScene(float waitTime)
     {
         yield return new WaitForSeconds(waitTime); 
-        Loader.Load(Loader.Scene.Thanks); 
+        Loader.Load(Loader.Scene.Dungeon); 
     }
 
     void Update()
