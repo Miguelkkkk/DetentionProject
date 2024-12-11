@@ -8,7 +8,17 @@ public class SwordInteractable : InteractableObject
     private void Start()
     {
         _renderer = GetComponent<SpriteRenderer>();
-    }
+
+        PlayerData loadedPlayer = SaveManager.LoadPlayerData();
+        if (loadedPlayer != null)
+        {
+            if (loadedPlayer.hasTakenSword)
+            {
+                this.gameObject.SetActive(false);
+            }
+        }
+        }
+
 
     public new void Interact()
     {
