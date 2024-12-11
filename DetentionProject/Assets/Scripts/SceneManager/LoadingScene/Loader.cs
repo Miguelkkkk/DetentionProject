@@ -13,7 +13,8 @@ public static class Loader {
         PlayerSelection,
         Loading,
         Tutorial,
-        TestScene,   
+        Thanks,
+        TestScene,
     }
 
     private static Action onLoaderCallback;
