@@ -3,6 +3,10 @@ using UnityEngine;
 public class PlayerLoader : MonoBehaviour
 {
     public GameObject player;
+    public GameObject playerHand;
+    public Sprite sofiaHand;
+    public Sprite andreHand;
+    public GameObject activeWeapon;
     public GameEvent onPlayerIconChanged;
 
     public RuntimeAnimatorController defaultAnimatorController;
@@ -17,16 +21,21 @@ public class PlayerLoader : MonoBehaviour
             Debug.Log("Jogador carregado: " + loadedPlayer.playerName);
 
             Animator playerAnimator = player.GetComponent<Animator>();
+            if (loadedPlayer.hasTakenSword) {
+                activeWeapon.SetActive(true);
+            }
             if (playerAnimator != null)
             {
                 switch (loadedPlayer.playerName)
                 {
                     case "Sofia":
                         playerAnimator.runtimeAnimatorController = alternateAnimatorController;
+                        playerHand.GetComponent<SpriteRenderer>().sprite = sofiaHand;
                         break;
 
                     case "Andre":
                         playerAnimator.runtimeAnimatorController = defaultAnimatorController;
+                        playerHand.GetComponent<SpriteRenderer>().sprite = andreHand;
                         break;
                 }
             }

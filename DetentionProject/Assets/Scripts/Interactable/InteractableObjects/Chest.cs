@@ -2,41 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chest : MonoBehaviour, IInteractable
+public class Chest : InteractableObject
 {
-
-    private Animator _chestanimator;
-    private bool isOpened = false;
-    private SpriteRenderer _chestRenderer;
-    [SerializeField]private bool isInRange;
-
     public void Awake()
     {
-        _chestanimator = GetComponent<Animator>();
-        _chestRenderer = GetComponent<SpriteRenderer>();
+        _animator = GetComponent<Animator>();
+        _renderer = GetComponent<SpriteRenderer>();
     }
     public void Update()
     {
         isInRange = GetComponentInChildren<Interactor>().isInRange;
-        if(isInRange && !isOpened)
+        if(isInRange && !hasInteracted)
         {
-            _chestRenderer.material.SetFloat("_OutlineThickness", 1f);
+            UpdateOutline(true);
         }
         else
         {
-            _chestRenderer.material.SetFloat("_OutlineThickness", 0f);
+            UpdateOutline(false);
         }
     }
     public void OpenChest()
     {
         if (isInRange) {
-            _chestanimator.SetTrigger("ChestOpened");
-            isOpened = true;
-            _chestRenderer.material.SetFloat("_OutlineThickness", 0f);
+            _animator.SetTrigger("ChestOpened");
+            hasInteracted = true;
+            UpdateOutline(false);
         }
     }
 
-    public void Interact()
+   
+    public new void Interact()
     {
         OpenChest();
     }

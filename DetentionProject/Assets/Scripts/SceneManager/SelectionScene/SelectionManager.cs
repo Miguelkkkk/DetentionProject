@@ -41,7 +41,7 @@ public class SelectionsManager : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                PlayerData player = new PlayerData("Sofia");
+                PlayerData player = new PlayerData("Sofia", false);
                 SaveManager.SavePlayerData(player);
                 Loader.Load(Loader.Scene.Tutorial);
             }
@@ -56,7 +56,7 @@ public class SelectionsManager : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                PlayerData player = new PlayerData("Andre");
+                PlayerData player = new PlayerData("Andre", false);
                 SaveManager.SavePlayerData(player);
                 Loader.Load(Loader.Scene.Tutorial);
             }
