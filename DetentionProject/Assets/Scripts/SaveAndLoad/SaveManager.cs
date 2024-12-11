@@ -6,9 +6,37 @@ public static class SaveManager
     private static string saveFilePath = "playerData.json";
 
     // Salvar dados
-    public static void SavePlayerData(PlayerData playerData)
+    public static void SavePlayerData(PlayerData newPlayerData)
     {
-        string json = JsonUtility.ToJson(playerData, true);
+        PlayerData existingPlayerData = LoadPlayerData();
+
+        if (existingPlayerData != null)
+        {
+            // Atualizar apenas os campos não nulos do novo PlayerData
+            foreach (var field in typeof(PlayerData).GetFields())
+            {
+                object newValue = field.GetValue(newPlayerData);
+                if (newValue != null)
+                {
+                    field.SetValue(existingPlayerData, newValue);
+                }
+            }
+
+            foreach (var property in typeof(PlayerData).GetProperties())
+            {
+                object newValue = property.GetValue(newPlayerData);
+                if (newValue != null && property.CanWrite)
+                {
+                    property.SetValue(existingPlayerData, newValue);
+                }
+            }
+        }
+        else
+        {
+            existingPlayerData = newPlayerData;
+        }
+
+        string json = JsonUtility.ToJson(existingPlayerData, true);
         File.WriteAllText(GetSaveFilePath(), json);
         Debug.Log("Player data saved");
     }

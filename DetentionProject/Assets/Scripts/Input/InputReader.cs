@@ -12,6 +12,7 @@ public class InputReader : ScriptableObject
     public event UnityAction<Vector2> MovementEvent;
     public event UnityAction InteractEvent;
     public event UnityAction DodgeEvent;
+    public event UnityAction AttackEvent;
     public event UnityAction RunEvent;
     public event UnityAction RunCancelledEvent;
 
@@ -19,6 +20,7 @@ public class InputReader : ScriptableObject
     private InputAction _interactAction;
     private InputAction _dodgeAction;
     private InputAction _runAction;
+    private InputAction _attackAction;
 
     private void OnEnable()
     {
@@ -63,6 +65,17 @@ public class InputReader : ScriptableObject
 
         _dodgeAction.Enable();
         #endregion
+
+        #region attack
+
+        _attackAction = _inputasset.FindAction("Attack");
+
+        _attackAction.started += OnAttack;
+        _attackAction.performed += OnAttack;
+        _attackAction.canceled += OnAttack;
+
+        _attackAction.Enable();
+        #endregion
     }
 
     private void OnDisable()
@@ -101,11 +114,28 @@ public class InputReader : ScriptableObject
 
         _dodgeAction.Disable();
         #endregion
+
+        #region attack
+
+        _attackAction.started -= OnAttack;
+        _attackAction.performed -= OnAttack;
+        _attackAction.canceled -= OnAttack;
+
+        _attackAction.Disable();
+        #endregion
     }
 
     private void OnMovement(InputAction.CallbackContext context)
     {
         MovementEvent?.Invoke(context.ReadValue<Vector2>());
+    }
+
+    private void OnAttack(InputAction.CallbackContext context)
+    {
+        if (AttackEvent != null && context.started)
+        {
+            AttackEvent.Invoke();
+        }
     }
 
     private void OnInteract(InputAction.CallbackContext context)

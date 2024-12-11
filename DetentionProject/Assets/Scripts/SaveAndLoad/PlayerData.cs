@@ -6,9 +6,11 @@ using UnityEngine;
 public class PlayerData
 {
     public string playerName;
+    public bool hasTakenSword;
 
-    public PlayerData(string playerName)
+    public PlayerData(string playerName, bool hasTakenSword)
     {
         this.playerName = playerName;
+        this.hasTakenSword = hasTakenSword;
     }
 }

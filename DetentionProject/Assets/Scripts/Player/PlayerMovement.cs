@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public ParticleSystem dust;
+    public GameObject activeWeapon;
+
     [Header("Input")]
     public InputReader input;
 
@@ -151,6 +153,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (_isDodging) yield break;
 
+        activeWeapon.gameObject.SetActive(false);
+
         dodgeDirection = _playerDir;
         if (dodgeDirection == Vector2.zero) 
         {
@@ -176,6 +180,8 @@ public class PlayerMovement : MonoBehaviour
         _playerDir = Vector2.zero;
 
         input.Enable();
+
+        activeWeapon.gameObject.SetActive(true);
 
         _isDodging = false;
     }
