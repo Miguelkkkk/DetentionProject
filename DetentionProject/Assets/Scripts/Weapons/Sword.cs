@@ -7,9 +7,11 @@ public class Sword : MonoBehaviour
     [SerializeField] private InputReader input;
 
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject swordCollision;
+    [SerializeField] private GameObject playerHand;
 
     private Animator _swordAnimator;
-    private Animator _playerAnimator;
+    [SerializeField] private Animator playerAnimator;
     [SerializeField] private GameObject activeWeapon;
 
     private SpriteRenderer playerSpriteRenderer;
@@ -38,25 +40,49 @@ public class Sword : MonoBehaviour
 
     private void Awake()
     {
+
         _swordAnimator = GetComponent<Animator>();
-        _playerAnimator = GetComponentInParent<Animator>();
         playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
         weaponSpriteRenderer = activeWeapon.GetComponentInChildren<SpriteRenderer>();
+        HideWeapon();
+        swordCollision.SetActive(false);
+        playerHand.SetActive(false);
     }
 
     private void Update()
     {
-        MouseFollowWithOffset();
+        if (isAttacking)
+        {
+            MouseFollowWithOffset();
+        }
         AdjustWeaponSorting();
     }
 
     private void Attack()
     {
         canAttack = false;
-        isAttacking = true; // Bloqueia novos ataques até o cooldown ser concluído
-        ShowWeapon(); // Garante que a arma está visível durante o ataque
+        isAttacking = true; 
+        ShowWeapon(); 
+        swordCollision.SetActive(true);
+        playerHand.SetActive(true);
         _swordAnimator.SetTrigger("Attack");
-        _playerAnimator.SetTrigger("Attack");
+
+        Vector3 mousePos = Input.mousePosition;
+        Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(player.transform.position);
+        Vector3 direction = mousePos - playerScreenPoint;
+
+        playerAnimator.SetFloat("LastHorizontal", direction.x);
+        playerAnimator.SetFloat("LastVertical", direction.y);
+        if (direction.x > 0)
+        {
+            playerAnimator.gameObject.transform.eulerAngles = new Vector2(0f, 0f);
+        }
+        else if (direction.x < 0)
+        {
+            playerAnimator.gameObject.transform.eulerAngles = new Vector2(0f, 180f);
+        }
+        input.Disable();
+        playerAnimator.SetTrigger("Attack");
         StartCoroutine(AttackCooldown(0.5f));
     }
 
@@ -64,7 +90,9 @@ public class Sword : MonoBehaviour
     {
         yield return new WaitForSeconds(cooldownTime); // Tempo de espera do cooldown
         canAttack = true;
-        yield return new WaitForSeconds(0.2f); // Tempo extra antes de ocultar a arma
+        input.Enable();
+        swordCollision.SetActive(false);
+        playerHand.SetActive(false);
         HideWeapon();
         isAttacking = false; // Permite novos ataques
     }
@@ -76,22 +104,28 @@ public class Sword : MonoBehaviour
 
         Vector3 direction = mousePos - playerScreenPoint;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
+        if(!isAttacking) { 
         if (angle > 45 && angle <= 135)
         {
             activeWeapon.transform.rotation = Quaternion.Euler(0, 0, 90);
+            swordCollision.transform.rotation = Quaternion.Euler(0, 0, 90);
         }
         else if (angle < -45 && angle >= -135)
         {
+         
             activeWeapon.transform.rotation = Quaternion.Euler(0, 0, -90);
+            swordCollision.transform.rotation = Quaternion.Euler(0, 0, -90);
         }
         else if (angle > -45 && angle <= 45)
         {
             activeWeapon.transform.rotation = Quaternion.Euler(0, 0, 0);
+            swordCollision.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else
         {
             activeWeapon.transform.rotation = Quaternion.Euler(0, 180, 0);
+            swordCollision.transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
         }
     }
 

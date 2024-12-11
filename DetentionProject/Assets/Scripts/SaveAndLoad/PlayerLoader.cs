@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerLoader : MonoBehaviour
 {
     public GameObject player;
+    public GameObject activeWeapon;
     public GameEvent onPlayerIconChanged;
 
     public RuntimeAnimatorController defaultAnimatorController;
@@ -17,6 +18,9 @@ public class PlayerLoader : MonoBehaviour
             Debug.Log("Jogador carregado: " + loadedPlayer.playerName);
 
             Animator playerAnimator = player.GetComponent<Animator>();
+            if (loadedPlayer.hasTakenSword) {
+                activeWeapon.SetActive(true);
+            }
             if (playerAnimator != null)
             {
                 switch (loadedPlayer.playerName)
