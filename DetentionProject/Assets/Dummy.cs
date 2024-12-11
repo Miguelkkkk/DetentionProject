@@ -46,11 +46,10 @@ public class Dummy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("AttackHitBox"))
         {
-            if (!canTakeDamage || isFlashing) return; // Impede dano se já estiver em cooldown ou flashing
+            if (!canTakeDamage || isFlashing) return;
 
             CinemachineShake.Instance.shakeCamera(6f, .2f);
 
-            // Inverter a imagem
             InvertImage();
 
             if (_hitEffectCoroutine == null)
@@ -62,44 +61,40 @@ public class Dummy : MonoBehaviour
 
     private IEnumerator HitEffect()
     {
-        // Começar o efeito de flash
-        if (_renderer == null || _collider == null) yield break; // Verifica se os componentes ainda são válidos
+        if (_renderer == null || _collider == null) yield break; 
 
-        isFlashing = true; // Marca que o efeito está ocorrendo
+        isFlashing = true;
 
         float elapsedTime = 0f;
 
-        // Desabilitar o Collider temporariamente para impedir novos hits
         _collider.enabled = false;
 
         while (elapsedTime < flashDuration)
         {
             float t = elapsedTime / flashDuration;
-            ApplyFlashEffect(Mathf.Lerp(0f, 1f, t)); // Aumenta a intensidade do flash
+            ApplyFlashEffect(Mathf.Lerp(0f, 1f, t)); 
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        // Devolver ao estado normal
+
         ApplyFlashEffect(0f);
 
-        // Habilitar o Collider novamente após o efeito de dano
         _collider.enabled = true;
 
-        // Aguardar o cooldown antes de permitir outro flash
         yield return new WaitForSeconds(cooldownDuration);
 
-        // Finaliza o efeito de flash
+    
         isFlashing = false;
         _hitEffectCoroutine = null;
     }
 
     private void ApplyFlashEffect(float hitEffectAmount)
     {
-        if (_renderer == null) return; // Verifica se o Renderer ainda é válido
+        if (_renderer == null) return; 
 
         _renderer.GetPropertyBlock(_propertyBlock);
-        _propertyBlock.SetFloat("_HitEffectAmount", hitEffectAmount); // Supondo que o shader tenha essa propriedade
+        _propertyBlock.SetFloat("_HitEffectAmount", hitEffectAmount); 
         _renderer.SetPropertyBlock(_propertyBlock);
     }
 
@@ -107,7 +102,6 @@ public class Dummy : MonoBehaviour
     {
         if (_spriteRenderer != null)
         {
-            // Inverter a imagem horizontalmente (flipX)
             _spriteRenderer.flipX = !_spriteRenderer.flipX;
         }
     }
