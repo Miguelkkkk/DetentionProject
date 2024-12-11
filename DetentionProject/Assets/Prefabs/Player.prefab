@@ -4947,7 +4947,6 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8132261224338567076}
-  - {fileID: 8621014503794721496}
   m_Father: {fileID: 8623300149846621155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 85.418}
 --- !u!212 &2699916054785645121
@@ -5038,6 +5037,7 @@ MonoBehaviour:
   input: {fileID: 11400000, guid: 7a281e4b1b6e1f64abd29923d0acf93a, type: 2}
   player: {fileID: 8462918584066463690}
   swordCollision: {fileID: 0}
+  playerHand: {fileID: 0}
   playerAnimator: {fileID: 0}
   activeWeapon: {fileID: 8016667394965905417}
 --- !u!1 &6187200727698689831
@@ -5065,12 +5065,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6187200727698689831}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.8073293, w: 0.59010124}
-  m_LocalPosition: {x: -0.6568455, y: 0.63957286, z: 0.012326751}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4828381503376148481}
+  m_Father: {fileID: 8623300149846621155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &5446957834937565577
 PolygonCollider2D:
@@ -5157,6 +5157,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4828381503376148481}
+  - {fileID: 8621014503794721496}
   m_Father: {fileID: 1003513117351016319}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8016667394965905417
@@ -5516,6 +5517,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8462918584066463690}
+  playerHand: {fileID: 0}
+  sofiaHand: {fileID: 0}
+  andreHand: {fileID: 0}
+  activeWeapon: {fileID: 8016667394965905417}
   onPlayerIconChanged: {fileID: 11400000, guid: b808f1d39ebb34843bbf3634322f0111, type: 2}
-  defaultAnimatorController: {fileID: 0}
-  alternateAnimatorController: {fileID: 0}
+  defaultAnimatorController: {fileID: 9100000, guid: da804928b81968c439f5b2d9f638f9c8, type: 2}
+  alternateAnimatorController: {fileID: 22100000, guid: 67e646ff5fc995b42a1e39e81ca9eefa, type: 2}

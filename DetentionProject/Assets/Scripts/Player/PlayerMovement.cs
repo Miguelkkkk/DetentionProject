@@ -28,7 +28,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private int _dodgeDistance;
     [SerializeField] private float _dodgeStaminaCost;
-    [SerializeField] private float _dodgeDuration = 0.5f; 
+    [SerializeField] private float _dodgeDuration = 0.5f;
+    private PlayerData loadedPlayer;
 
     private bool _isDodging = false;
     private bool _isRunning = false;
@@ -181,8 +182,15 @@ public class PlayerMovement : MonoBehaviour
 
         input.Enable();
 
-        activeWeapon.gameObject.SetActive(true);
+        PlayerData loadedPlayer = SaveManager.LoadPlayerData();
 
+        if (loadedPlayer != null)
+        {
+            if (loadedPlayer.hasTakenSword)
+            {
+                activeWeapon.gameObject.SetActive(true);
+            }
+        }
         _isDodging = false;
     }
 

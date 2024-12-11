@@ -3,6 +3,9 @@ using UnityEngine;
 public class PlayerLoader : MonoBehaviour
 {
     public GameObject player;
+    public GameObject playerHand;
+    public Sprite sofiaHand;
+    public Sprite andreHand;
     public GameObject activeWeapon;
     public GameEvent onPlayerIconChanged;
 
@@ -27,10 +30,12 @@ public class PlayerLoader : MonoBehaviour
                 {
                     case "Sofia":
                         playerAnimator.runtimeAnimatorController = alternateAnimatorController;
+                        playerHand.GetComponent<SpriteRenderer>().sprite = sofiaHand;
                         break;
 
                     case "Andre":
                         playerAnimator.runtimeAnimatorController = defaultAnimatorController;
+                        playerHand.GetComponent<SpriteRenderer>().sprite = andreHand;
                         break;
                 }
             }

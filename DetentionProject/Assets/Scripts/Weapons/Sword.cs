@@ -104,7 +104,7 @@ public class Sword : MonoBehaviour
 
         Vector3 direction = mousePos - playerScreenPoint;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        if(!isAttacking) { 
+      
         if (angle > 45 && angle <= 135)
         {
             activeWeapon.transform.rotation = Quaternion.Euler(0, 0, 90);
@@ -125,7 +125,6 @@ public class Sword : MonoBehaviour
         {
             activeWeapon.transform.rotation = Quaternion.Euler(0, 180, 0);
             swordCollision.transform.rotation = Quaternion.Euler(0, 180, 0);
-        }
         }
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SwordInteractable : InteractableObject
 {
+    public GameObject swordObject;
     private void Start()
     {
         _renderer = GetComponent<SpriteRenderer>();
@@ -14,6 +15,7 @@ public class SwordInteractable : InteractableObject
         if (isInRange) { 
             PlayerData player = new PlayerData(null, true);
             SaveManager.SavePlayerData(player);
+            swordObject.SetActive(true);
             this.gameObject.SetActive(false);
         }
     }
