@@ -9,16 +9,15 @@ public class NPCInteraction : InteractableObject
     private void Start()
     {
         _renderer = GetComponent<SpriteRenderer>();
-        _objCanvasGroup = obj.GetComponent<CanvasGroup>(); // Assuming the object has a CanvasGroup.
+        _objCanvasGroup = obj.GetComponent<CanvasGroup>(); 
 
         if (_objCanvasGroup == null)
         {
-            // If no CanvasGroup is found, add one.
             _objCanvasGroup = obj.AddComponent<CanvasGroup>();
         }
 
-        _objCanvasGroup.alpha = 0f; // Initializes the object as invisible.
-        obj.SetActive(false); // Initially deactivate the object.
+        _objCanvasGroup.alpha = 0f; 
+        obj.SetActive(false);
     }
 
     public new void Interact()
@@ -31,12 +30,12 @@ public class NPCInteraction : InteractableObject
 
     private IEnumerator ShowAndHideObject()
     {
-        obj.SetActive(true); // Make the object active.
+        obj.SetActive(true);
 
-        float fadeDuration = 1f; // Duration for the object to appear.
+        float fadeDuration = 1f; 
         float fadeSpeed = 1f / fadeDuration;
 
-        // Gradually appear the object (fade in).
+   
         while (_objCanvasGroup.alpha < 1f)
         {
             _objCanvasGroup.alpha += fadeSpeed * Time.deltaTime;
@@ -45,10 +44,9 @@ public class NPCInteraction : InteractableObject
 
         _objCanvasGroup.alpha = 1f;
 
-        // Wait for 3 seconds before disappearing.
-        yield return new WaitForSeconds(3f);
+          yield return new WaitForSeconds(2f);
 
-        // Gradually disappear the object (fade out).
+   
         while (_objCanvasGroup.alpha > 0f)
         {
             _objCanvasGroup.alpha -= fadeSpeed * Time.deltaTime;
@@ -56,7 +54,7 @@ public class NPCInteraction : InteractableObject
         }
 
         _objCanvasGroup.alpha = 0f;
-        obj.SetActive(false); // Deactivate the object after it disappears.
+        obj.SetActive(false); 
     }
 
     void Update()

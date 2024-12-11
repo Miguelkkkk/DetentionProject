@@ -9,6 +9,7 @@ public class Sword : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject swordCollision;
     [SerializeField] private GameObject playerHand;
+    [SerializeField] private GameObject SwordTrail;
 
     private Animator _swordAnimator;
     [SerializeField] private Animator playerAnimator;
@@ -47,11 +48,12 @@ public class Sword : MonoBehaviour
         HideWeapon();
         swordCollision.SetActive(false);
         playerHand.SetActive(false);
+        SwordTrail.SetActive(false);
     }
 
     private void Update()
     {
-        if (isAttacking)
+        if (!isAttacking)
         {
             MouseFollowWithOffset();
         }
@@ -61,18 +63,30 @@ public class Sword : MonoBehaviour
     private void Attack()
     {
         canAttack = false;
-        isAttacking = true; 
-        ShowWeapon(); 
+        isAttacking = true;
+        ShowWeapon();
         swordCollision.SetActive(true);
         playerHand.SetActive(true);
+        SwordTrail.SetActive(true);
+
         _swordAnimator.SetTrigger("Attack");
 
-        Vector3 mousePos = Input.mousePosition;
-        Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(player.transform.position);
-        Vector3 direction = mousePos - playerScreenPoint;
+        // Obtém a posição do mouse na tela e converte para o mundo
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPos.z = 0; // Garantir que a posição Z seja 0
 
+        // Calcula a direção do ataque
+        Vector3 direction = (mouseWorldPos - player.transform.position).normalized;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        // Aponta a espada e a colisão para a direção do mouse
+        activeWeapon.transform.rotation = Quaternion.Euler(0, 0, angle);
+        swordCollision.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        // Ajusta a orientação do personagem com base na direção do ataque
         playerAnimator.SetFloat("LastHorizontal", direction.x);
         playerAnimator.SetFloat("LastVertical", direction.y);
+
         if (direction.x > 0)
         {
             playerAnimator.gameObject.transform.eulerAngles = new Vector2(0f, 0f);
@@ -81,10 +95,13 @@ public class Sword : MonoBehaviour
         {
             playerAnimator.gameObject.transform.eulerAngles = new Vector2(0f, 180f);
         }
+
         input.Disable();
         playerAnimator.SetTrigger("Attack");
+
         StartCoroutine(AttackCooldown(0.5f));
     }
+
 
     private IEnumerator AttackCooldown(float cooldownTime)
     {
@@ -93,18 +110,21 @@ public class Sword : MonoBehaviour
         input.Enable();
         swordCollision.SetActive(false);
         playerHand.SetActive(false);
+        SwordTrail.SetActive(false);
         HideWeapon();
         isAttacking = false; // Permite novos ataques
     }
 
     private void MouseFollowWithOffset()
     {
+        if (isAttacking) return; // Evita que a espada rode durante o ataque
+
         Vector3 mousePos = Input.mousePosition;
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(player.transform.position);
 
         Vector3 direction = mousePos - playerScreenPoint;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-      
+
         if (angle > 45 && angle <= 135)
         {
             activeWeapon.transform.rotation = Quaternion.Euler(0, 0, 90);
@@ -112,7 +132,7 @@ public class Sword : MonoBehaviour
         }
         else if (angle < -45 && angle >= -135)
         {
-         
+
             activeWeapon.transform.rotation = Quaternion.Euler(0, 0, -90);
             swordCollision.transform.rotation = Quaternion.Euler(0, 0, -90);
         }
