@@ -20,6 +20,14 @@ public class FadeInText : MonoBehaviour
         StartCoroutine(FadeIn());
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Loader.Load(Loader.Scene.MainMenu);
+        }
+    }
+
     private IEnumerator FadeIn()
     {
         float timeElapsed = 0f;
