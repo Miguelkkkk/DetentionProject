@@ -18,8 +18,8 @@ TagManager:
   - PlayerCollider
   - PlayerHitbox
   - AttackHitbox
-  - 
-  - 
+  - EnemyCollider
+  - EnemySight
   - 
   - 
   - 

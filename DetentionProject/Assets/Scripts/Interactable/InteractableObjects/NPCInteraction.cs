@@ -5,12 +5,11 @@ public class NPCInteraction : InteractableObject
 {
     public GameObject obj;
     private CanvasGroup _objCanvasGroup;
-    private new bool isInRange;
 
     private void Start()
     {
         _renderer = GetComponent<SpriteRenderer>();
-        _objCanvasGroup = obj.GetComponent<CanvasGroup>(); 
+        _objCanvasGroup = obj.GetComponent<CanvasGroup>(); // Assuming the object has a CanvasGroup.
 
         if (_objCanvasGroup == null)
         {
@@ -24,7 +23,10 @@ public class NPCInteraction : InteractableObject
 
     public new void Interact()
     {
-        StartCoroutine(ShowAndHideObject());
+        if (isInRange)
+        {
+            StartCoroutine(ShowAndHideObject());
+        }
     }
 
     private IEnumerator ShowAndHideObject()
