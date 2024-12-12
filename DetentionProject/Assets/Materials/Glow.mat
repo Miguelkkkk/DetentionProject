@@ -56,5 +56,5 @@ Material:
     m_Floats:
     - _HitEffectAmount: 1
     m_Colors:
-    - _HitEffectColor: {r: 2.869203, g: 5.0256453, b: 7.6996336, a: 0}
+    - _HitEffectColor: {r: 5.738406, g: 10.0512905, b: 15.399267, a: 0}
   m_BuildTextureStacks: []

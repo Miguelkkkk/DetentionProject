@@ -1,74 +1,76 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] private float speed; // Velocidade de movimento
-    [SerializeField] private bool isInSlimeRange; // Verifica se o inimigo está dentro do alcance de detecção
-    [SerializeField] private bool isPlayerSpotted; // Verifica se o inimigo viu o jogador
-    [SerializeField] private Transform target; // Alvo do inimigo (provavelmente o jogador)
+    public Transform player;
+    public float followSpeed = 3f;
+    public float obstacleAvoidanceDistance = 1.5f;
+    private bool isFollowing = false;
+    private Rigidbody2D rb;
+    private Animator _animator;
 
-    private Rigidbody2D _enemyRigidBody; // Rigidbody do inimigo
-    private Animator _enemyAnimator; // Animator do inimigo
 
-    private void Awake()
+    public EnemyHealth health;
+
+    void Start()
     {
-        // Inicializa os componentes
-        _enemyAnimator = GetComponent<Animator>();
-        _enemyRigidBody = GetComponent<Rigidbody2D>();
+        _animator = this.gameObject.GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    private void Update()
     {
-        // Verifica se o inimigo está em alcance do slime (provavelmente é um detector de proximidade)
-        isInSlimeRange = GetComponentInChildren<Interactor>().isInRange;
+        if (health != null && health.isDeafeated())
+        {
 
-        // Se o inimigo detectou o jogador, ele começa a persegui-lo
-        if (isInSlimeRange)
-        {
-            isPlayerSpotted = true;
-        }
-
-        // Se o jogador foi visto, o inimigo se move, caso contrário, ele para
-        if (isPlayerSpotted)
-        {
-            Move();
-        }
-        else
-        {
-            StopMove();
-        }
-    }
-
-    // Função que faz o inimigo se mover em direção ao alvo (jogador)
-    private void Move()
-    {
-        // Verifica se o alvo (jogador) foi atribuído corretamente
-        if (target == null)
-        {
-            Debug.LogError("Target not assigned!");
+            rb.velocity = Vector2.zero;
             return;
         }
-
-        // Calcula a direção do movimento em direção ao alvo
-        Vector2 targetPos = target.position;
-        Vector2 currentPos = transform.position;
-
-        Vector2 direction = targetPos - currentPos;
-        direction.Normalize(); // Normaliza a direção para garantir que o inimigo mova a uma velocidade constante
-
-        // Aplica a velocidade e a direção ao Rigidbody2D
-        _enemyRigidBody.velocity = direction * speed;
-
-        // Atualiza a animação para indicar que o inimigo está se movendo
-        _enemyAnimator.SetBool("IsMoving", true);
+        _animator.SetBool("IsMoving", isFollowing);
+        if (isFollowing)
+        {
+            FollowPlayer();
+        }
     }
 
-    // Função que faz o inimigo parar
-    private void StopMove()
+    void FollowPlayer()
     {
-        _enemyRigidBody.velocity = Vector2.zero; // Para o movimento
-        _enemyAnimator.SetBool("IsMoving", false); // Atualiza a animação para indicar que o inimigo parou
+        Vector2 directionToPlayer = (player.position - transform.position).normalized;
+        Vector2 avoidanceDirection = AvoidObstacles(directionToPlayer);
+
+        Vector2 movement = avoidanceDirection * followSpeed * Time.deltaTime;
+        rb.MovePosition(rb.position + movement);
+    }
+
+    Vector2 AvoidObstacles(Vector2 direction)
+    {
+        // Cast múltiplos raycasts em diferentes direções ao redor do inimigo
+        Vector2[] directions = {
+            direction,
+            Quaternion.Euler(0, 0, 45) * direction,
+            Quaternion.Euler(0, 0, -45) * direction
+        };
+
+        Vector2 adjustedDirection = direction;
+        foreach (Vector2 dir in directions)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, obstacleAvoidanceDistance);
+            if (hit.collider != null && hit.collider.CompareTag("Wall"))
+            {
+                Vector2 hitNormal = hit.normal;
+                adjustedDirection += hitNormal * 0.5f; // Ajuste suave na direção
+            }
+        }
+
+        adjustedDirection.Normalize();
+        return adjustedDirection;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            isFollowing = true;
+        }
     }
 }

@@ -29,10 +29,13 @@ public class PlayerLife : MonoBehaviour, IDamageable
     private SpriteRenderer spriteRenderer;
     private Material flashMaterial;
 
+    private Rigidbody2D _playerRigidBody;
+
 
 
     public void Awake()
     {
+        _playerRigidBody = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer != null)
@@ -72,6 +75,7 @@ public class PlayerLife : MonoBehaviour, IDamageable
         isDead = true;
         canTakeDamage = false;
         input.Disable();
+        _playerRigidBody.bodyType = RigidbodyType2D.Static;
 
         yield return new WaitForSeconds(2);
 
@@ -89,11 +93,28 @@ public class PlayerLife : MonoBehaviour, IDamageable
                 StartCoroutine(DamageCooldown());
             }
         }
+        if (collision.gameObject.CompareTag("Enemy") && canTakeDamage && !isDead)
+        {
+            if (!isInTrigger)
+            {
+                StartCoroutine(DamageCooldown());
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Damager"))
+        {
+            isInTrigger = false;
+
+            if (DamageCooldown() != null)
+            {
+                StopCoroutine(DamageCooldown());
+            }
+        }
+
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             isInTrigger = false;
 
