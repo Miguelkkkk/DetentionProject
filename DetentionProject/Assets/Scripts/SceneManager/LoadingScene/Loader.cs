@@ -14,7 +14,6 @@ public static class Loader {
         Loading,
         Tutorial,
         Thanks,
-        Dungeon,
         TestScene,
     }
 
