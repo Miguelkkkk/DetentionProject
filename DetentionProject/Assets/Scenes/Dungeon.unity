@@ -13576,8 +13576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab2a0fa541ee8847b449b82f8609c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 27833271}
-  textMeshPro: {fileID: 1327397857}
 --- !u!114 &1327397857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29207,7 +29205,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6b2210d65b4cfe4b81a1a8359d59f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToActivate: {fileID: 1747190916}
 --- !u!60 &1902153940
 PolygonCollider2D:
   m_ObjectHideFlags: 0
