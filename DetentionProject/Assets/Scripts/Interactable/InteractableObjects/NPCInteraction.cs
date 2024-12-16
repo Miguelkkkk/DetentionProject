@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class NPCInteraction : InteractableObject
@@ -12,9 +10,13 @@ public class NPCInteraction : InteractableObject
 
     public new void Interact()
     {
-        //código de interação.
+        if (isInRange)
+        {
+            //coisas
+        }
     }
 
+   
     void Update()
     {
         isInRange = GetComponentInChildren<Interactor>().isInRange;
@@ -22,7 +24,8 @@ public class NPCInteraction : InteractableObject
         {
             UpdateOutline(true);
         }
-        else {
+        else
+        {
             UpdateOutline(false);
         }
     }

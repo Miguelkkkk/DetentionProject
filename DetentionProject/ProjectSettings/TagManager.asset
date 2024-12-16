@@ -8,6 +8,10 @@ TagManager:
   - AttackHitBox
   - Enemy
   - Damager
+  - Wall
+  - WallFrame
+  - Objects
+  - PlayerHitBox
   layers:
   - Default
   - TransparentFX
@@ -18,8 +22,8 @@ TagManager:
   - PlayerCollider
   - PlayerHitbox
   - AttackHitbox
-  - 
-  - 
+  - EnemyCollider
+  - EnemySight
   - 
   - 
   - 

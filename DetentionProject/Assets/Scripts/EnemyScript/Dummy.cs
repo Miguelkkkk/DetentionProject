@@ -5,15 +5,15 @@ public class Dummy : MonoBehaviour
 {
     private MaterialPropertyBlock _propertyBlock;
     private Renderer _renderer;
-    private Collider2D _collider; // Armazena o collider para controle
+    private Collider2D _collider;
     private Coroutine _hitEffectCoroutine;
 
     [Header("Flash")]
-    [SerializeField] private float flashDuration = 0.1f; // Duração do flash
-    [SerializeField] private float cooldownDuration = 0.3f; // Duração do cooldown entre os flashes
+    [SerializeField] private float flashDuration = 0.1f; 
+    [SerializeField] private float cooldownDuration = 0.3f; 
 
     private bool canTakeDamage = true;
-    private bool isFlashing = false; // Controla se o efeito de flash está em andamento
+    private bool isFlashing = false; 
 
     private SpriteRenderer _spriteRenderer;
 
