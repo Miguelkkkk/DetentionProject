@@ -77,12 +77,12 @@ MonoBehaviour:
     m_Output: 0
     m_ColliderType: 1
     m_RandomTransform: 0
-    m_Neighbors: 0100000001000000010000000200000002000000
+    m_Neighbors: 0100000002000000010000000100000002000000
     m_NeighborPositions:
     - {x: 0, y: 1, z: 0}
-    - {x: -1, y: 1, z: 0}
-    - {x: -1, y: 0, z: 0}
     - {x: 1, y: -1, z: 0}
+    - {x: -1, y: 0, z: 0}
+    - {x: -1, y: 1, z: 0}
     - {x: -1, y: -1, z: 0}
     m_RuleTransform: 0
   - m_Id: 7
@@ -191,9 +191,9 @@ MonoBehaviour:
     - {fileID: 1416656520, guid: 1c31c69818a107a458807870eb69a966, type: 3}
     - {fileID: 1639098756, guid: 1c31c69818a107a458807870eb69a966, type: 3}
     - {fileID: 1639098756, guid: 1c31c69818a107a458807870eb69a966, type: 3}
+    - {fileID: 1416656520, guid: 1c31c69818a107a458807870eb69a966, type: 3}
     - {fileID: 1639098756, guid: 1c31c69818a107a458807870eb69a966, type: 3}
-    - {fileID: 1639098756, guid: 1c31c69818a107a458807870eb69a966, type: 3}
-    - {fileID: 1639098756, guid: 1c31c69818a107a458807870eb69a966, type: 3}
+    - {fileID: 787651527, guid: 1c31c69818a107a458807870eb69a966, type: 3}
     - {fileID: 1259287960, guid: 1c31c69818a107a458807870eb69a966, type: 3}
     - {fileID: 1259287960, guid: 1c31c69818a107a458807870eb69a966, type: 3}
     - {fileID: 1511052952, guid: 1c31c69818a107a458807870eb69a966, type: 3}

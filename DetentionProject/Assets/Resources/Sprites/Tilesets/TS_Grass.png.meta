@@ -504,7 +504,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -525,7 +525,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -546,7 +546,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -554,6 +554,27 @@ TextureImporter:
       bones: []
       spriteID: 28f3775684989754185e7eee73c4af53
       internalID: 1259287960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_Grass_22
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0f07e531318c34c8f02cf349f5802e
+      internalID: 787651527
       vertices: []
       indices: 
       edges: []
@@ -584,6 +605,7 @@ TextureImporter:
       TS_Grass_2: -578490231
       TS_Grass_20: -562490907
       TS_Grass_21: 1259287960
+      TS_Grass_22: 787651527
       TS_Grass_3: 1511052952
       TS_Grass_4: 1610183439
       TS_Grass_5: -1759565978

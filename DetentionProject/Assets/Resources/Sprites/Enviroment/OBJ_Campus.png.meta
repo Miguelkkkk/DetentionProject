@@ -100,10 +100,10 @@ TextureImporter:
       name: OBJ_Campus_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 105
-        width: 40
-        height: 49
+        x: 4
+        y: 109
+        width: 42
+        height: 51
       alignment: 9
       pivot: {x: 0.47975844, y: 0.23116209}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,6 +113,90 @@ TextureImporter:
       bones: []
       spriteID: 4ff995f4cc1fb7a458708fdf1c81a853
       internalID: 1595697128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OBJ_Campus_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 110
+        width: 40
+        height: 49
+      alignment: 9
+      pivot: {x: 0.47, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0185bedc79f44864298498d371231f09
+      internalID: -1860699294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OBJ_Campus_2
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 110
+        width: 40
+        height: 49
+      alignment: 9
+      pivot: {x: 0.47, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4cf6d357af8474c95fb7f127ce348f
+      internalID: 1281231723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OBJ_Campus_3
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 56
+        width: 40
+        height: 49
+      alignment: 9
+      pivot: {x: 0.47, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e76814fd54b3b94a9ae9a07f005b8f8
+      internalID: 1601260012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OBJ_Campus_4
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 56
+        width: 40
+        height: 49
+      alignment: 9
+      pivot: {x: 0.47, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48364c55a0293e2408aeb6a90f62e26f
+      internalID: 1469929758
       vertices: []
       indices: 
       edges: []
@@ -129,6 +213,10 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       OBJ_Campus_0: 1595697128
+      OBJ_Campus_1: -1860699294
+      OBJ_Campus_2: 1281231723
+      OBJ_Campus_3: 1601260012
+      OBJ_Campus_4: 1469929758
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

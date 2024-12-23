@@ -18,11 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial.unity
     guid: ecad6a438912b914b93121cdef00ff50
   - enabled: 1
-    path: Assets/Scenes/Thanks.unity
-    guid: e3c690ac76c2d4341bddad4ec77f27fb
-  - enabled: 1
-    path: Assets/Scenes/Dungeon.unity
-    guid: 88d3461b9c5e03242a2725480e65473c
+    path: Assets/Scenes/CampusArea.unity
+    guid: f07d31afa0fdf364aa5b94a62caefa80
   - enabled: 0
     path: Assets/Scenes/TestScene.unity
     guid: de5e7101fcc7e5c4d89502ad71535045
