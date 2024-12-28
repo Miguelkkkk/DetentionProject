@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.github.teodorvecerdi.dialoguegraph": "https://github.com/TeodorVecerdi/DialogueGraph.git",
     "com.unity.2d.aseprite": "1.1.2",
     "com.unity.cinemachine": "2.9.7",
     "com.unity.collab-proxy": "2.3.1",
