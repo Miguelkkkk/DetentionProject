@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial.unity
     guid: ecad6a438912b914b93121cdef00ff50
   - enabled: 1
-    path: Assets/Scenes/CampusArea.unity
+    path: Assets/Scenes/WestCampus.unity
     guid: f07d31afa0fdf364aa5b94a62caefa80
   - enabled: 0
     path: Assets/Scenes/TestScene.unity
