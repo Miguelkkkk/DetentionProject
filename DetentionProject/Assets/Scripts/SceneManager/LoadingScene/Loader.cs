@@ -18,6 +18,7 @@ public static class Loader {
         WestCampus,
         UndergroundDungeon,
         Tutorial,
+        PinkForest,
 
     }
 

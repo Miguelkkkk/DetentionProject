@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Tutorial.unity
     guid: ecad6a438912b914b93121cdef00ff50
+  - enabled: 1
+    path: Assets/Scenes/PinkForest.unity
+    guid: b5b832608dd6b7745a9ed07a522f7fe1
   m_configObjects: {}

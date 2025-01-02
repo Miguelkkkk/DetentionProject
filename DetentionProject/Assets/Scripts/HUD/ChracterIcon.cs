@@ -30,7 +30,6 @@ public class ChracterIcon : MonoBehaviour
         }
         else
         {
-            // Caso 'data' não seja uma string, trata o erro
             Debug.LogError("Data não é uma string válida.");
         }
     }
