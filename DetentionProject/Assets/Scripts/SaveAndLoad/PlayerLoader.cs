@@ -8,18 +8,17 @@ public class PlayerLoader : MonoBehaviour
     public Sprite andreHand;
     public GameObject activeWeapon;
     public GameEvent onPlayerIconChanged;
+    private PlayerData loadedPlayer;
+    private bool hasChangeIcon;
 
     public RuntimeAnimatorController defaultAnimatorController;
     public RuntimeAnimatorController alternateAnimatorController;
 
     void Awake()
     {
-        PlayerData loadedPlayer = SaveManager.LoadPlayerData();
+        loadedPlayer = SaveManager.LoadPlayerData();
         if (loadedPlayer != null)
         {
-            onPlayerIconChanged.Raise(this, loadedPlayer.playerName);
-            Debug.Log("Jogador carregado: " + loadedPlayer.playerName);
-
             Animator playerAnimator = player.GetComponent<Animator>();
             if (loadedPlayer.hasTakenSword) {
                 activeWeapon.SetActive(true);
@@ -40,5 +39,12 @@ public class PlayerLoader : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void Update()
+    {
+        
+        onPlayerIconChanged.Raise(this, loadedPlayer.playerName);
+        
     }
 }
