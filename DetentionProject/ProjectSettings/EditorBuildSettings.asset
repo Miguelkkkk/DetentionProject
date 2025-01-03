@@ -6,33 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Menus/MainMenu.unity
     guid: d125c6bb7c04dae4798875eb219f9ac3
   - enabled: 1
-    path: Assets/Scenes/PlayerSelection.unity
+    path: Assets/Scenes/Menus/PlayerSelection.unity
     guid: c6f5b90ea935d734abea320aa1988ff5
   - enabled: 1
-    path: Assets/Scenes/Loading.unity
+    path: Assets/Scenes/Menus/Loading.unity
     guid: 0f2b9621e7bf23a499fbd32a939086fd
   - enabled: 1
-    path: Assets/Scenes/FirstFloor.unity
+    path: Assets/Scenes/School/FirstFloor.unity
     guid: 32d92f920e3837b42a38fa4c6dd4b7a0
   - enabled: 1
     path: Assets/Scenes/TestScene.unity
     guid: de5e7101fcc7e5c4d89502ad71535045
   - enabled: 1
-    path: Assets/Scenes/EastCampus.unity
+    path: Assets/Scenes/EastCampus/EastCampus.unity
     guid: b363f15c7117825459387fcbf7813d06
   - enabled: 1
-    path: Assets/Scenes/WestCampus.unity
+    path: Assets/Scenes/WestCampus/WestCampus.unity
     guid: f07d31afa0fdf364aa5b94a62caefa80
   - enabled: 1
-    path: Assets/Scenes/UndergroundDungeon.unity
+    path: Assets/Scenes/Dungeon/UndergroundDungeon.unity
     guid: f644370efe1037744991f8417a17e1d9
   - enabled: 0
-    path: Assets/Scenes/Tutorial.unity
+    path: Assets/Scenes/School/Tutorial.unity
     guid: ecad6a438912b914b93121cdef00ff50
   - enabled: 1
-    path: Assets/Scenes/PinkForest.unity
+    path: Assets/Scenes/WestCampus/PinkForest.unity
     guid: b5b832608dd6b7745a9ed07a522f7fe1
   m_configObjects: {}
