@@ -18,6 +18,7 @@ TagManager:
   - SpawnPoint4
   - SpawnPoint5
   - SpawnPoint0
+  - SoundManager
   layers:
   - Default
   - TransparentFX

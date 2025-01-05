@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9ee2fbbd4652141901862c1c094dcb, type: 3}
+  m_Name: PlayerSounds
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Hurt
+    volume: 0.652
+    mixer: {fileID: -4717263993471552668, guid: 4e33a688a3ad3234ea8c1d2b452e5c2b, type: 2}
+    sounds:
+    - {fileID: 0}
+    pitchMin: 1.09
+    pitchMax: 0.91
+  - name: Attack
+    volume: 0.606
+    mixer: {fileID: -4717263993471552668, guid: 4e33a688a3ad3234ea8c1d2b452e5c2b, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 56703418e3aed4c47a5f6622816b8e41, type: 3}
+    pitchMin: 1.5
+    pitchMax: 0.82
+  - name: Dodge
+    volume: 0.735
+    mixer: {fileID: -4717263993471552668, guid: 4e33a688a3ad3234ea8c1d2b452e5c2b, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 4e349dc959014a845b9aa317d1c2b7f0, type: 3}
+    pitchMin: 2
+    pitchMax: 1.66
+  - name: Footsteps
+    volume: 0.079
+    mixer: {fileID: -4717263993471552668, guid: 4e33a688a3ad3234ea8c1d2b452e5c2b, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 023ea3ddeaa8dd146b7633a0800e5a0e, type: 3}
+    pitchMin: 0.93
+    pitchMax: 0.67
+  - name: Landing
+    volume: 0.657
+    mixer: {fileID: -4717263993471552668, guid: 4e33a688a3ad3234ea8c1d2b452e5c2b, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: eaae8fe8d600e1f459f34aa5757fa3b8, type: 3}
+    pitchMin: 1.09
+    pitchMax: 0.9
