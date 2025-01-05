@@ -16,6 +16,12 @@ public class PreserveOnLoad : MonoBehaviour
             {
                 DontDestroyOnLoad(player);
             }
+
+            GameObject soundManager = GameObject.FindGameObjectWithTag("SoundManager");
+            if (soundManager != null)
+            {
+                DontDestroyOnLoad(soundManager);
+            }
         }
         else
         {
