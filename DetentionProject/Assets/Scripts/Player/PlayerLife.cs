@@ -84,7 +84,7 @@ public class PlayerLife : MonoBehaviour, IDamageable
         input.Enable();
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    public void TriggerStay(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Damager") && canTakeDamage && !isDead)
         {
@@ -102,7 +102,7 @@ public class PlayerLife : MonoBehaviour, IDamageable
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public void TriggerExit(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Damager"))
         {

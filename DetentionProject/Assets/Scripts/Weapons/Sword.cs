@@ -64,7 +64,7 @@ public class Sword : MonoBehaviour
         canAttack = false;
         isAttacking = true;
         ShowWeapon();
-        swordCollision.SetActive(true);
+        StartCoroutine(ActivateCollision(0.15f));
         playerHand.SetActive(true);
         SwordTrail.SetActive(true);
         _swordAnimator.SetTrigger("Attack");
@@ -73,7 +73,6 @@ public class Sword : MonoBehaviour
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(player.transform.position);
         Vector3 direction = (mousePos - playerScreenPoint).normalized;
 
-        // Apontar o jogador na direção do ataque
         if (direction.x > 0)
         {
             player.transform.eulerAngles = new Vector2(0f, 0f);
@@ -83,7 +82,6 @@ public class Sword : MonoBehaviour
             player.transform.eulerAngles = new Vector2(0f, 180f);
         }
 
-        // Ajustar a rotação da arma na direção do ataque
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         activeWeapon.transform.rotation = Quaternion.Euler(0, 0, angle);
         swordCollision.transform.rotation = Quaternion.Euler(0, 0, angle);
@@ -92,13 +90,18 @@ public class Sword : MonoBehaviour
         input.Disable();
         StartCoroutine(AttackCooldown(0.5f));
     }
+    private IEnumerator ActivateCollision(float duration)
+    {
+        swordCollision.SetActive(true);
+        yield return new WaitForSeconds(duration);
+        swordCollision.SetActive(false);
+    }
 
     private IEnumerator AttackCooldown(float cooldownTime)
     {
         yield return new WaitForSeconds(cooldownTime);
         canAttack = true;
         input.Enable();
-        swordCollision.SetActive(false);
         playerHand.SetActive(false);
         SwordTrail.SetActive(false);
         HideWeapon();
