@@ -31,8 +31,8 @@ TagManager:
   - AttackHitbox
   - EnemyCollider
   - EnemySight
-  - 
-  - 
+  - TilemapColliders
+  - Obstacles
   - 
   - 
   - 
