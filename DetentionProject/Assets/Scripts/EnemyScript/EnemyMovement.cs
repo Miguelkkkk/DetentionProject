@@ -1,49 +1,53 @@
-using UnityEngine.AI;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public abstract class EnemyMovement : MonoBehaviour
 {
     protected NavMeshAgent agent;
-
-    [Header("Enemy Movement Settings")]
-    public float detectionRadius = 5f;
-    public LayerMask targetLayer;
-
     protected Transform target;
+    [SerializeField] private float chaseRadius = 10f; // Ajuste para refletir um raio realista
+    protected bool isTargetDefined;
 
-    protected virtual void Awake()
+    protected void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.updateUpAxis = false; // Adapt for 2D
         agent.updateRotation = false;
+        agent.updateUpAxis = false;
     }
 
-    protected virtual void Update()
+    protected void Update()
     {
-        DetectTarget();
-        if (target != null)
+        DetectPlayer();
+
+        if (isTargetDefined)
         {
-            MoveTowardsTarget();
+            float distance = Vector2.Distance(new Vector2(transform.position.x, transform.position.y),
+                                              new Vector2(target.position.x, target.position.y));
+
+            if (distance <= chaseRadius)
+            {
+                agent.SetDestination(target.position);
+            }
+            else
+            {
+                agent.ResetPath();
+                isTargetDefined = false;
+            }
         }
     }
 
-    protected void DetectTarget()
+    private void DetectPlayer()
     {
-        Collider2D detectedTarget = Physics2D.OverlapCircle(transform.position, detectionRadius, targetLayer);
-        target = detectedTarget != null ? detectedTarget.transform : null;
-    }
-
-    protected virtual void MoveTowardsTarget()
-    {
-        if (target != null)
+        if (!isTargetDefined)
         {
-            agent.SetDestination(target.position);
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                target = player.transform;
+                isTargetDefined = true;
+            }
         }
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
 }
