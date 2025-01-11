@@ -33,5 +33,4 @@ public class ChracterIcon : MonoBehaviour
             Debug.LogError("Data não é uma string válida.");
         }
     }
-
 }
