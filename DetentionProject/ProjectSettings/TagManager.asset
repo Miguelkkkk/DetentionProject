@@ -12,6 +12,13 @@ TagManager:
   - WallFrame
   - Objects
   - PlayerHitBox
+  - SpawnPoint1
+  - SpawnPoint2
+  - SpawnPoint3
+  - SpawnPoint4
+  - SpawnPoint5
+  - SpawnPoint0
+  - SoundManager
   layers:
   - Default
   - TransparentFX

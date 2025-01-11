@@ -43,7 +43,7 @@ public class SelectionsManager : MonoBehaviour
             {
                 PlayerData player = new PlayerData("Sofia", false);
                 SaveManager.SavePlayerData(player);
-                Loader.Load(Loader.Scene.Tutorial);
+                Loader.Load(Loader.Scene.FirstFloor);
             }
         }
         else if (mousePos.x < Screen.width / 2 - 100)
@@ -58,7 +58,7 @@ public class SelectionsManager : MonoBehaviour
             {
                 PlayerData player = new PlayerData("Andre", false);
                 SaveManager.SavePlayerData(player);
-                Loader.Load(Loader.Scene.Tutorial);
+                Loader.Load(Loader.Scene.FirstFloor);
             }
         }
         else

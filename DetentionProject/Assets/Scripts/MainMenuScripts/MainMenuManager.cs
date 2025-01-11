@@ -45,7 +45,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void Continue()
     {
-        Loader.Load(Loader.Scene.Tutorial);
+        Loader.Load(Loader.Scene.FirstFloor);
     }
 
     public void newGame()

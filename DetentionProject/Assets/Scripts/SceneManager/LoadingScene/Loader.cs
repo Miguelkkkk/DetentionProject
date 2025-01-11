@@ -12,9 +12,14 @@ public static class Loader {
         MainMenu,
         PlayerSelection,
         Loading,
-        Tutorial,
-        Thanks,
+        FirstFloor,
         TestScene,
+        EastCampus,
+        WestCampus,
+        UndergroundDungeon,
+        Tutorial,
+        PinkForest,
+
     }
 
     private static Action onLoaderCallback;
