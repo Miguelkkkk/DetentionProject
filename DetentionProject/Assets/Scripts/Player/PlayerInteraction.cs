@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerInteraction : MonoBehaviour
 {
     [Header("Input")]
-    public InputReader Input;
+    public PlayerInputReader input;
 
     [Header("Events")]
     public GameEvent onPlayerInteracted;
@@ -13,12 +13,12 @@ public class PlayerInteraction : MonoBehaviour
     #region events
     private void OnEnable()
     {
-        Input.InteractEvent += onInteract;
+        input.InteractEvent += onInteract;
     }
 
     private void OnDisable()
     {
-        Input.InteractEvent -= onInteract;
+        input.InteractEvent -= onInteract;
     }
 
     private void onInteract() {

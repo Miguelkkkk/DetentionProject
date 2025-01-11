@@ -1,5 +1,16 @@
 {
   "dependencies": {
+    "com.github.teodorvecerdi.dialoguegraph": {
+      "version": "https://github.com/TeodorVecerdi/DialogueGraph.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.textmeshpro": "3.0.1",
+        "com.unity.shadergraph": "10.5.1",
+        "com.unity.nuget.newtonsoft-json": "2.0.0"
+      },
+      "hash": "9837f4c05998ec3f19a37b040575438686d8dc44"
+    },
     "com.unity.2d.animation": {
       "version": "9.1.0",
       "depth": 1,
@@ -181,6 +192,13 @@
     },
     "com.unity.mathematics": {
       "version": "1.2.6",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {},

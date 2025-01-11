@@ -12,13 +12,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Miguel Angelo Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4630247120064993475, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4965389686204620988, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.2173724
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: 4965389686204620988, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.6473427
+      value: 7.01
       objectReference: {fileID: 0}
     - target: {fileID: 4965389686204620988, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
       propertyPath: m_LocalPosition.z
@@ -89,7 +93,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 740360453888455315, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4965389686204620988, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
       insertIndex: -1
