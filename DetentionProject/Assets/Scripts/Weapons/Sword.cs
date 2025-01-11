@@ -88,7 +88,7 @@ public class Sword : MonoBehaviour
 
         playerAnimator.SetTrigger("Attack");
         input.Disable();
-        StartCoroutine(AttackCooldown(0.5f));
+        StartCoroutine(AttackCooldown(0.3f));
     }
     private IEnumerator ActivateCollision(float duration)
     {

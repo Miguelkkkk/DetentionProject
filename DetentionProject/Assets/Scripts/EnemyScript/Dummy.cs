@@ -15,7 +15,7 @@ public class Dummy : EnemyLife
         if (!canTakeDamage || isFlashing || currentHealth <= 0) return;
 
         currentHealth -= amount;
-        CinemachineShake.Instance.shakeCamera(6f, 0.2f);
+        CinemachineShake.Instance.shakeCamera(2f, 0.2f);
 
         if (_hitEffectCoroutine == null)
         {
