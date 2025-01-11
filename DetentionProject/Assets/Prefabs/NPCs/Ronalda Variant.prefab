@@ -8,17 +8,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 854205680422041352, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 2968645810001289186}
+    - target: {fileID: 2171165563009933589, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
+      propertyPath: DlogObject
+      value: 
+      objectReference: {fileID: -5475051401550479605, guid: 4f61cd208dfbbff4eb54e405913cc354, type: 3}
+    - target: {fileID: 2171165563009933589, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
+      propertyPath: CurrentAssetGuid
+      value: 4f61cd208dfbbff4eb54e405913cc354
+      objectReference: {fileID: 0}
     - target: {fileID: 4630247120064993475, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
       propertyPath: m_Name
       value: Ronalda Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4965389686204620988, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.22889042
+      value: -0.46
       objectReference: {fileID: 0}
     - target: {fileID: 4965389686204620988, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.704523
+      value: -4.06
       objectReference: {fileID: 0}
     - target: {fileID: 4965389686204620988, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
       propertyPath: m_LocalPosition.z
@@ -76,98 +88,207 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.pivot.y
       value: 0.39
       objectReference: {fileID: 0}
+    - target: {fileID: 7189231431500713094, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
+      propertyPath: DialogueSystem
+      value: 
+      objectReference: {fileID: 4459300084980564062}
     - target: {fileID: 7192153637461120562, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 204943262, guid: f174c7125eece5c40bb41f1aeb19897a, type: 3}
     - target: {fileID: 7192153637461120562, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7192153637461120562, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
       propertyPath: m_SortingOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7192153637461120562, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -46673605
       objectReference: {fileID: 0}
     - target: {fileID: 7192153637461120562, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4965389686204620988, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2611464170252850050}
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
---- !u!4 &5682992511642114067 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4965389686204620988, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
-  m_PrefabInstance: {fileID: 735933957387810991}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &7004004523838390683
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 5682992511642114067}
-    m_Modifications:
-    - target: {fileID: 1783320858479544556, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
-      propertyPath: m_Name
-      value: CircleInteractor
-      objectReference: {fileID: 0}
-    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7564866068795720519, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7564866068795720519, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.33
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2171165563009933589, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
+    - {fileID: 7189231431500713094, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
---- !u!4 &2611464170252850050 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
-  m_PrefabInstance: {fileID: 7004004523838390683}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4126220927495165915, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2968645810001289186}
+    - targetCorrespondingSourceObject: {fileID: 4126220927495165915, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4459300084980564062}
+  m_SourcePrefab: {fileID: 100100000, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
+--- !u!1 &3708107476875259764 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4126220927495165915, guid: 774359ac55c36954bb8781f21e8c1138, type: 3}
+  m_PrefabInstance: {fileID: 735933957387810991}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2968645810001289186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3708107476875259764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503459909300eb243846ff348f127f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueSystem: {fileID: 4459300084980564062}
+  LineController: {fileID: 0}
+  SecondaryScreen: {fileID: 0}
+  PlayerContainer: {fileID: 0}
+  NpcContainer: {fileID: 0}
+  PlayerText: {fileID: 0}
+  NpcText: {fileID: 0}
+  NpcName: {fileID: 0}
+  input: {fileID: 11400000, guid: cce0215f9d96f7642a170f46be3f285a, type: 2}
+  playerInput: {fileID: 11400000, guid: 7a281e4b1b6e1f64abd29923d0acf93a, type: 2}
+  isInConversation: 0
+--- !u!114 &4459300084980564062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3708107476875259764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80c49c349eea4a6f9719386703f11e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DlogObject: {fileID: -5475051401550479605, guid: 4f61cd208dfbbff4eb54e405913cc354, type: 3}
+  CurrentAssetGuid: 4f61cd208dfbbff4eb54e405913cc354
+  PersistentData:
+  - ActorDataIndices:
+      m_keys:
+      - 7d6a525b-b711-4587-899b-abe39a024b3d
+      m_values: 00000000
+    ActorData:
+    - Name: Empty name
+      CustomData: {fileID: 0}
+      Property:
+        Guid: 7d6a525b-b711-4587-899b-abe39a024b3d
+        ReferenceName: Actor_47349990
+        DisplayName: Shop Keeper
+        Type: 2
+    CheckDataIndices:
+      m_keys:
+      - 0499b57d-42ae-415f-b6fe-ccde98cc2fe1
+      - 3f457785-b316-4eae-87ee-8129b6b6ccd3
+      m_values: 0000000001000000
+    CheckData:
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.CheckEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.CheckEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    TriggerDataIndices:
+      m_keys:
+      - 040ac558-1527-47e7-96f5-741bd7d7a28e
+      - 4cf90030-325a-4b21-bde1-66f9e82e46ab
+      - 444013ed-b010-4bf5-aa9f-cc66c157bd12
+      - 81c1a9c3-23ac-4fd0-92cc-597d9a8172e3
+      - 2af6175d-4323-4bd4-be23-72ea22a80668
+      m_values: 0000000001000000020000000300000004000000
+    TriggerData:
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+  - ActorDataIndices:
+      m_keys:
+      - e537d3f2-fa1b-4e93-9c49-5e1b01fb2d01
+      m_values: 00000000
+    ActorData:
+    - Name: Ronalda
+      CustomData: {fileID: 0}
+      Property:
+        Guid: e537d3f2-fa1b-4e93-9c49-5e1b01fb2d01
+        ReferenceName: Actor_649E3462
+        DisplayName: Ronalda
+        Type: 2
+    CheckDataIndices:
+      m_keys:
+      - 978259cc-0028-4574-be83-bd34a2a9461e
+      m_values: 00000000
+    CheckData:
+    - _target: {fileID: 2968645810001289186}
+      _methodName: getQuestActivated
+      _args: []
+      _dynamic: 0
+      _typeName: DialogueGraph.Runtime.CheckEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    TriggerDataIndices:
+      m_keys:
+      - 06091144-e460-41e8-86a9-901ba33a7180
+      m_values: 00000000
+    TriggerData:
+    - _target: {fileID: 2968645810001289186}
+      _methodName: setQuestActivated
+      _args:
+      - boolValue: 1
+        intValue: 0
+        floatValue: 0
+        stringValue: 
+        objectValue: {fileID: 0}
+        argType: 1
+        _typeName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _dynamic: 0
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+  PersistentDataIndices:
+    m_keys:
+    - eb71420dc23754148891843881b4dc58
+    - 4f61cd208dfbbff4eb54e405913cc354
+    m_values: 0000000001000000

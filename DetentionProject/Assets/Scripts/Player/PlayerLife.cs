@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerLife : MonoBehaviour, IDamageable
 {
     [Header("Input")]
-    public InputReader input;
+    public PlayerInputReader input;
 
     [Header("Events")]
     public GameEvent onPlayerHealthChanged;
@@ -74,14 +74,14 @@ public class PlayerLife : MonoBehaviour, IDamageable
         animator.SetTrigger("Death");
         isDead = true;
         canTakeDamage = false;
-        input.Disable();
+        input.DisablePlayerAction();
         _playerRigidBody.bodyType = RigidbodyType2D.Static;
 
         yield return new WaitForSeconds(2);
 
         UnityEngine.SceneManagement.Scene currentScene = Loader.GetCurrentScene();
         Loader.Load((Loader.Scene)Enum.Parse(typeof(Loader.Scene), currentScene.name));
-        input.Enable();
+        input.EnablePlayerAction();
     }
 
     public void TriggerStay(Collider2D collision)
