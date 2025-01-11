@@ -56,7 +56,7 @@ public class EnemyLife : MonoBehaviour, IDamageable
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public void TakeDamage(int amount, Vector2 knockbackDirection)
+    public virtual void TakeDamage(int amount, Vector2 knockbackDirection)
     {
         if (!canTakeDamage || isFlashing || currentHealth <= 0) return;
 

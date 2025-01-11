@@ -1,24 +1,29 @@
-//using System.Collections;
-//using UnityEngine;
+using UnityEngine;
 
-//public class Dummy : Enemy
-//{
-//    private void Awake()
-//    {
-//        GetComponents();
-//    }
+public class Dummy : EnemyLife
+{
+    private void InvertImage()
+    {
+        if (_spriteRenderer != null)
+        {
+            _spriteRenderer.flipX = !_spriteRenderer.flipX;
+        }
+    }
 
-//    private void OnTriggerEnter2D(Collider2D collision)
-//    {
-//        OnHit(collision);
-//        InvertImage();
-//    }
+    public override void TakeDamage(int amount, Vector2 knockbackDirection)
+    {
+        if (!canTakeDamage || isFlashing || currentHealth <= 0) return;
 
-//    private void InvertImage()
-//    {
-//        if (_spriteRenderer != null)
-//        {
-//            _spriteRenderer.flipX = !_spriteRenderer.flipX;
-//        }
-//    }
-//}
+        currentHealth -= amount;
+        CinemachineShake.Instance.shakeCamera(6f, 0.2f);
+
+        if (_hitEffectCoroutine == null)
+        {
+            _hitEffectCoroutine = StartCoroutine(HitEffect());
+        }
+
+        ApplyKnockback(knockbackDirection);
+
+        InvertImage();
+    }
+}
