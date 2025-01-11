@@ -849,18 +849,162 @@ MonoBehaviour:
   PersistentData:
   - ActorDataIndices:
       m_keys:
+      - 7d6a525b-b711-4587-899b-abe39a024b3d
+      m_values: 00000000
+    ActorData:
+    - Name: Empty name
+      CustomData: {fileID: 0}
+      Property:
+        Guid: 7d6a525b-b711-4587-899b-abe39a024b3d
+        ReferenceName: Actor_47349990
+        DisplayName: Shop Keeper
+        Type: 2
+    CheckDataIndices:
+      m_keys:
+      - 0499b57d-42ae-415f-b6fe-ccde98cc2fe1
+      - 3f457785-b316-4eae-87ee-8129b6b6ccd3
+      m_values: 0000000001000000
+    CheckData:
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.CheckEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.CheckEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    TriggerDataIndices:
+      m_keys:
+      - 040ac558-1527-47e7-96f5-741bd7d7a28e
+      - 4cf90030-325a-4b21-bde1-66f9e82e46ab
+      - 444013ed-b010-4bf5-aa9f-cc66c157bd12
+      - 81c1a9c3-23ac-4fd0-92cc-597d9a8172e3
+      - 2af6175d-4323-4bd4-be23-72ea22a80668
+      m_values: 0000000001000000020000000300000004000000
+    TriggerData:
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+  - ActorDataIndices:
+      m_keys: []
+      m_values: 
+    ActorData: []
+    CheckDataIndices:
+      m_keys: []
+      m_values: 
+    CheckData: []
+    TriggerDataIndices:
+      m_keys: []
+      m_values: 
+    TriggerData: []
+  - ActorDataIndices:
+      m_keys:
+      - b960a31d-b6f0-47c9-a0a3-5f6358f44ce9
+      m_values: 00000000
+    ActorData:
+    - Name: Empty name
+      CustomData: {fileID: 0}
+      Property:
+        Guid: b960a31d-b6f0-47c9-a0a3-5f6358f44ce9
+        ReferenceName: Actor_B2597F9C
+        DisplayName: Statue
+        Type: 2
+    CheckDataIndices:
+      m_keys: []
+      m_values: 
+    CheckData: []
+    TriggerDataIndices:
+      m_keys: []
+      m_values: 
+    TriggerData: []
+  - ActorDataIndices:
+      m_keys:
+      - e537d3f2-fa1b-4e93-9c49-5e1b01fb2d01
+      m_values: 00000000
+    ActorData:
+    - Name: Empty name
+      CustomData: {fileID: 0}
+      Property:
+        Guid: e537d3f2-fa1b-4e93-9c49-5e1b01fb2d01
+        ReferenceName: Actor_649E3462
+        DisplayName: Ronalda
+        Type: 2
+    CheckDataIndices:
+      m_keys:
+      - 978259cc-0028-4574-be83-bd34a2a9461e
+      m_values: 00000000
+    CheckData:
+    - _target: {fileID: 1341116747}
+      _methodName: get_active
+      _args: []
+      _dynamic: 0
+      _typeName: DialogueGraph.Runtime.CheckEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    TriggerDataIndices:
+      m_keys:
+      - 06091144-e460-41e8-86a9-901ba33a7180
+      m_values: 00000000
+    TriggerData:
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+  - ActorDataIndices:
+      m_keys:
       - b8b559cf-c779-4dc0-9cf4-a8f0fead34bc
       - 187063b9-1f59-42f5-963c-fed5be92cbaa
       m_values: 0000000001000000
     ActorData:
-    - Name: Laura
+    - Name: Empty name
       CustomData: {fileID: 0}
       Property:
         Guid: b8b559cf-c779-4dc0-9cf4-a8f0fead34bc
         ReferenceName: Actor_B7174E55
         DisplayName: Laura
         Type: 2
-    - Name: "Andr\xE9"
+    - Name: Empty name
       CustomData: {fileID: 0}
       Property:
         Guid: 187063b9-1f59-42f5-963c-fed5be92cbaa
@@ -877,8 +1021,12 @@ MonoBehaviour:
     TriggerData: []
   PersistentDataIndices:
     m_keys:
+    - eb71420dc23754148891843881b4dc58
+    - ed130a618251d3b4eb5c503718674b39
+    - 6bbb51c0a100f2b45861300ab2acf45e
+    - 4f61cd208dfbbff4eb54e405913cc354
     - c38abc3cb88850a468a5977bc3192c2f
-    m_values: 00000000
+    m_values: 0000000001000000020000000300000004000000
 --- !u!114 &815786737
 MonoBehaviour:
   m_ObjectHideFlags: 0
