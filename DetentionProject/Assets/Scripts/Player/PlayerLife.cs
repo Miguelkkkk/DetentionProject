@@ -47,7 +47,7 @@ public class PlayerLife : MonoBehaviour, IDamageable
     }
 
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, Vector2 knockbackDirection)
     {
         if (isDead) return; 
 
@@ -84,7 +84,7 @@ public class PlayerLife : MonoBehaviour, IDamageable
         input.EnablePlayerAction();
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    public void TriggerStay(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Damager") && canTakeDamage && !isDead)
         {
@@ -102,7 +102,7 @@ public class PlayerLife : MonoBehaviour, IDamageable
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public void TriggerExit(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Damager"))
         {
@@ -131,7 +131,7 @@ public class PlayerLife : MonoBehaviour, IDamageable
 
         while (isInTrigger && canTakeDamage && !isDead)
         {
-            TakeDamage(1);
+            TakeDamage(1, Vector2.zero);
             canTakeDamage = false;
 
             yield return new WaitForSeconds(0.3f);
