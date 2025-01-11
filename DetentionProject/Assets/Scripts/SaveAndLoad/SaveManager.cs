@@ -5,14 +5,12 @@ public static class SaveManager
 {
     private static string saveFilePath = "playerData.json";
 
-    // Salvar dados
     public static void SavePlayerData(PlayerData newPlayerData)
     {
         PlayerData existingPlayerData = LoadPlayerData();
 
         if (existingPlayerData != null)
         {
-            // Atualizar apenas os campos não nulos do novo PlayerData
             foreach (var field in typeof(PlayerData).GetFields())
             {
                 object newValue = field.GetValue(newPlayerData);
@@ -41,7 +39,6 @@ public static class SaveManager
         Debug.Log("Player data saved");
     }
 
-    // Carregar dados
     public static PlayerData LoadPlayerData()
     {
         if (File.Exists(GetSaveFilePath()))
@@ -56,7 +53,6 @@ public static class SaveManager
         }
     }
 
-    // Caminho para o arquivo de save
     private static string GetSaveFilePath()
     {
         return Path.Combine(Application.persistentDataPath, saveFilePath);

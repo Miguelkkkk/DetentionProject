@@ -4,7 +4,7 @@ using UnityEngine;
 public class Sword : MonoBehaviour
 {
     [Header("Input")]
-    [SerializeField] private InputReader input;
+    [SerializeField] private PlayerInputReader input;
 
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject swordCollision;
@@ -89,7 +89,7 @@ public class Sword : MonoBehaviour
         swordCollision.transform.rotation = Quaternion.Euler(0, 0, angle);
 
         playerAnimator.SetTrigger("Attack");
-        input.Disable();
+        input.DisablePlayerAction();
         StartCoroutine(AttackCooldown(0.5f));
     }
 
@@ -97,7 +97,7 @@ public class Sword : MonoBehaviour
     {
         yield return new WaitForSeconds(cooldownTime);
         canAttack = true;
-        input.Enable();
+        input.EnablePlayerAction();
         swordCollision.SetActive(false);
         playerHand.SetActive(false);
         SwordTrail.SetActive(false);

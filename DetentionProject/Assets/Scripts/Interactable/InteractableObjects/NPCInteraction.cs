@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class NPCInteraction : InteractableObject
 {
+    [SerializeField] private NPCDialogue dialogue;
     private void Start()
     {
         _renderer = GetComponent<SpriteRenderer>();
@@ -10,13 +11,12 @@ public class NPCInteraction : InteractableObject
 
     public new void Interact()
     {
-        if (isInRange)
+        if (isInRange && dialogue.isInConversation == false)
         {
-            //coisas
+            dialogue.StartConversation();
         }
     }
 
-   
     void Update()
     {
         isInRange = GetComponentInChildren<Interactor>().isInRange;

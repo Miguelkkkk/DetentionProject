@@ -5612,7 +5612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd9fc59c58d487488a6f9783b1cbf88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Input: {fileID: 11400000, guid: 7a281e4b1b6e1f64abd29923d0acf93a, type: 2}
+  input: {fileID: 11400000, guid: 7a281e4b1b6e1f64abd29923d0acf93a, type: 2}
   onPlayerInteracted: {fileID: 11400000, guid: 2f80e9db1c71ea742b14d3c7792dd4dd, type: 2}
 --- !u!114 &4456080391956803673
 MonoBehaviour:

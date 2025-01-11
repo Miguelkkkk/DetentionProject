@@ -1,8 +1,10 @@
+using TMPro;
 using UnityEngine;
 
 public class PlayerLoader : MonoBehaviour
 {
     public GameObject player;
+    public TextMeshProUGUI playerText;
     public GameObject playerHand;
     public Sprite sofiaHand;
     public Sprite andreHand;
@@ -29,11 +31,13 @@ public class PlayerLoader : MonoBehaviour
                 switch (loadedPlayer.playerName)
                 {
                     case "Sofia":
+                        playerText.SetText("Sofia");
                         playerAnimator.runtimeAnimatorController = alternateAnimatorController;
                         playerHand.GetComponent<SpriteRenderer>().sprite = sofiaHand;
                         break;
 
                     case "Andre":
+                        playerText.SetText("Andre");
                         playerAnimator.runtimeAnimatorController = defaultAnimatorController;
                         playerHand.GetComponent<SpriteRenderer>().sprite = andreHand;
                         break;

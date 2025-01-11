@@ -1,5 +1,293 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4126220927495165915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7855928985078768927}
+  - component: {fileID: 2171165563009933589}
+  - component: {fileID: 7189231431500713094}
+  m_Layer: 0
+  m_Name: Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7855928985078768927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4126220927495165915}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.8353996, y: -8.169878, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4965389686204620988}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2171165563009933589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4126220927495165915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80c49c349eea4a6f9719386703f11e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DlogObject: {fileID: -5475051401550479605, guid: 3dc48a134eb1af24aa0b0fb57b245573, type: 3}
+  CurrentAssetGuid: 3dc48a134eb1af24aa0b0fb57b245573
+  PersistentData:
+  - ActorDataIndices:
+      m_keys:
+      - 7d6a525b-b711-4587-899b-abe39a024b3d
+      m_values: 00000000
+    ActorData:
+    - Name: Empty name
+      CustomData: {fileID: 0}
+      Property:
+        Guid: 7d6a525b-b711-4587-899b-abe39a024b3d
+        ReferenceName: Actor_47349990
+        DisplayName: Shop Keeper
+        Type: 2
+    CheckDataIndices:
+      m_keys:
+      - 0499b57d-42ae-415f-b6fe-ccde98cc2fe1
+      - 3f457785-b316-4eae-87ee-8129b6b6ccd3
+      m_values: 0000000001000000
+    CheckData:
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.CheckEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.CheckEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    TriggerDataIndices:
+      m_keys:
+      - 040ac558-1527-47e7-96f5-741bd7d7a28e
+      - 4cf90030-325a-4b21-bde1-66f9e82e46ab
+      - 444013ed-b010-4bf5-aa9f-cc66c157bd12
+      - 81c1a9c3-23ac-4fd0-92cc-597d9a8172e3
+      - 2af6175d-4323-4bd4-be23-72ea22a80668
+      m_values: 0000000001000000020000000300000004000000
+    TriggerData:
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+  - ActorDataIndices:
+      m_keys: []
+      m_values: 
+    ActorData: []
+    CheckDataIndices:
+      m_keys: []
+      m_values: 
+    CheckData: []
+    TriggerDataIndices:
+      m_keys: []
+      m_values: 
+    TriggerData: []
+  - ActorDataIndices:
+      m_keys:
+      - b960a31d-b6f0-47c9-a0a3-5f6358f44ce9
+      m_values: 00000000
+    ActorData:
+    - Name: Empty name
+      CustomData: {fileID: 0}
+      Property:
+        Guid: b960a31d-b6f0-47c9-a0a3-5f6358f44ce9
+        ReferenceName: Actor_B2597F9C
+        DisplayName: Statue
+        Type: 2
+    CheckDataIndices:
+      m_keys: []
+      m_values: 
+    CheckData: []
+    TriggerDataIndices:
+      m_keys: []
+      m_values: 
+    TriggerData: []
+  - ActorDataIndices:
+      m_keys:
+      - e537d3f2-fa1b-4e93-9c49-5e1b01fb2d01
+      m_values: 00000000
+    ActorData:
+    - Name: Empty name
+      CustomData: {fileID: 0}
+      Property:
+        Guid: e537d3f2-fa1b-4e93-9c49-5e1b01fb2d01
+        ReferenceName: Actor_649E3462
+        DisplayName: Ronalda
+        Type: 2
+    CheckDataIndices:
+      m_keys:
+      - 978259cc-0028-4574-be83-bd34a2a9461e
+      m_values: 00000000
+    CheckData:
+    - _target: {fileID: 0}
+      _methodName: get_active
+      _args: []
+      _dynamic: 0
+      _typeName: DialogueGraph.Runtime.CheckEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    TriggerDataIndices:
+      m_keys:
+      - 06091144-e460-41e8-86a9-901ba33a7180
+      m_values: 00000000
+    TriggerData:
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+  - ActorDataIndices:
+      m_keys:
+      - b8b559cf-c779-4dc0-9cf4-a8f0fead34bc
+      - 187063b9-1f59-42f5-963c-fed5be92cbaa
+      m_values: 0000000001000000
+    ActorData:
+    - Name: Empty name
+      CustomData: {fileID: 0}
+      Property:
+        Guid: b8b559cf-c779-4dc0-9cf4-a8f0fead34bc
+        ReferenceName: Actor_B7174E55
+        DisplayName: Laura
+        Type: 2
+    - Name: Empty name
+      CustomData: {fileID: 0}
+      Property:
+        Guid: 187063b9-1f59-42f5-963c-fed5be92cbaa
+        ReferenceName: Actor_F3019D74
+        DisplayName: Player
+        Type: 2
+    CheckDataIndices:
+      m_keys: []
+      m_values: 
+    CheckData: []
+    TriggerDataIndices:
+      m_keys: []
+      m_values: 
+    TriggerData: []
+  - ActorDataIndices:
+      m_keys:
+      - f529ebe7-e95c-4775-a43a-bd6bb9f0864d
+      m_values: 00000000
+    ActorData:
+    - Name: Otto
+      CustomData: {fileID: 0}
+      Property:
+        Guid: f529ebe7-e95c-4775-a43a-bd6bb9f0864d
+        ReferenceName: Actor_AEAD6097
+        DisplayName: Otto
+        Type: 2
+    CheckDataIndices:
+      m_keys:
+      - 315c73b8-1fa7-4721-8f3b-abb102695ff8
+      m_values: 00000000
+    CheckData:
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.CheckEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+    TriggerDataIndices:
+      m_keys:
+      - f458a472-c9ab-4c07-b976-701a3b8852b0
+      m_values: 00000000
+    TriggerData:
+    - _target: {fileID: 0}
+      _methodName: 
+      _args: []
+      _dynamic: 1
+      _typeName: DialogueGraph.Runtime.TriggerEvent, DialogueGraph.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      dirty: 0
+  PersistentDataIndices:
+    m_keys:
+    - eb71420dc23754148891843881b4dc58
+    - ed130a618251d3b4eb5c503718674b39
+    - 6bbb51c0a100f2b45861300ab2acf45e
+    - 4f61cd208dfbbff4eb54e405913cc354
+    - c38abc3cb88850a468a5977bc3192c2f
+    - 3dc48a134eb1af24aa0b0fb57b245573
+    m_values: 000000000100000002000000030000000400000005000000
+--- !u!114 &7189231431500713094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4126220927495165915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 547a5bae61204ff9b4d06acd989900dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueSystem: {fileID: 2171165563009933589}
+  LineController: {fileID: 0}
+  SecondaryScreen: {fileID: 0}
+  PlayerContainer: {fileID: 0}
+  NpcContainer: {fileID: 0}
+  PlayerText: {fileID: 0}
+  NpcText: {fileID: 0}
+  NpcName: {fileID: 0}
+  input: {fileID: 11400000, guid: cce0215f9d96f7642a170f46be3f285a, type: 2}
+  playerInput: {fileID: 11400000, guid: 7a281e4b1b6e1f64abd29923d0acf93a, type: 2}
+  isInConversation: 0
 --- !u!1 &4630247120064993475
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,7 +321,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6338562370276321382}
+  - {fileID: 7855928985078768927}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7192153637461120562
@@ -76,16 +366,16 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6f34bc2c0b4f88c40878b20411407c72, type: 3}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 1074774288, guid: 16971733dda2ad044ae780992e0cb4da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.48, y: 0.48}
+  m_Size: {x: 3, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &5802814691239977281
@@ -120,18 +410,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0042369366, y: -0.0826211}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.39}
     oldSize: {x: 3, y: 3}
-    newSize: {x: 0.48, y: 0.48}
+    newSize: {x: 3, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0001, y: 0.0001}
+  m_Size: {x: 0.6186943, y: 0.30092335}
   m_EdgeRadius: 0
 --- !u!50 &-8828610336009851745
 Rigidbody2D:
@@ -170,7 +460,7 @@ Animator:
   m_GameObject: {fileID: 4630247120064993475}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ab051076744d54a46953faed587c4925, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -193,3 +483,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb322265e18501c4e83d2b8787d990c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue: {fileID: 0}
+--- !u!1001 &1367380381396073087
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4965389686204620988}
+    m_Modifications:
+    - target: {fileID: 1783320858479544556, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: m_Name
+      value: CircleInteractor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564866068795720519, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564866068795720519, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672610765233935959, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672610765233935959, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672610765233935959, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 854205680422041352}
+    - target: {fileID: 7672610765233935959, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672610765233935959, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672610765233935959, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NPCInteraction, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672610765233935959, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+--- !u!4 &6338562370276321382 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4976180526076989977, guid: 665ebb4153edf60478294e59c54da3fa, type: 3}
+  m_PrefabInstance: {fileID: 1367380381396073087}
+  m_PrefabAsset: {fileID: 0}

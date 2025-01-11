@@ -8,8 +8,41 @@ public class LineController : MonoBehaviour {
     public LineEntry Prefab;
     public NPCDialogue Owner;
     private List<LineEntry> entries;
+    [SerializeField] private UIInputReader input;
     private int selectedIndex;
     private bool isActive;
+
+    protected void OnEnable()
+    {
+        input.ConfirmEvent += OnConfirm;
+        input.UpEvent += OnUpPressed;
+        input.DownEvent += OnDownPressed;
+    }
+    protected void OnDisable()
+    {
+        input.ConfirmEvent -= OnConfirm;
+        input.UpEvent -= OnUpPressed;
+        input.DownEvent -= OnDownPressed;
+    }
+
+    protected void OnUpPressed() {
+        var nextIndex = Mathf.Max(selectedIndex - 1, 0);
+        entries[selectedIndex].Select(false);
+        entries[nextIndex].Select(true);
+        selectedIndex = nextIndex;
+    }
+    protected void OnDownPressed()
+    {
+        var nextIndex = Mathf.Min(selectedIndex + 1, entries.Count - 1);
+        entries[selectedIndex].Select(false);
+        entries[nextIndex].Select(true);
+        selectedIndex = nextIndex;
+    }
+
+    protected void OnConfirm()
+    {
+        SelectLine(selectedIndex);
+    }
 
     public void Clear() {
         entries.ForEach(entry => Destroy(entry.gameObject));
@@ -39,20 +72,5 @@ public class LineController : MonoBehaviour {
 
     private void Update() {
         if(!isActive) return;
-        if (Input.GetKeyDown(KeyCode.DownArrow)) {
-            var nextIndex = Mathf.Min(selectedIndex + 1, entries.Count - 1);
-            entries[selectedIndex].Select(false);
-            entries[nextIndex].Select(true);
-            selectedIndex = nextIndex;
-        } else if (Input.GetKeyDown(KeyCode.UpArrow)) {
-            var nextIndex = Mathf.Max(selectedIndex - 1, 0);
-            entries[selectedIndex].Select(false);
-            entries[nextIndex].Select(true);
-            selectedIndex = nextIndex;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            SelectLine(selectedIndex);
-        }
     }
 }

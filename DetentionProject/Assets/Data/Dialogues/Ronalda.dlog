@@ -16,16 +16,16 @@
                 },
                 "Expanded": true
             },
-            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"Essas geleias estão me irritando, mate 15 e quem sabe você ganhe alguma coisa.\\\",\\\"PortGuidA\\\":\\\"86c32656-0f35-4733-a674-a67c868875bf\\\",\\\"PortGuidB\\\":\\\"cc100d64-010a-4ee0-8430-31336a91aaee\\\",\\\"PortGuidC\\\":\\\"04d5380e-4782-4f0a-9e8a-16bcb221b72e\\\"},{\\\"Line\\\":\\\"Anda logo. não tenho o dia todo\\\",\\\"PortGuidA\\\":\\\"762aebd1-50ec-4514-bad4-294f140899fb\\\",\\\"PortGuidB\\\":\\\"19bbc1a6-1441-4f00-93c6-590c95114c14\\\",\\\"PortGuidC\\\":\\\"258e36e9-6efa-4e6f-a665-5649b4eedd28\\\"}]\"}",
+            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"Anda logo. não tenho o dia todo\\\",\\\"PortGuidA\\\":\\\"762aebd1-50ec-4514-bad4-294f140899fb\\\",\\\"PortGuidB\\\":\\\"19bbc1a6-1441-4f00-93c6-590c95114c14\\\",\\\"PortGuidC\\\":\\\"258e36e9-6efa-4e6f-a665-5649b4eedd28\\\"},{\\\"Line\\\":\\\"Essas geleias estão me irritando, mate 15 e quem sabe você ganhe alguma coisa.\\\",\\\"PortGuidA\\\":\\\"b164bf33-1e93-4762-bbfb-d8a6d425d1d7\\\",\\\"PortGuidB\\\":\\\"90f9d5d6-2bac-441a-a90d-7093ea2c4071\\\",\\\"PortGuidC\\\":\\\"25ca8bb5-d7ed-47b9-8cc7-dc1dac213eed\\\"}]\"}",
             "PortData": [
                 "d140096f-0e4a-4ec3-9808-30654234b3f4",
                 "2dc1c1fe-b2b7-484a-b965-7e51b8e5ff66",
-                "86c32656-0f35-4733-a674-a67c868875bf",
-                "cc100d64-010a-4ee0-8430-31336a91aaee",
-                "04d5380e-4782-4f0a-9e8a-16bcb221b72e",
                 "762aebd1-50ec-4514-bad4-294f140899fb",
                 "19bbc1a6-1441-4f00-93c6-590c95114c14",
-                "258e36e9-6efa-4e6f-a665-5649b4eedd28"
+                "258e36e9-6efa-4e6f-a665-5649b4eedd28",
+                "b164bf33-1e93-4762-bbfb-d8a6d425d1d7",
+                "90f9d5d6-2bac-441a-a90d-7093ea2c4071",
+                "25ca8bb5-d7ed-47b9-8cc7-dc1dac213eed"
             ]
         },
         {
@@ -96,10 +96,10 @@
             "DrawState": {
                 "Position": {
                     "serializedVersion": "2",
-                    "x": 188.99998474121095,
-                    "y": 60.99999237060547,
-                    "width": 84.00001525878906,
-                    "height": 42.00000762939453
+                    "x": 117.99999237060547,
+                    "y": 23.000003814697267,
+                    "width": 84.0000228881836,
+                    "height": 41.9999885559082
                 },
                 "Expanded": true
             },
@@ -136,10 +136,10 @@
             "DrawState": {
                 "Position": {
                     "serializedVersion": "2",
-                    "x": 1864.0,
-                    "y": -141.0,
+                    "x": 1315.0,
+                    "y": 46.999996185302737,
                     "width": 121.0,
-                    "height": 42.0
+                    "height": 42.00001907348633
                 },
                 "Expanded": true
             },
@@ -154,10 +154,10 @@
             "DrawState": {
                 "Position": {
                     "serializedVersion": "2",
-                    "x": 165.0,
-                    "y": 175.0,
-                    "width": 129.0,
-                    "height": 42.00001525878906
+                    "x": 61.00002670288086,
+                    "y": 171.00001525878907,
+                    "width": 128.99998474121095,
+                    "height": 42.0
                 },
                 "Expanded": true
             },
@@ -186,14 +186,6 @@
         }
     ],
     "edges": [
-        {
-            "Input": "7d2e2c77-c108-41a3-bc41-e587289732c4",
-            "Output": "0ca76f0e-5b3e-4e21-afc7-d44b3f9f93aa",
-            "InputPort": "19479f1a-5e09-4f9d-ad8b-412ca2f5de50",
-            "OutputPort": "86c32656-0f35-4733-a674-a67c868875bf",
-            "InputCapacity": 1,
-            "OutputCapacity": 0
-        },
         {
             "Input": "85096559-0a49-4dac-899a-0b8625bd6297",
             "Output": "7d2e2c77-c108-41a3-bc41-e587289732c4",
@@ -227,14 +219,6 @@
             "OutputCapacity": 0
         },
         {
-            "Input": "f19a4cdb-e026-4a24-a309-bb49be7409c9",
-            "Output": "1820f591-2fc5-4c83-8c68-e87cd469ef96",
-            "InputPort": "64e5e5c3-e2e3-4e4f-98dd-f1077666b43e",
-            "OutputPort": "1df9bfb7-72cf-4ca1-8ab2-4913f12b294f",
-            "InputCapacity": 1,
-            "OutputCapacity": 1
-        },
-        {
             "Input": "0ca76f0e-5b3e-4e21-afc7-d44b3f9f93aa",
             "Output": "11cf543d-e576-4e6a-a0fe-62e84db48c11",
             "InputPort": "258e36e9-6efa-4e6f-a665-5649b4eedd28",
@@ -247,6 +231,22 @@
             "Output": "1820f591-2fc5-4c83-8c68-e87cd469ef96",
             "InputPort": "694d64b1-4a33-43ce-b900-472e0f2d5854",
             "OutputPort": "ee7d2b74-55ed-49e9-89af-e8dec9b06a4e",
+            "InputCapacity": 1,
+            "OutputCapacity": 0
+        },
+        {
+            "Input": "f19a4cdb-e026-4a24-a309-bb49be7409c9",
+            "Output": "7d2e2c77-c108-41a3-bc41-e587289732c4",
+            "InputPort": "64e5e5c3-e2e3-4e4f-98dd-f1077666b43e",
+            "OutputPort": "5fa715e1-584f-4f07-8aa5-32ba68af9ffa",
+            "InputCapacity": 1,
+            "OutputCapacity": 1
+        },
+        {
+            "Input": "7d2e2c77-c108-41a3-bc41-e587289732c4",
+            "Output": "0ca76f0e-5b3e-4e21-afc7-d44b3f9f93aa",
+            "InputPort": "19479f1a-5e09-4f9d-ad8b-412ca2f5de50",
+            "OutputPort": "b164bf33-1e93-4762-bbfb-d8a6d425d1d7",
             "InputCapacity": 1,
             "OutputCapacity": 0
         }
