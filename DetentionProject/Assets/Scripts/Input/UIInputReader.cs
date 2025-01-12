@@ -15,6 +15,7 @@ public class UIInputReader : InputReader
     public event UnityAction LeftEvent;
     public event UnityAction RightEvent;
     public event UnityAction ConfirmEvent;
+    public event UnityAction OpenEvent;
 
     private InputAction _confirmAction;
     private InputAction _upAction;
@@ -22,6 +23,7 @@ public class UIInputReader : InputReader
     private InputAction _leftAction;
     private InputAction _rightAction;
     private InputAction _skipDialogueAction;
+    private InputAction _openAction;
 
     protected override void OnEnable()
     {
@@ -43,6 +45,16 @@ public class UIInputReader : InputReader
         _upAction.canceled += OnUpPressed;
 
         _upAction.Enable();
+        #endregion
+
+        #region Open
+        _openAction = _inputasset.FindAction("OpenMenu");
+
+        _openAction.started += OnOpenMenu;
+        _openAction.performed += OnOpenMenu;
+        _openAction.canceled += OnOpenMenu;
+
+        _openAction.Enable();
         #endregion
 
         #region Down
@@ -142,6 +154,15 @@ public class UIInputReader : InputReader
 
         _confirmAction.Disable();
         #endregion
+
+        #region Open
+
+        _openAction.started -= OnOpenMenu;
+        _openAction.performed -= OnOpenMenu;
+        _openAction.canceled -= OnOpenMenu;
+
+        _openAction.Disable();
+        #endregion
     }
 
     private void OnUpPressed(InputAction.CallbackContext context)
@@ -149,6 +170,14 @@ public class UIInputReader : InputReader
         if (context.phase == InputActionPhase.Started)
         {
             UpEvent?.Invoke();
+        }
+    }
+
+    private void OnOpenMenu(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+        {
+            OpenEvent?.Invoke();
         }
     }
     private void OnRightPressed(InputAction.CallbackContext context)
