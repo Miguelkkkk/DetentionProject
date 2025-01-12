@@ -1,8 +1,126 @@
 {
     "AssetGuid": "7de6f6b91ced4df48860cf20c694265b",
-    "IsBlackboardVisible": false,
+    "IsBlackboardVisible": true,
     "DialogueGraphVersion": "2.0.0",
-    "nodes": [],
-    "edges": [],
-    "serializedProperties": []
+    "nodes": [
+        {
+            "GUID": "ec24632c-9c69-47c4-be46-67aa611a016f",
+            "Type": "DialogueGraph.NpcNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 370.5104064941406,
+                    "y": 179.9622039794922,
+                    "width": 200.0,
+                    "height": 150.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"Pode vir aqui sempre que preisar treinar\\\",\\\"PortGuidA\\\":\\\"b1a6d865-a41f-494b-94f6-66ed35b08372\\\",\\\"PortGuidB\\\":\\\"7c1a606a-e604-4f75-84f9-566995f47988\\\",\\\"PortGuidC\\\":\\\"01cdb587-fde9-42a1-bb10-edaa5618d904\\\"},{\\\"Line\\\":\\\"Experimente os bonecos de treino, eles são ótimos para praticar seus golpes e melhorar sua técnica.\\\",\\\"PortGuidA\\\":\\\"00cc24c7-b980-4b67-9dd8-6dd722c78e25\\\",\\\"PortGuidB\\\":\\\"1a56f829-92ff-459f-99ee-08a440ab949b\\\",\\\"PortGuidC\\\":\\\"aa5cb08e-839d-4936-91fb-5ec0d84f95bc\\\"}]\"}",
+            "PortData": [
+                "3a7e8026-cd1e-41a0-b512-5a2d8e4a1b20",
+                "d2c1c9f6-00ad-4c3e-a629-a810ccb55771",
+                "b1a6d865-a41f-494b-94f6-66ed35b08372",
+                "7c1a606a-e604-4f75-84f9-566995f47988",
+                "01cdb587-fde9-42a1-bb10-edaa5618d904",
+                "00cc24c7-b980-4b67-9dd8-6dd722c78e25",
+                "1a56f829-92ff-459f-99ee-08a440ab949b",
+                "aa5cb08e-839d-4936-91fb-5ec0d84f95bc"
+            ]
+        },
+        {
+            "GUID": "8ef70c10-6086-4865-b74d-e145add914d7",
+            "Type": "DialogueGraph.PropertyNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 279.8409729003906,
+                    "y": 187.14366149902345,
+                    "width": 200.0,
+                    "height": 150.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"propertyGuid\":\"f4412d0c-8541-496f-9cfd-8cf7ab356f63\"}",
+            "PortData": [
+                "3983b718-9f14-4765-ac7d-2551f270c057"
+            ]
+        },
+        {
+            "GUID": "28bb309e-daf8-471f-ab49-9be6b74103c7",
+            "Type": "DialogueGraph.PropertyNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 242.0,
+                    "y": 268.0,
+                    "width": 99.0,
+                    "height": 42.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"propertyGuid\":\"e98766a3-ca65-48be-af37-14be2d250ec2\"}",
+            "PortData": [
+                "49dce736-75d7-458e-8999-9fd7872c902f"
+            ]
+        },
+        {
+            "GUID": "b8b4b220-4916-40af-8c84-eecc7435855a",
+            "Type": "DialogueGraph.PropertyNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 880.9074096679688,
+                    "y": 321.361083984375,
+                    "width": 200.0,
+                    "height": 150.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"propertyGuid\":\"4d95cca7-462f-4d1b-916b-5ca769d67978\"}",
+            "PortData": [
+                "d09390ba-d33c-4810-bf30-5b993d073c4e"
+            ]
+        }
+    ],
+    "edges": [
+        {
+            "Input": "ec24632c-9c69-47c4-be46-67aa611a016f",
+            "Output": "8ef70c10-6086-4865-b74d-e145add914d7",
+            "InputPort": "d2c1c9f6-00ad-4c3e-a629-a810ccb55771",
+            "OutputPort": "3983b718-9f14-4765-ac7d-2551f270c057",
+            "InputCapacity": 0,
+            "OutputCapacity": 1
+        },
+        {
+            "Input": "ec24632c-9c69-47c4-be46-67aa611a016f",
+            "Output": "28bb309e-daf8-471f-ab49-9be6b74103c7",
+            "InputPort": "01cdb587-fde9-42a1-bb10-edaa5618d904",
+            "OutputPort": "49dce736-75d7-458e-8999-9fd7872c902f",
+            "InputCapacity": 1,
+            "OutputCapacity": 1
+        },
+        {
+            "Input": "b8b4b220-4916-40af-8c84-eecc7435855a",
+            "Output": "ec24632c-9c69-47c4-be46-67aa611a016f",
+            "InputPort": "d09390ba-d33c-4810-bf30-5b993d073c4e",
+            "OutputPort": "1a56f829-92ff-459f-99ee-08a440ab949b",
+            "InputCapacity": 1,
+            "OutputCapacity": 1
+        }
+    ],
+    "serializedProperties": [
+        {
+            "Type": "DialogueGraph.ActorProperty",
+            "Data": "{\"$type\":\"DialogueGraph.ActorProperty, DialogueGraph.Editor\",\"GUID\":\"f4412d0c-8541-496f-9cfd-8cf7ab356f63\",\"Type\":2,\"DisplayName\":\"Bruno\",\"ReferenceName\":\"Actor_FD4DB8EF\",\"OverrideReferenceName\":null,\"Hidden\":false,\"ShortGuid\":\"FD4DB8EF\"}"
+        },
+        {
+            "Type": "DialogueGraph.CheckProperty",
+            "Data": "{\"$type\":\"DialogueGraph.CheckProperty, DialogueGraph.Editor\",\"GUID\":\"e98766a3-ca65-48be-af37-14be2d250ec2\",\"Type\":1,\"DisplayName\":\"MetBefore\",\"ReferenceName\":\"Check_831332EB\",\"OverrideReferenceName\":null,\"Hidden\":false,\"ShortGuid\":\"831332EB\"}"
+        },
+        {
+            "Type": "DialogueGraph.TriggerProperty",
+            "Data": "{\"$type\":\"DialogueGraph.TriggerProperty, DialogueGraph.Editor\",\"GUID\":\"4d95cca7-462f-4d1b-916b-5ca769d67978\",\"Type\":0,\"DisplayName\":\"Meet\",\"ReferenceName\":\"Trigger_9546729A\",\"OverrideReferenceName\":null,\"Hidden\":false,\"ShortGuid\":\"9546729A\"}"
+        }
+    ]
 }

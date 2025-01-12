@@ -7,11 +7,13 @@ public abstract class EnemyMovement : MonoBehaviour
 {
     protected NavMeshAgent agent;
     protected Transform target;
-    [SerializeField] private float chaseRadius = 10f; // Ajuste para refletir um raio realista
+    protected Animator animator;
+    [SerializeField] private float chaseRadius = 10f;
     protected bool isTargetDefined;
 
     protected void Awake()
     {
+        animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -29,11 +31,13 @@ public abstract class EnemyMovement : MonoBehaviour
             if (distance <= chaseRadius)
             {
                 agent.SetDestination(target.position);
+                animator.SetBool("isMoving", true);
             }
             else
             {
                 agent.ResetPath();
                 isTargetDefined = false;
+                animator.SetBool("isMoving", false);
             }
         }
     }

@@ -19,7 +19,8 @@ TagManager:
   - SpawnPoint5
   - SpawnPoint0
   - SoundManager
-  - PlayerText
+  - EnemyBullet
+  - Limiter
   layers:
   - Default
   - TransparentFX
@@ -34,7 +35,7 @@ TagManager:
   - EnemySight
   - TilemapColliders
   - Obstacles
-  - 
+  - EnemyBullet
   - 
   - 
   - 

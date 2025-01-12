@@ -64,6 +64,24 @@
             "PortData": [
                 "c4fd1ae0-d75d-4c00-ba2f-481c792259d1"
             ]
+        },
+        {
+            "GUID": "8e4b4af4-da63-4725-902a-2e378fba19fb",
+            "Type": "DialogueGraph.PropertyNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 877.5448608398438,
+                    "y": 165.77537536621095,
+                    "width": 200.0,
+                    "height": 150.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"propertyGuid\":\"b960a31d-b6f0-47c9-a0a3-5f6358f44ce9\"}",
+            "PortData": [
+                "ebb2e6d0-e7a6-4eec-85aa-68fa8e9c74c8"
+            ]
         }
     ],
     "edges": [
@@ -80,6 +98,14 @@
             "Output": "031013ba-54b4-4e99-9e6d-ae282be58745",
             "InputPort": "4d03fd98-df70-4717-9dee-fb48cdaa2b62",
             "OutputPort": "c4fd1ae0-d75d-4c00-ba2f-481c792259d1",
+            "InputCapacity": 0,
+            "OutputCapacity": 1
+        },
+        {
+            "Input": "86e86c71-e7b8-4a91-8046-a571f8ea1b61",
+            "Output": "8e4b4af4-da63-4725-902a-2e378fba19fb",
+            "InputPort": "7b44bc3e-8f00-4284-ac3b-7455d214b9c1",
+            "OutputPort": "ebb2e6d0-e7a6-4eec-85aa-68fa8e9c74c8",
             "InputCapacity": 0,
             "OutputCapacity": 1
         }

@@ -102,19 +102,18 @@ public class PlayerLife : MonoBehaviour, IDamageable
         }
     }
 
+    public void TriggerEnter(Collider2D collision) {
+        if (collision.gameObject.CompareTag("EnemyBullet") && canTakeDamage && !isDead)
+        {
+            TakeDamage(1,Vector2.zero);
+        }
+    }
+
     public void TriggerExit(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Damager"))
-        {
-            isInTrigger = false;
-
-            if (DamageCooldown() != null)
-            {
-                StopCoroutine(DamageCooldown());
-            }
-        }
-
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Damager") ||
+            collision.gameObject.CompareTag("Enemy") ||
+            collision.gameObject.CompareTag("EnemyBullet"))
         {
             isInTrigger = false;
 

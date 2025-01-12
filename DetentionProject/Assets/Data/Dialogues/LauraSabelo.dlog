@@ -16,7 +16,7 @@
                 },
                 "Expanded": true
             },
-            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"Teste1\\\",\\\"PortGuidA\\\":\\\"18fe5eed-6e32-45b4-8eac-082590538540\\\",\\\"PortGuidB\\\":\\\"f7c0fb17-d673-43fd-b293-5b27ec1a2678\\\",\\\"PortGuidC\\\":\\\"50e547dc-aa68-4756-aba0-15af940f16a1\\\"}]\"}",
+            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"Oii, meu nome é Laura, Laura Sabelo, é um prazer te conhecer.\\\",\\\"PortGuidA\\\":\\\"18fe5eed-6e32-45b4-8eac-082590538540\\\",\\\"PortGuidB\\\":\\\"f7c0fb17-d673-43fd-b293-5b27ec1a2678\\\",\\\"PortGuidC\\\":\\\"50e547dc-aa68-4756-aba0-15af940f16a1\\\"}]\"}",
             "PortData": [
                 "894f3aeb-2109-45a2-8e61-9545e5a1ab37",
                 "c678ba0d-7bb7-4245-ac47-984d27d04a8b",
@@ -56,13 +56,31 @@
                 },
                 "Expanded": true
             },
-            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"A chuva está agradável!\\\",\\\"PortGuidA\\\":\\\"e7968148-29a0-4601-a8f2-404d4356fd16\\\",\\\"PortGuidB\\\":\\\"d9577faf-3d9c-4134-b64e-26c5b1a34ca3\\\",\\\"PortGuidC\\\":\\\"03d7be6c-f1c2-4337-958e-8d0f82500e47\\\"}]\"}",
+            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"A chuva está agradável, mas não tanto quanto um cuzcuz com ovo!!!\\\",\\\"PortGuidA\\\":\\\"e7968148-29a0-4601-a8f2-404d4356fd16\\\",\\\"PortGuidB\\\":\\\"d9577faf-3d9c-4134-b64e-26c5b1a34ca3\\\",\\\"PortGuidC\\\":\\\"03d7be6c-f1c2-4337-958e-8d0f82500e47\\\"}]\"}",
             "PortData": [
                 "8160ced0-fe1e-4c83-b4e6-2e9f04b206f0",
                 "29e83525-46f5-4d98-84e5-b3e9dd869ff0",
                 "e7968148-29a0-4601-a8f2-404d4356fd16",
                 "d9577faf-3d9c-4134-b64e-26c5b1a34ca3",
                 "03d7be6c-f1c2-4337-958e-8d0f82500e47"
+            ]
+        },
+        {
+            "GUID": "80ac947d-36ba-4934-ae7c-2cce9c38ce68",
+            "Type": "DialogueGraph.PropertyNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 970.7149658203125,
+                    "y": 210.27749633789063,
+                    "width": 200.0,
+                    "height": 150.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"propertyGuid\":\"b8b559cf-c779-4dc0-9cf4-a8f0fead34bc\"}",
+            "PortData": [
+                "703795a1-4ebf-4fa4-8b1f-0cbd41754756"
             ]
         }
     ],
@@ -82,16 +100,20 @@
             "OutputPort": "18fe5eed-6e32-45b4-8eac-082590538540",
             "InputCapacity": 1,
             "OutputCapacity": 0
+        },
+        {
+            "Input": "92921ec7-9a04-453c-8eed-318cab09e454",
+            "Output": "80ac947d-36ba-4934-ae7c-2cce9c38ce68",
+            "InputPort": "29e83525-46f5-4d98-84e5-b3e9dd869ff0",
+            "OutputPort": "703795a1-4ebf-4fa4-8b1f-0cbd41754756",
+            "InputCapacity": 0,
+            "OutputCapacity": 1
         }
     ],
     "serializedProperties": [
         {
             "Type": "DialogueGraph.ActorProperty",
             "Data": "{\"$type\":\"DialogueGraph.ActorProperty, DialogueGraph.Editor\",\"GUID\":\"b8b559cf-c779-4dc0-9cf4-a8f0fead34bc\",\"Type\":2,\"DisplayName\":\"Laura\",\"ReferenceName\":\"Actor_B7174E55\",\"OverrideReferenceName\":null,\"Hidden\":false,\"ShortGuid\":\"B7174E55\"}"
-        },
-        {
-            "Type": "DialogueGraph.ActorProperty",
-            "Data": "{\"$type\":\"DialogueGraph.ActorProperty, DialogueGraph.Editor\",\"GUID\":\"187063b9-1f59-42f5-963c-fed5be92cbaa\",\"Type\":2,\"DisplayName\":\"Player\",\"ReferenceName\":\"Actor_F3019D74\",\"OverrideReferenceName\":null,\"Hidden\":false,\"ShortGuid\":\"F3019D74\"}"
         }
     ]
 }

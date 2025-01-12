@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RangedEnemyMovement : EnemyMovement
+public class SoldierBeeMovement : EnemyMovement
 {
-   
+    
 }

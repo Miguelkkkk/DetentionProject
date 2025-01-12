@@ -10,6 +10,11 @@ public class HitBoxDetection : MonoBehaviour
         playerLife.TriggerStay(collision);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        playerLife.TriggerEnter(collision);
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         playerLife.TriggerExit(collision);
