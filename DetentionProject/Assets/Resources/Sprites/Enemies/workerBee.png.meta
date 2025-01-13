@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: caa859db399e87c4aa40ec6dade0aec1
+guid: 02ed6994fb7abd846898c0b92f354f8d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,91 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Items_0
+      name: workerBee_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b29dbeb5dfd91a46ab821b14b5b0c9b
+      internalID: -1268241929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: workerBee_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8432bddfd09cc94f95305675fcfbf14
+      internalID: -782113171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: workerBee_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b6a11f8a40fdd4e8af3172520ad66d
+      internalID: 1581932087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: workerBee_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a90fa148712b3440809fcd5d0140b6a
+      internalID: -802071398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: workerBee_4
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7f08309a21993c4687c46dd98511c31
-      internalID: 857625371
+      spriteID: b6e19bc6b66e77b4a8f17bd8a164e19f
+      internalID: 1439450172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items_1
+      name: workerBee_5
       rect:
         serializedVersion: 2
         x: 48
@@ -132,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 464bf3ce20e0470439e0ae01839a2474
-      internalID: -565633391
+      spriteID: dd87138d0d1a96042a7a88cf058eb15c
+      internalID: 1241135835
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items_2
+      name: workerBee_6
       rect:
         serializedVersion: 2
         x: 96
@@ -153,14 +237,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bb84a794a89f604ea98e92f363c19d7
-      internalID: 1515711873
+      spriteID: 34ac6163f58bd4a4fb9c2331c2e0c1a9
+      internalID: -1837763817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items_3
+      name: workerBee_7
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae60b6afb775ca449a94d7b50a97a0a2
+      internalID: 2126285660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: workerBee_8
       rect:
         serializedVersion: 2
         x: 0
@@ -174,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5fdae36c7b41304c88a83b76fe4c463
-      internalID: 857077264
+      spriteID: 3690a3f08dd3f094d8d68f30ee30684a
+      internalID: 1771729064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items_4
+      name: workerBee_9
       rect:
         serializedVersion: 2
         x: 48
@@ -195,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a526d01a471022d46b747cbf2da8c43c
-      internalID: -1271794966
+      spriteID: d015e48a3624ae940af03f8cbd47f2fa
+      internalID: -1829154527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items_5
+      name: workerBee_10
       rect:
         serializedVersion: 2
         x: 96
@@ -216,14 +321,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c4a71aab0593ca439f2672c30835a50
-      internalID: 295810613
+      spriteID: 37265a1d577ba3b428759cbe6eb335c8
+      internalID: -1808600770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items_6
+      name: workerBee_11
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac5a6642b8f0434eb3d20185ec62b26
+      internalID: -1146619870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: workerBee_12
       rect:
         serializedVersion: 2
         x: 0
@@ -237,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 068ff7d4b3961bf4aaa42bc1a09e8aea
-      internalID: 304689467
+      spriteID: 1f8e9af5fd463be40ac11868acc123cc
+      internalID: -1608313000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items_7
+      name: workerBee_13
       rect:
         serializedVersion: 2
         x: 48
@@ -258,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5acdf16077b78943bf1853a8109817a
-      internalID: 140683659
+      spriteID: e1b30667b6e13fa4da3d1e13f48d53db
+      internalID: -1079684965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items_8
+      name: workerBee_14
       rect:
         serializedVersion: 2
         x: 96
@@ -279,18 +405,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51cfec748cd86484e818f973c607685c
-      internalID: -2006669853
+      spriteID: faa04e259b8e5964e9041df3aa5bd460
+      internalID: 573116854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items_9
+      name: workerBee_15
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 144
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -300,8 +426,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7903a530fef656140a31fa529ec2ddc1
-      internalID: -1086589523
+      spriteID: 640b00142d1bd344ea9ac0042690d1b2
+      internalID: -10772360
       vertices: []
       indices: 
       edges: []
@@ -317,16 +443,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Items_0: 857625371
-      Items_1: -565633391
-      Items_2: 1515711873
-      Items_3: 857077264
-      Items_4: -1271794966
-      Items_5: 295810613
-      Items_6: 304689467
-      Items_7: 140683659
-      Items_8: -2006669853
-      Items_9: -1086589523
+      workerBee_0: -1268241929
+      workerBee_1: -782113171
+      workerBee_10: -1808600770
+      workerBee_11: -1146619870
+      workerBee_12: -1608313000
+      workerBee_13: -1079684965
+      workerBee_14: 573116854
+      workerBee_15: -10772360
+      workerBee_2: 1581932087
+      workerBee_3: -802071398
+      workerBee_4: 1439450172
+      workerBee_5: 1241135835
+      workerBee_6: -1837763817
+      workerBee_7: 2126285660
+      workerBee_8: 1771729064
+      workerBee_9: -1829154527
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
