@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerLife : MonoBehaviour, IDamageable
 {
     [Header("Input")]
-    public InputReader input;
+    public PlayerInputReader input;
 
     [Header("Events")]
     public GameEvent onPlayerHealthChanged;
@@ -47,7 +47,7 @@ public class PlayerLife : MonoBehaviour, IDamageable
     }
 
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, Vector2 knockbackDirection)
     {
         if (isDead) return; 
 
@@ -74,17 +74,17 @@ public class PlayerLife : MonoBehaviour, IDamageable
         animator.SetTrigger("Death");
         isDead = true;
         canTakeDamage = false;
-        input.Disable();
+        input.DisablePlayerAction();
         _playerRigidBody.bodyType = RigidbodyType2D.Static;
 
         yield return new WaitForSeconds(2);
 
         UnityEngine.SceneManagement.Scene currentScene = Loader.GetCurrentScene();
         Loader.Load((Loader.Scene)Enum.Parse(typeof(Loader.Scene), currentScene.name));
-        input.Enable();
+        input.EnablePlayerAction();
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    public void TriggerStay(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Damager") && canTakeDamage && !isDead)
         {
@@ -102,19 +102,18 @@ public class PlayerLife : MonoBehaviour, IDamageable
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Damager"))
+    public void TriggerEnter(Collider2D collision) {
+        if (collision.gameObject.CompareTag("EnemyBullet") && canTakeDamage && !isDead)
         {
-            isInTrigger = false;
-
-            if (DamageCooldown() != null)
-            {
-                StopCoroutine(DamageCooldown());
-            }
+            TakeDamage(1,Vector2.zero);
         }
+    }
 
-        if (collision.gameObject.CompareTag("Enemy"))
+    public void TriggerExit(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Damager") ||
+            collision.gameObject.CompareTag("Enemy") ||
+            collision.gameObject.CompareTag("EnemyBullet"))
         {
             isInTrigger = false;
 
@@ -131,7 +130,7 @@ public class PlayerLife : MonoBehaviour, IDamageable
 
         while (isInTrigger && canTakeDamage && !isDead)
         {
-            TakeDamage(1);
+            TakeDamage(1, Vector2.zero);
             canTakeDamage = false;
 
             yield return new WaitForSeconds(0.3f);

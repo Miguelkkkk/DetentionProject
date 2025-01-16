@@ -8,8 +8,11 @@ public class PlayerLoader : MonoBehaviour
     public Sprite andreHand;
     public GameObject activeWeapon;
     public GameEvent onPlayerIconChanged;
+    public GameEvent onPlayerTextChanged;
     private PlayerData loadedPlayer;
-    private bool hasChangeIcon;
+
+    //private bool hasChangeIcon;
+    //private bool hasChangeText;
 
     public RuntimeAnimatorController defaultAnimatorController;
     public RuntimeAnimatorController alternateAnimatorController;
@@ -28,11 +31,13 @@ public class PlayerLoader : MonoBehaviour
                 switch (loadedPlayer.playerName)
                 {
                     case "Sofia":
+                        //playerText.SetText("Sofia");
                         playerAnimator.runtimeAnimatorController = alternateAnimatorController;
                         playerHand.GetComponent<SpriteRenderer>().sprite = sofiaHand;
                         break;
 
                     case "Andre":
+                        //playerText.SetText("Andre");
                         playerAnimator.runtimeAnimatorController = defaultAnimatorController;
                         playerHand.GetComponent<SpriteRenderer>().sprite = andreHand;
                         break;
@@ -45,6 +50,7 @@ public class PlayerLoader : MonoBehaviour
     {
         
         onPlayerIconChanged.Raise(this, loadedPlayer.playerName);
-        
+        onPlayerTextChanged.Raise(this, loadedPlayer.playerName);
+
     }
 }

@@ -1,0 +1,238 @@
+{
+    "AssetGuid": "3dc48a134eb1af24aa0b0fb57b245573",
+    "IsBlackboardVisible": true,
+    "DialogueGraphVersion": "2.0.0",
+    "nodes": [
+        {
+            "GUID": "774d5cbf-87af-4a23-b9bd-e070d1d39197",
+            "Type": "DialogueGraph.NpcNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 327.0,
+                    "y": 142.0,
+                    "width": 436.00006103515627,
+                    "height": 177.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"Essa caverna é enorme, quem imaginaria que teria uma dessas aqui na escola não é?\\\",\\\"PortGuidA\\\":\\\"8ac81b1f-18ae-40bf-8681-7bf86d1a88a6\\\",\\\"PortGuidB\\\":\\\"fbf3ba9c-a735-4c9b-bd41-2ab3b0a83940\\\",\\\"PortGuidC\\\":\\\"20e925f4-8b81-45d5-ab34-ab3da5c412f3\\\"},{\\\"Line\\\":\\\"Como o prometido, vou te dar uma recompensa.\\\",\\\"PortGuidA\\\":\\\"f0eecee2-3d93-4359-a1b2-745c6ba6c648\\\",\\\"PortGuidB\\\":\\\"5446cc6a-3ff2-458d-9b3f-6b744245114c\\\",\\\"PortGuidC\\\":\\\"65ee377a-f51a-40ac-940b-cc2ceb2419f8\\\"}]\"}",
+            "PortData": [
+                "a76a2bfe-6ed0-41d8-a979-3a0ed0494e43",
+                "cb08897d-e40d-40fe-9a5d-c1a8217c9b01",
+                "8ac81b1f-18ae-40bf-8681-7bf86d1a88a6",
+                "fbf3ba9c-a735-4c9b-bd41-2ab3b0a83940",
+                "20e925f4-8b81-45d5-ab34-ab3da5c412f3",
+                "f0eecee2-3d93-4359-a1b2-745c6ba6c648",
+                "5446cc6a-3ff2-458d-9b3f-6b744245114c",
+                "65ee377a-f51a-40ac-940b-cc2ceb2419f8"
+            ]
+        },
+        {
+            "GUID": "3a5330fe-5709-446c-bd74-f8df27900e64",
+            "Type": "DialogueGraph.PropertyNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 202.0,
+                    "y": 83.0,
+                    "width": 63.0,
+                    "height": 42.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"propertyGuid\":\"f529ebe7-e95c-4775-a43a-bd6bb9f0864d\"}",
+            "PortData": [
+                "6e07d20c-cf83-4cde-9b95-809ab7483509"
+            ]
+        },
+        {
+            "GUID": "4828536b-3e00-459c-8533-3477d064c618",
+            "Type": "DialogueGraph.NpcNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 858.9998779296875,
+                    "y": -129.00001525878907,
+                    "width": 436.0,
+                    "height": 225.00001525878907
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"Fiquei sabendo que lá no fundo tem uma criatura estranha, você poderia ir lá conferir pra mim, mas tenha cuidado, é preciso manter os pés no chão.\\\",\\\"PortGuidA\\\":\\\"cf580fef-f196-4af3-97c9-255b84553149\\\",\\\"PortGuidB\\\":\\\"442a7aeb-4b3f-44f5-883a-8796b3c5375a\\\",\\\"PortGuidC\\\":\\\"8bf2faf7-bce3-4c72-9a23-4d46c426dd89\\\"}]\"}",
+            "PortData": [
+                "bd280b2d-dc0f-473a-a59e-f73df9ad3ad7",
+                "987fb4d2-84f1-4f21-aef9-88dd3c8e32c4",
+                "cf580fef-f196-4af3-97c9-255b84553149",
+                "442a7aeb-4b3f-44f5-883a-8796b3c5375a",
+                "8bf2faf7-bce3-4c72-9a23-4d46c426dd89"
+            ]
+        },
+        {
+            "GUID": "d79cb79c-c067-42b6-bd64-9bb7463af872",
+            "Type": "DialogueGraph.NpcNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 1378.0,
+                    "y": -190.00001525878907,
+                    "width": 394.0,
+                    "height": 177.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"Se você conseguir derrota-lo, vou te dar uma boa recompensa.\\\",\\\"PortGuidA\\\":\\\"271aae36-c5e1-4f91-a9e2-db02e7573186\\\",\\\"PortGuidB\\\":\\\"20688c79-1dd4-4b55-ab89-aac4d6ff22f6\\\",\\\"PortGuidC\\\":\\\"884c08d2-8a0e-45a1-9b8a-98f271e71d87\\\"}]\"}",
+            "PortData": [
+                "e457bd84-58ed-4032-b889-b1519235c560",
+                "620f53c6-7a28-4a7b-b465-a9e2b564a287",
+                "271aae36-c5e1-4f91-a9e2-db02e7573186",
+                "20688c79-1dd4-4b55-ab89-aac4d6ff22f6",
+                "884c08d2-8a0e-45a1-9b8a-98f271e71d87"
+            ]
+        },
+        {
+            "GUID": "a3702c17-5016-4bad-a6eb-c648239bb195",
+            "Type": "DialogueGraph.PropertyNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 142.00001525878907,
+                    "y": 359.0000305175781,
+                    "width": 118.99998474121094,
+                    "height": 42.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"propertyGuid\":\"315c73b8-1fa7-4721-8f3b-abb102695ff8\"}",
+            "PortData": [
+                "5547fc03-9f40-46fc-a4aa-90da3c535d8a"
+            ]
+        },
+        {
+            "GUID": "72cad05c-cd74-48bd-ae16-f77a34026635",
+            "Type": "DialogueGraph.PropertyNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 841.0,
+                    "y": 379.0,
+                    "width": 112.0,
+                    "height": 42.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"propertyGuid\":\"f458a472-c9ab-4c07-b976-701a3b8852b0\"}",
+            "PortData": [
+                "eefb20df-64ce-4258-9d9e-9e983ce06f07"
+            ]
+        },
+        {
+            "GUID": "1b44556a-fd96-44e0-95b0-397121d1d8d0",
+            "Type": "DialogueGraph.PropertyNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 763.0000610351563,
+                    "y": -150.00001525878907,
+                    "width": 62.99993896484375,
+                    "height": 42.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"propertyGuid\":\"f529ebe7-e95c-4775-a43a-bd6bb9f0864d\"}",
+            "PortData": [
+                "bfa66729-886d-4c8f-a83e-5c81aeccc8be"
+            ]
+        },
+        {
+            "GUID": "3f0b8c72-bd49-403a-8c59-7c028d42da9c",
+            "Type": "DialogueGraph.PropertyNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 1288.0001220703125,
+                    "y": -238.0,
+                    "width": 63.0,
+                    "height": 42.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"propertyGuid\":\"f529ebe7-e95c-4775-a43a-bd6bb9f0864d\"}",
+            "PortData": [
+                "894ee06e-70a6-449f-ab8f-76f0560e8b2c"
+            ]
+        }
+    ],
+    "edges": [
+        {
+            "Input": "774d5cbf-87af-4a23-b9bd-e070d1d39197",
+            "Output": "3a5330fe-5709-446c-bd74-f8df27900e64",
+            "InputPort": "cb08897d-e40d-40fe-9a5d-c1a8217c9b01",
+            "OutputPort": "6e07d20c-cf83-4cde-9b95-809ab7483509",
+            "InputCapacity": 0,
+            "OutputCapacity": 1
+        },
+        {
+            "Input": "4828536b-3e00-459c-8533-3477d064c618",
+            "Output": "774d5cbf-87af-4a23-b9bd-e070d1d39197",
+            "InputPort": "bd280b2d-dc0f-473a-a59e-f73df9ad3ad7",
+            "OutputPort": "8ac81b1f-18ae-40bf-8681-7bf86d1a88a6",
+            "InputCapacity": 1,
+            "OutputCapacity": 0
+        },
+        {
+            "Input": "d79cb79c-c067-42b6-bd64-9bb7463af872",
+            "Output": "4828536b-3e00-459c-8533-3477d064c618",
+            "InputPort": "e457bd84-58ed-4032-b889-b1519235c560",
+            "OutputPort": "cf580fef-f196-4af3-97c9-255b84553149",
+            "InputCapacity": 1,
+            "OutputCapacity": 0
+        },
+        {
+            "Input": "774d5cbf-87af-4a23-b9bd-e070d1d39197",
+            "Output": "a3702c17-5016-4bad-a6eb-c648239bb195",
+            "InputPort": "65ee377a-f51a-40ac-940b-cc2ceb2419f8",
+            "OutputPort": "5547fc03-9f40-46fc-a4aa-90da3c535d8a",
+            "InputCapacity": 1,
+            "OutputCapacity": 1
+        },
+        {
+            "Input": "72cad05c-cd74-48bd-ae16-f77a34026635",
+            "Output": "774d5cbf-87af-4a23-b9bd-e070d1d39197",
+            "InputPort": "eefb20df-64ce-4258-9d9e-9e983ce06f07",
+            "OutputPort": "5446cc6a-3ff2-458d-9b3f-6b744245114c",
+            "InputCapacity": 1,
+            "OutputCapacity": 1
+        },
+        {
+            "Input": "4828536b-3e00-459c-8533-3477d064c618",
+            "Output": "1b44556a-fd96-44e0-95b0-397121d1d8d0",
+            "InputPort": "987fb4d2-84f1-4f21-aef9-88dd3c8e32c4",
+            "OutputPort": "bfa66729-886d-4c8f-a83e-5c81aeccc8be",
+            "InputCapacity": 0,
+            "OutputCapacity": 1
+        },
+        {
+            "Input": "d79cb79c-c067-42b6-bd64-9bb7463af872",
+            "Output": "3f0b8c72-bd49-403a-8c59-7c028d42da9c",
+            "InputPort": "620f53c6-7a28-4a7b-b465-a9e2b564a287",
+            "OutputPort": "894ee06e-70a6-449f-ab8f-76f0560e8b2c",
+            "InputCapacity": 0,
+            "OutputCapacity": 1
+        }
+    ],
+    "serializedProperties": [
+        {
+            "Type": "DialogueGraph.ActorProperty",
+            "Data": "{\"$type\":\"DialogueGraph.ActorProperty, DialogueGraph.Editor\",\"GUID\":\"f529ebe7-e95c-4775-a43a-bd6bb9f0864d\",\"Type\":2,\"DisplayName\":\"Otto\",\"ReferenceName\":\"Actor_AEAD6097\",\"OverrideReferenceName\":null,\"Hidden\":false,\"ShortGuid\":\"AEAD6097\"}"
+        },
+        {
+            "Type": "DialogueGraph.CheckProperty",
+            "Data": "{\"$type\":\"DialogueGraph.CheckProperty, DialogueGraph.Editor\",\"GUID\":\"315c73b8-1fa7-4721-8f3b-abb102695ff8\",\"Type\":1,\"DisplayName\":\"BossDefeated\",\"ReferenceName\":\"Check_E4189A86\",\"OverrideReferenceName\":null,\"Hidden\":false,\"ShortGuid\":\"E4189A86\"}"
+        },
+        {
+            "Type": "DialogueGraph.TriggerProperty",
+            "Data": "{\"$type\":\"DialogueGraph.TriggerProperty, DialogueGraph.Editor\",\"GUID\":\"f458a472-c9ab-4c07-b976-701a3b8852b0\",\"Type\":0,\"DisplayName\":\"SpawnChest\",\"ReferenceName\":\"Trigger_66552EBD\",\"OverrideReferenceName\":null,\"Hidden\":false,\"ShortGuid\":\"66552EBD\"}"
+        }
+    ]
+}

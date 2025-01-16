@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject activeWeapon;
 
     [Header("Input")]
-    public InputReader input;
+    public PlayerInputReader input;
 
     [Header("Movement")]
     [SerializeField] private float _playerSpd = 5;
@@ -168,7 +168,7 @@ public class PlayerMovement : MonoBehaviour
         }
         _isDodging = true;
 
-        input.Disable();
+        input.DisablePlayerAction();
 
         CreateDust();
 
@@ -180,7 +180,7 @@ public class PlayerMovement : MonoBehaviour
 
         _playerDir = Vector2.zero;
 
-        input.Enable();
+        input.EnablePlayerAction();
 
         PlayerData loadedPlayer = SaveManager.LoadPlayerData();
 

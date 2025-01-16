@@ -34,12 +34,7 @@ public class CinemachineFollowPlayer : MonoBehaviour
                 // Define o objeto do Player como o Follow Target da câmera
                 virtualCamera.Follow = player.transform;
                 virtualCamera.LookAt = player.transform;
-                Debug.Log("Player encontrado e definido como alvo da câmera.");
-            }
-            else
-            {
-                Debug.LogWarning("Nenhum Player foi encontrado na cena com a tag '" + playerTag + "'.");
-            }
+            }      
         }
         catch (System.Exception ex)
         {

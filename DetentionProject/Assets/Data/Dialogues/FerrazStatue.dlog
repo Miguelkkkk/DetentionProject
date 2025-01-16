@@ -1,0 +1,119 @@
+{
+    "AssetGuid": "6bbb51c0a100f2b45861300ab2acf45e",
+    "IsBlackboardVisible": true,
+    "DialogueGraphVersion": "2.0.0",
+    "nodes": [
+        {
+            "GUID": "f7e372fd-9ff6-40a8-a59a-03d3a24a622c",
+            "Type": "DialogueGraph.NpcNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 401.0,
+                    "y": 184.0,
+                    "width": 436.0,
+                    "height": 198.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"Um grande herói, morreu após lutar com uma horda de slimes, faltavam apenas 3\\\",\\\"PortGuidA\\\":\\\"f1f2a9ac-d305-4517-bbad-84ef1e5af293\\\",\\\"PortGuidB\\\":\\\"56841f01-4741-4d97-bb9d-fc1a07f17783\\\",\\\"PortGuidC\\\":\\\"4b05ecd1-255d-4678-ba58-0d1216f8123a\\\"}]\"}",
+            "PortData": [
+                "42ac8e12-6898-4206-a15f-b12f4115294f",
+                "4d03fd98-df70-4717-9dee-fb48cdaa2b62",
+                "f1f2a9ac-d305-4517-bbad-84ef1e5af293",
+                "56841f01-4741-4d97-bb9d-fc1a07f17783",
+                "4b05ecd1-255d-4678-ba58-0d1216f8123a"
+            ]
+        },
+        {
+            "GUID": "86e86c71-e7b8-4a91-8046-a571f8ea1b61",
+            "Type": "DialogueGraph.NpcNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 912.0,
+                    "y": 225.00001525878907,
+                    "width": 394.0,
+                    "height": 176.99998474121095
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"Ele se tornou uma lenda na escola, atualmente é conhecido como MF7\\\",\\\"PortGuidA\\\":\\\"54aebf35-5569-449d-9f4c-006b0977c4e2\\\",\\\"PortGuidB\\\":\\\"83a16353-1450-4b0c-959a-abf48d767331\\\",\\\"PortGuidC\\\":\\\"70a934bf-ebcf-47f3-8563-82a2f0c9ae83\\\"}]\"}",
+            "PortData": [
+                "f7f3c908-f688-4e5e-b294-b123185567c5",
+                "7b44bc3e-8f00-4284-ac3b-7455d214b9c1",
+                "54aebf35-5569-449d-9f4c-006b0977c4e2",
+                "83a16353-1450-4b0c-959a-abf48d767331",
+                "70a934bf-ebcf-47f3-8563-82a2f0c9ae83"
+            ]
+        },
+        {
+            "GUID": "031013ba-54b4-4e99-9e6d-ae282be58745",
+            "Type": "DialogueGraph.PropertyNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 249.55001831054688,
+                    "y": 205.8500213623047,
+                    "width": 200.0,
+                    "height": 150.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"propertyGuid\":\"b960a31d-b6f0-47c9-a0a3-5f6358f44ce9\"}",
+            "PortData": [
+                "c4fd1ae0-d75d-4c00-ba2f-481c792259d1"
+            ]
+        },
+        {
+            "GUID": "8e4b4af4-da63-4725-902a-2e378fba19fb",
+            "Type": "DialogueGraph.PropertyNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 877.5448608398438,
+                    "y": 165.77537536621095,
+                    "width": 200.0,
+                    "height": 150.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"propertyGuid\":\"b960a31d-b6f0-47c9-a0a3-5f6358f44ce9\"}",
+            "PortData": [
+                "ebb2e6d0-e7a6-4eec-85aa-68fa8e9c74c8"
+            ]
+        }
+    ],
+    "edges": [
+        {
+            "Input": "86e86c71-e7b8-4a91-8046-a571f8ea1b61",
+            "Output": "f7e372fd-9ff6-40a8-a59a-03d3a24a622c",
+            "InputPort": "f7f3c908-f688-4e5e-b294-b123185567c5",
+            "OutputPort": "f1f2a9ac-d305-4517-bbad-84ef1e5af293",
+            "InputCapacity": 1,
+            "OutputCapacity": 0
+        },
+        {
+            "Input": "f7e372fd-9ff6-40a8-a59a-03d3a24a622c",
+            "Output": "031013ba-54b4-4e99-9e6d-ae282be58745",
+            "InputPort": "4d03fd98-df70-4717-9dee-fb48cdaa2b62",
+            "OutputPort": "c4fd1ae0-d75d-4c00-ba2f-481c792259d1",
+            "InputCapacity": 0,
+            "OutputCapacity": 1
+        },
+        {
+            "Input": "86e86c71-e7b8-4a91-8046-a571f8ea1b61",
+            "Output": "8e4b4af4-da63-4725-902a-2e378fba19fb",
+            "InputPort": "7b44bc3e-8f00-4284-ac3b-7455d214b9c1",
+            "OutputPort": "ebb2e6d0-e7a6-4eec-85aa-68fa8e9c74c8",
+            "InputCapacity": 0,
+            "OutputCapacity": 1
+        }
+    ],
+    "serializedProperties": [
+        {
+            "Type": "DialogueGraph.ActorProperty",
+            "Data": "{\"$type\":\"DialogueGraph.ActorProperty, DialogueGraph.Editor\",\"GUID\":\"b960a31d-b6f0-47c9-a0a3-5f6358f44ce9\",\"Type\":2,\"DisplayName\":\"Statue\",\"ReferenceName\":\"Actor_B2597F9C\",\"OverrideReferenceName\":null,\"Hidden\":false,\"ShortGuid\":\"B2597F9C\"}"
+        }
+    ]
+}

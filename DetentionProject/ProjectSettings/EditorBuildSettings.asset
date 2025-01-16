@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/School/FirstFloor.unity
     guid: 32d92f920e3837b42a38fa4c6dd4b7a0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestScene.unity
     guid: de5e7101fcc7e5c4d89502ad71535045
   - enabled: 1

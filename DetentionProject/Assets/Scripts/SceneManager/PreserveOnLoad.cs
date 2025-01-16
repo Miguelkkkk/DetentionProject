@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,16 +8,26 @@ public class PreserveOnLoad : MonoBehaviour
 
     void Awake()
     {
-        if (!excludeScenes.Contains(SceneManager.GetActiveScene().name))
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (!excludeScenes.Contains(scene.name))
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null)
+            if (player != null && player.scene.name == scene.name)
             {
                 DontDestroyOnLoad(player);
             }
 
             GameObject soundManager = GameObject.FindGameObjectWithTag("SoundManager");
-            if (soundManager != null)
+            if (soundManager != null && soundManager.scene.name == scene.name)
             {
                 DontDestroyOnLoad(soundManager);
             }
