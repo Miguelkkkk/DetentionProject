@@ -4844,7 +4844,7 @@ GameObject:
   - component: {fileID: 3418291409212338374}
   - component: {fileID: 5805713376157986503}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: BeeSting
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
