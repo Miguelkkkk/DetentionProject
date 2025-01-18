@@ -8,11 +8,13 @@ public abstract class EnemyMovement : MonoBehaviour
     protected NavMeshAgent agent;
     protected Transform target;
     protected Animator animator;
-    [SerializeField] private float chaseRadius = 10f;
+    [SerializeField] protected float chaseRadius = 10f;
     protected bool isTargetDefined;
+    protected new Rigidbody2D rigidbody2D;
 
     protected void Awake()
     {
+        rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
@@ -32,15 +34,32 @@ public abstract class EnemyMovement : MonoBehaviour
             {
                 agent.SetDestination(target.position);
                 animator.SetBool("isMoving", true);
+
+                Vector3 agentVelocity = agent.velocity;
+                Vector3 movementDirection = agentVelocity.normalized;
+
+                animator.SetFloat("Horizontal", movementDirection.x);
+                animator.SetFloat("Vertical", movementDirection.y);
+
+                if (movementDirection.x != 0)
+                {
+                    Vector3 scale = transform.localScale;
+                    scale.x = Mathf.Abs(scale.x) * (movementDirection.x > 0 ? 1 : -1);
+                    transform.localScale = scale;
+                }
             }
             else
             {
                 agent.ResetPath();
                 isTargetDefined = false;
                 animator.SetBool("isMoving", false);
+
+                animator.SetFloat("Horizontal", 0f);
+                animator.SetFloat("Vertical", 0f);
             }
         }
     }
+
 
     private void DetectPlayer()
     {

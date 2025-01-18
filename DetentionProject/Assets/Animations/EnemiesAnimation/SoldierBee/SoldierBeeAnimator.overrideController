@@ -9,7 +9,17 @@ AnimatorOverrideController:
   m_Name: SoldierBeeAnimator
   m_Controller: {fileID: 9100000, guid: aaf38af04c0f5e240acb92dc0acdb179, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: 3f1e79cb185c0134f865eac49c1d8024, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: e98d208278ab46f41b59e62809f27952, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: ab0c89f6d56ae304c84d408b508201f6, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: f25d4578c27699f4c98304ec1a3e6a77, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 75fba08aba97a9a4ba866aef310d847b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e2622bed064b34c499e077087d99e2da, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3f1e79cb185c0134f865eac49c1d8024, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e98d208278ab46f41b59e62809f27952, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1dc07eebc0067e64fa93990ed0dc2165, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e98d208278ab46f41b59e62809f27952, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 883e541bdb485aa4594ae5437745d6f5, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 20679126e22f08e40854f97cc7769d1d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 49c8bebf7a83b6342a6ff2669f66620e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: df675e13ad0c78e4eb66b5ba144f0aca, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 29319df3c32899649b1c8d97e8e978d7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7c54fe2ee3235c14eaef9298f149d6b6, type: 2}

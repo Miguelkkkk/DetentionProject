@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenSlime Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1341316163867588185, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1672961248543659522, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
       propertyPath: m_Name
       value: GreenSlime Variant
@@ -56,13 +60,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6119948456003398518, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6281601463277111297, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.729355
+      value: -12.357973
       objectReference: {fileID: 0}
     - target: {fileID: 6281601463277111297, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.284185
+      value: -25.323158
       objectReference: {fileID: 0}
     - target: {fileID: 6354760548637063747, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
       propertyPath: m_Controller
@@ -97,14 +105,23 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8775424354190076658, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775424354190076658, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775424354190076658, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -264483911, guid: 030fb15a3acc6374e8810d59de00039b, type: 3}
+      objectReference: {fileID: 780587987, guid: 09913d1403fb24241a44616f02d617cd, type: 3}
     - target: {fileID: 8775424354190076658, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7802680419165310209, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8505775127945865781, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
     - {fileID: 1272233456538410304, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}

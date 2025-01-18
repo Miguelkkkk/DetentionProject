@@ -19,6 +19,7 @@ public static class Loader {
         UndergroundDungeon,
         Tutorial,
         PinkForest,
+        QueenBeeBattle,
 
     }
 

@@ -6,6 +6,8 @@ public class EnemyLife : MonoBehaviour, IDamageable
     [Header("General Settings")]
     [SerializeField] protected int maxHealth = 100;
 
+    protected Animator _animator;
+
     protected float currentHealth;
     protected MaterialPropertyBlock _propertyBlock;
     protected Renderer _renderer;
@@ -44,6 +46,7 @@ public class EnemyLife : MonoBehaviour, IDamageable
 
     protected void GetComponents()
     {
+        _animator = GetComponent<Animator>();
         _renderer = GetComponent<Renderer>();
         _collider = GetComponent<Collider2D>();
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -95,8 +98,7 @@ public class EnemyLife : MonoBehaviour, IDamageable
 
     protected virtual void Die()
     {
-        // Adicione comportamento de morte aqui, como animação, destruição, etc.
-        Debug.Log($"{gameObject.name} morreu.");
+        _animator.SetTrigger("Death");
         Destroy(gameObject);
     }
 
