@@ -23,6 +23,9 @@ TagManager:
   - Limiter
   - PlayerText
   - FireBall
+  - SpawnPoint6
+  - SpawnPoint7
+  - SpawnPoint8
   layers:
   - Default
   - TransparentFX
