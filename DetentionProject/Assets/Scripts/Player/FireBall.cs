@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Rendering.Universal; // Para Light2D
+using UnityEngine.Rendering.Universal; 
 
 public class FireBall : MonoBehaviour
 {
@@ -35,7 +35,6 @@ public class FireBall : MonoBehaviour
         }
         yield return new WaitForSeconds(lifetime - fadeDuration);
 
-        // Fade out do SpriteRenderer
         if (spriteRenderer != null)
         {
             float elapsedTime = 0f;
@@ -48,7 +47,6 @@ public class FireBall : MonoBehaviour
             }
         }
 
-        // Fade out do ParticleSystem
         if (childParticleSystem != null)
         {
             var mainModule = childParticleSystem.main;
@@ -68,7 +66,6 @@ public class FireBall : MonoBehaviour
             childParticleSystem.Stop();
         }
 
-        // Fade out da Light2D
         if (childLight2D != null)
         {
             float initialIntensity = childLight2D.intensity;
@@ -85,7 +82,6 @@ public class FireBall : MonoBehaviour
             childLight2D.intensity = 0f;
         }
 
-        // Garante que o SpriteRenderer fique invisível no final
         if (spriteRenderer != null)
         {
             spriteRenderer.color = new Color(originalColor.r, originalColor.g, originalColor.b, 0f);

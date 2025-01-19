@@ -21,6 +21,8 @@ TagManager:
   - SoundManager
   - EnemyBullet
   - Limiter
+  - PlayerText
+  - FireBall
   layers:
   - Default
   - TransparentFX
