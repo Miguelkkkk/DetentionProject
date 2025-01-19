@@ -47,6 +47,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1341316163867588185, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2384324606093354434, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
       propertyPath: m_Size.x
       value: 0.5757037
@@ -59,13 +63,17 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 0.003107793
       objectReference: {fileID: 0}
+    - target: {fileID: 6119948456003398518, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6281601463277111297, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.433691
+      value: -9.878218
       objectReference: {fileID: 0}
     - target: {fileID: 6281601463277111297, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.119074
+      value: -22.211308
       objectReference: {fileID: 0}
     - target: {fileID: 6281601463277111297, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -122,7 +130,7 @@ PrefabInstance:
     - target: {fileID: 8775424354190076658, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1664757556, guid: ccc784b6cb544ce49b73eaffe37eceee, type: 3}
+      objectReference: {fileID: -1427551479, guid: 175f0b4268b10a74aadbe365d870c6c5, type: 3}
     - target: {fileID: 8775424354190076658, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -158,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb654c731485dd140b0c092975a59686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseRadius: 10
+  chaseRadius: 15
 --- !u!114 &3792513171092568400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,10 +179,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5112c14e8a583204f91d9e891fb41312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 0.75
+  attackSpeed: 1.2
   attackDistance: 8
   bullet: {fileID: 6186236454049578226, guid: e7c0e9cbfb3cfcc46a0f6f88ea6a68c3, type: 3}
   bulletSpawner: {fileID: 3890732122091597396}
+  _animator: {fileID: 7225620574391188158}
+--- !u!95 &7225620574391188158 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6354760548637063747, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}
+  m_PrefabInstance: {fileID: 4356716616012693757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7735655367074269436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6281601463277111297, guid: 3a0f0f81ded84c14189a1f0858094cdd, type: 3}

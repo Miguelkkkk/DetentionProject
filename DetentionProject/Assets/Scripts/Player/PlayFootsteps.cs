@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlayFootsteps : MonoBehaviour
 {
-
     public void PlayFootSteps() {
         SoundManager.PlaySound(SoundType.Footsteps);
     }

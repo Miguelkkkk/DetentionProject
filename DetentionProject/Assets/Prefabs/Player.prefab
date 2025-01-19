@@ -5436,6 +5436,7 @@ GameObject:
   - component: {fileID: 4172592921221524695}
   - component: {fileID: 4720039932048146172}
   - component: {fileID: 7841762233555622482}
+  - component: {fileID: 6865488214741393840}
   - component: {fileID: 1128523461624467747}
   - component: {fileID: 218921071482217268}
   - component: {fileID: 4456080391956803673}
@@ -5568,6 +5569,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6865488214741393840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8462918584066463690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d786d85f22b6549b09c1e3aa0c1387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireballPrefab: {fileID: 3400616154881460281, guid: 767c6f5adabbf504b96b7e908794d483, type: 3}
+  fireballSpawnPoint: {fileID: 2812728471181154765}
+  fireballSpeed: 20
+  cooldownTime: 1
+  fadeoutDuration: 0.8
+  input: {fileID: 11400000, guid: 7a281e4b1b6e1f64abd29923d0acf93a, type: 2}
 --- !u!114 &1128523461624467747
 MonoBehaviour:
   m_ObjectHideFlags: 0

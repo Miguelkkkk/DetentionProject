@@ -8,9 +8,10 @@ public class RangedEnemyAttack : EnemyAttack
     [SerializeField] protected Transform bulletSpawner;
 
     private float timer;
+    [SerializeField] private Animator _animator;
     protected override void Start()
     {
-        animator = GetComponent<Animator>();
+        
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -24,7 +25,7 @@ public class RangedEnemyAttack : EnemyAttack
                 timer += Time.deltaTime;
                 if (timer > attackSpeed)
                 {
-                    animator.SetTrigger("Attack");
+                    _animator.SetTrigger("Attack");
                     Shoot();
                     timer = 0;
                 }
