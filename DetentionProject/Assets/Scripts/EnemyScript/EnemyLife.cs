@@ -42,6 +42,11 @@ public class EnemyLife : MonoBehaviour, IDamageable
             Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
             TakeDamage(1, knockbackDirection);
         }
+        if (collision.CompareTag("FireBall"))
+        {
+            Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
+            TakeDamage(2, knockbackDirection * 2);
+        }
     }
 
     protected void GetComponents()

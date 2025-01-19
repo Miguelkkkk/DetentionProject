@@ -14,7 +14,9 @@ public class PlayerInputReader : InputReader
     public event UnityAction AttackEvent;
     public event UnityAction RunEvent;
     public event UnityAction RunCancelledEvent;
+    public event UnityAction UltimateEvent;
 
+    private InputAction _ultimateAction;
     private InputAction _movementAction;
     private InputAction _interactAction;
     private InputAction _dodgeAction;
@@ -23,6 +25,16 @@ public class PlayerInputReader : InputReader
 
     protected override void OnEnable()
     {
+        #region ultimate
+        _ultimateAction = _inputasset.FindAction("Ultimate");
+
+        _ultimateAction.started += OnUltimate;
+        _ultimateAction.performed += OnUltimate;
+        _ultimateAction.canceled += OnUltimate;
+
+        _ultimateAction.Enable();
+        #endregion
+
         #region movement
         _movementAction = _inputasset.FindAction("Movement");
 
@@ -79,6 +91,14 @@ public class PlayerInputReader : InputReader
 
     protected override void OnDisable()
     {
+        #region ultimate
+        _ultimateAction.started -= OnUltimate;
+        _ultimateAction.performed -= OnUltimate;
+        _ultimateAction.canceled -= OnUltimate;
+
+        _ultimateAction.Disable();
+        #endregion
+
         #region movement
         _movementAction.started -= OnMovement;
         _movementAction.performed -= OnMovement;
@@ -127,6 +147,14 @@ public class PlayerInputReader : InputReader
     private void OnMovement(InputAction.CallbackContext context)
     {
         MovementEvent?.Invoke(context.ReadValue<Vector2>());
+    }
+
+    private void OnUltimate(InputAction.CallbackContext context)
+    {
+        if (UltimateEvent != null && context.started)
+        {
+            UltimateEvent.Invoke();
+        }
     }
 
     private void OnAttack(InputAction.CallbackContext context)
