@@ -11,7 +11,6 @@ public class RangedEnemyAttack : EnemyAttack
     [SerializeField] private Animator _animator;
     protected override void Start()
     {
-        
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -31,6 +30,9 @@ public class RangedEnemyAttack : EnemyAttack
                 }
 
             }
+        }
+        else {
+            Debug.Log("porra");
         }
     }
 

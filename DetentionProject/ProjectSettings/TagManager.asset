@@ -69,6 +69,9 @@ TagManager:
   - name: Wall
     uniqueID: 4275344133
     locked: 0
+  - name: Chairs
+    uniqueID: 3485967707
+    locked: 0
   - name: Objects
     uniqueID: 365895081
     locked: 0
