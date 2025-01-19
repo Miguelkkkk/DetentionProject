@@ -23,6 +23,9 @@ TagManager:
   - Limiter
   - PlayerText
   - FireBall
+  - SpawnPoint6
+  - SpawnPoint7
+  - SpawnPoint8
   layers:
   - Default
   - TransparentFX
@@ -68,6 +71,9 @@ TagManager:
     locked: 0
   - name: Wall
     uniqueID: 4275344133
+    locked: 0
+  - name: Chairs
+    uniqueID: 3485967707
     locked: 0
   - name: Objects
     uniqueID: 365895081

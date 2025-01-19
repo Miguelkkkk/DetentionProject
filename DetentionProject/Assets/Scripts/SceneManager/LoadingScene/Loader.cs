@@ -20,6 +20,9 @@ public static class Loader {
         Tutorial,
         PinkForest,
         QueenBeeBattle,
+        GolemBattle,
+        DirectorBattle,
+        SchoolInteriors,
 
     }
 
