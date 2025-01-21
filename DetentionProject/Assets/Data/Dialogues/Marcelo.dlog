@@ -1,8 +1,235 @@
 {
     "AssetGuid": "5e295dce3d197ae41b277ea97f44c268",
-    "IsBlackboardVisible": false,
+    "IsBlackboardVisible": true,
     "DialogueGraphVersion": "2.0.0",
-    "nodes": [],
-    "edges": [],
-    "serializedProperties": []
+    "nodes": [
+        {
+            "GUID": "20911769-bcbd-4726-b4a4-3af53bdf6c0d",
+            "Type": "DialogueGraph.NpcNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 127.36264038085938,
+                    "y": 212.271240234375,
+                    "width": 200.0,
+                    "height": 150.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"Melhor se atentar por aqui, é cada maluco que me aparece, como você por exemplo.\\\",\\\"PortGuidA\\\":\\\"5ed1c60d-1f2d-406d-9837-f537d91b0ce4\\\",\\\"PortGuidB\\\":\\\"00b9db2d-1901-4e35-8164-8fc93693fe69\\\",\\\"PortGuidC\\\":\\\"79d9a75d-f1ad-447c-8869-8fd0fa465776\\\"}]\"}",
+            "PortData": [
+                "fa4b0645-7ab3-4c90-a4df-38f9323c96fb",
+                "1ae25628-120a-4816-a30a-06c3b2666829",
+                "5ed1c60d-1f2d-406d-9837-f537d91b0ce4",
+                "00b9db2d-1901-4e35-8164-8fc93693fe69",
+                "79d9a75d-f1ad-447c-8869-8fd0fa465776"
+            ]
+        },
+        {
+            "GUID": "44987e49-2e6b-46da-88ca-f47e8c79e201",
+            "Type": "DialogueGraph.NpcNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 729.9999389648438,
+                    "y": 256.9999694824219,
+                    "width": 145.00006103515626,
+                    "height": 96.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"Já conheceu minha irmã?\\\",\\\"PortGuidA\\\":\\\"51b93ce3-b519-46f0-b522-3ce32a0d4ac2\\\",\\\"PortGuidB\\\":\\\"37a380db-fa15-467c-bfb7-22d03777f67d\\\",\\\"PortGuidC\\\":\\\"0b0f48db-fa52-4ba3-8c10-dae34bd78fc7\\\"}]\"}",
+            "PortData": [
+                "e98d72ec-6c77-4c6c-b17b-4cf7a5e779e6",
+                "bb148095-6ae9-4d99-bdc7-46fec03ef1ce",
+                "51b93ce3-b519-46f0-b522-3ce32a0d4ac2",
+                "37a380db-fa15-467c-bfb7-22d03777f67d",
+                "0b0f48db-fa52-4ba3-8c10-dae34bd78fc7"
+            ]
+        },
+        {
+            "GUID": "e694644a-2bcf-4296-b7cb-ff0be84dff8f",
+            "Type": "DialogueGraph.PropertyNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 625.0,
+                    "y": 184.99996948242188,
+                    "width": 83.99993896484375,
+                    "height": 42.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"propertyGuid\":\"9898dbc5-3f31-4c6f-a637-2aa08bdea437\"}",
+            "PortData": [
+                "0447470f-728b-4348-9a96-ca8e99feb50a"
+            ]
+        },
+        {
+            "GUID": "c5a578c2-5b2a-4584-abe5-4dd4d496effc",
+            "Type": "DialogueGraph.SelfNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 1198.0,
+                    "y": 260.0,
+                    "width": 348.0,
+                    "height": 223.99996948242188
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"Sim, ela é legal\\\",\\\"PortGuidA\\\":\\\"9bed455c-34d3-423a-ba5d-bde78d97f34f\\\",\\\"PortGuidB\\\":\\\"36de0bde-3e3e-41df-8828-b187a75578a8\\\"},{\\\"Line\\\":\\\"Não\\\",\\\"PortGuidA\\\":\\\"316c96a8-d422-46d0-9e39-cccc4cfffcf1\\\",\\\"PortGuidB\\\":\\\"b82b6c8f-2cc2-4bef-bf0e-1aecbc857570\\\"}]\"}",
+            "PortData": [
+                "bac3be83-5419-4c29-b737-343255e92a1b",
+                "9bed455c-34d3-423a-ba5d-bde78d97f34f",
+                "36de0bde-3e3e-41df-8828-b187a75578a8",
+                "316c96a8-d422-46d0-9e39-cccc4cfffcf1",
+                "b82b6c8f-2cc2-4bef-bf0e-1aecbc857570"
+            ]
+        },
+        {
+            "GUID": "2a1445cd-54bd-4972-9151-7ee28af21b89",
+            "Type": "DialogueGraph.NpcNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 1706.60009765625,
+                    "y": 474.9500427246094,
+                    "width": 200.0,
+                    "height": 150.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"Ela deve estar na sala ao lado do banheiro feminino, se quiser conhecê-la\\\",\\\"PortGuidA\\\":\\\"58a8f063-5686-40d0-9c58-7c0733c3ecc0\\\",\\\"PortGuidB\\\":\\\"c6aa208d-f43f-48f4-87e6-8c08f0806eb9\\\",\\\"PortGuidC\\\":\\\"515bcf99-e1f9-4567-a8f1-187947c0d4bf\\\"}]\"}",
+            "PortData": [
+                "4cdcc4df-cf87-46d1-8ee1-c4a28f3c14cf",
+                "40b160a7-767e-4c82-a0af-8c968388b76c",
+                "58a8f063-5686-40d0-9c58-7c0733c3ecc0",
+                "c6aa208d-f43f-48f4-87e6-8c08f0806eb9",
+                "515bcf99-e1f9-4567-a8f1-187947c0d4bf"
+            ]
+        },
+        {
+            "GUID": "affebcc0-9b01-488b-8d5a-b556c6b53355",
+            "Type": "DialogueGraph.PropertyNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 1532.0,
+                    "y": 582.0000610351563,
+                    "width": 84.0001220703125,
+                    "height": 42.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"propertyGuid\":\"9898dbc5-3f31-4c6f-a637-2aa08bdea437\"}",
+            "PortData": [
+                "d7f2f4fe-f51f-46ea-9270-66b03940421b"
+            ]
+        },
+        {
+            "GUID": "ebc95042-6737-44ba-b160-e3aba606f25d",
+            "Type": "DialogueGraph.NpcNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 1688.0,
+                    "y": 83.00000762939453,
+                    "width": 436.0,
+                    "height": 198.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"Ela é incrível, não conta pra ela que eu disse isso, ou o trem vai ficar feio pro teu lado.\\\",\\\"PortGuidA\\\":\\\"fdc640d4-9a68-4903-8457-b550356953b1\\\",\\\"PortGuidB\\\":\\\"33b1e3be-4530-4a58-961f-f90d062a613b\\\",\\\"PortGuidC\\\":\\\"0535c68f-0ed4-4aab-82da-72a3d9490e31\\\"}]\"}",
+            "PortData": [
+                "30cdedec-d0a8-491a-9d27-b15ed0e34f21",
+                "1fc07b72-3543-4bf1-a115-10ab3bd0412d",
+                "fdc640d4-9a68-4903-8457-b550356953b1",
+                "33b1e3be-4530-4a58-961f-f90d062a613b",
+                "0535c68f-0ed4-4aab-82da-72a3d9490e31"
+            ]
+        },
+        {
+            "GUID": "3bebf676-3271-4dac-945c-daaa4bedaec2",
+            "Type": "DialogueGraph.PropertyNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 1630.7080078125,
+                    "y": -3.2383038997650148,
+                    "width": 200.0,
+                    "height": 150.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"propertyGuid\":\"9898dbc5-3f31-4c6f-a637-2aa08bdea437\"}",
+            "PortData": [
+                "1cfd33ce-f980-46e5-bf48-8aac71e421c4"
+            ]
+        }
+    ],
+    "edges": [
+        {
+            "Input": "44987e49-2e6b-46da-88ca-f47e8c79e201",
+            "Output": "20911769-bcbd-4726-b4a4-3af53bdf6c0d",
+            "InputPort": "e98d72ec-6c77-4c6c-b17b-4cf7a5e779e6",
+            "OutputPort": "5ed1c60d-1f2d-406d-9837-f537d91b0ce4",
+            "InputCapacity": 1,
+            "OutputCapacity": 0
+        },
+        {
+            "Input": "e694644a-2bcf-4296-b7cb-ff0be84dff8f",
+            "Output": "44987e49-2e6b-46da-88ca-f47e8c79e201",
+            "InputPort": "0447470f-728b-4348-9a96-ca8e99feb50a",
+            "OutputPort": "bb148095-6ae9-4d99-bdc7-46fec03ef1ce",
+            "InputCapacity": 1,
+            "OutputCapacity": 0
+        },
+        {
+            "Input": "c5a578c2-5b2a-4584-abe5-4dd4d496effc",
+            "Output": "44987e49-2e6b-46da-88ca-f47e8c79e201",
+            "InputPort": "bac3be83-5419-4c29-b737-343255e92a1b",
+            "OutputPort": "51b93ce3-b519-46f0-b522-3ce32a0d4ac2",
+            "InputCapacity": 1,
+            "OutputCapacity": 0
+        },
+        {
+            "Input": "2a1445cd-54bd-4972-9151-7ee28af21b89",
+            "Output": "c5a578c2-5b2a-4584-abe5-4dd4d496effc",
+            "InputPort": "4cdcc4df-cf87-46d1-8ee1-c4a28f3c14cf",
+            "OutputPort": "316c96a8-d422-46d0-9e39-cccc4cfffcf1",
+            "InputCapacity": 1,
+            "OutputCapacity": 0
+        },
+        {
+            "Input": "affebcc0-9b01-488b-8d5a-b556c6b53355",
+            "Output": "2a1445cd-54bd-4972-9151-7ee28af21b89",
+            "InputPort": "d7f2f4fe-f51f-46ea-9270-66b03940421b",
+            "OutputPort": "40b160a7-767e-4c82-a0af-8c968388b76c",
+            "InputCapacity": 1,
+            "OutputCapacity": 0
+        },
+        {
+            "Input": "ebc95042-6737-44ba-b160-e3aba606f25d",
+            "Output": "c5a578c2-5b2a-4584-abe5-4dd4d496effc",
+            "InputPort": "30cdedec-d0a8-491a-9d27-b15ed0e34f21",
+            "OutputPort": "9bed455c-34d3-423a-ba5d-bde78d97f34f",
+            "InputCapacity": 1,
+            "OutputCapacity": 0
+        },
+        {
+            "Input": "3bebf676-3271-4dac-945c-daaa4bedaec2",
+            "Output": "ebc95042-6737-44ba-b160-e3aba606f25d",
+            "InputPort": "1cfd33ce-f980-46e5-bf48-8aac71e421c4",
+            "OutputPort": "1fc07b72-3543-4bf1-a115-10ab3bd0412d",
+            "InputCapacity": 1,
+            "OutputCapacity": 0
+        }
+    ],
+    "serializedProperties": [
+        {
+            "Type": "DialogueGraph.ActorProperty",
+            "Data": "{\"$type\":\"DialogueGraph.ActorProperty, DialogueGraph.Editor\",\"GUID\":\"9898dbc5-3f31-4c6f-a637-2aa08bdea437\",\"Type\":2,\"DisplayName\":\"Marcelo\",\"ReferenceName\":\"Actor_8702F4B0\",\"OverrideReferenceName\":null,\"Hidden\":false,\"ShortGuid\":\"8702F4B0\"}"
+        }
+    ]
 }

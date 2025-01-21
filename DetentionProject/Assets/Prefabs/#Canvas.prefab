@@ -2109,6 +2109,8 @@ GameObject:
   - component: {fileID: 2579724920021305356}
   - component: {fileID: 7464817991351829972}
   - component: {fileID: 7228068702190743837}
+  - component: {fileID: 5782654195737890751}
+  - component: {fileID: 6074188845884734852}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -2232,6 +2234,47 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5782654195737890751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3992602273795634467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb593a21d1b80641aeec4858bee6432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 540dec3d48f2cdc4aa5a76d921207c7f, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6074188845884734852}
+        m_TargetAssemblyTypeName: ChracterText, Assembly-CSharp
+        m_MethodName: changeIcon
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6074188845884734852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3992602273795634467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7685243ac39125943bf8fcecd27906dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chracterText: {fileID: 7228068702190743837}
 --- !u!1 &3998877750832801009
 GameObject:
   m_ObjectHideFlags: 0
@@ -2528,8 +2571,6 @@ GameObject:
   - component: {fileID: 7872254285239893549}
   - component: {fileID: 3799086103635130596}
   - component: {fileID: 6740745016016836138}
-  - component: {fileID: 2919832590934165804}
-  - component: {fileID: 1556621875628357084}
   m_Layer: 5
   m_Name: PlayerText
   m_TagString: PlayerText
@@ -2587,7 +2628,7 @@ MonoBehaviour:
   m_text: Message
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 847b9ced9ebd0ff4d96a84a73096a376, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -2961052239318987651, guid: 847b9ced9ebd0ff4d96a84a73096a376, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2647,53 +2688,12 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 25, y: 8, z: 25, w: 25}
+  m_margin: {x: 1.5827332, y: 8, z: 25, w: 7.4370956}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &2919832590934165804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4492028881187483179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddb593a21d1b80641aeec4858bee6432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 540dec3d48f2cdc4aa5a76d921207c7f, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1556621875628357084}
-        m_TargetAssemblyTypeName: ChracterText, Assembly-CSharp
-        m_MethodName: changeIcon
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1556621875628357084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4492028881187483179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7685243ac39125943bf8fcecd27906dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chracterText: {fileID: 6740745016016836138}
 --- !u!1 &4503658169689782449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2762,7 +2762,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 847b9ced9ebd0ff4d96a84a73096a376, type: 2}
-  m_sharedMaterial: {fileID: 0}
+  m_sharedMaterial: {fileID: -2961052239318987651, guid: 847b9ced9ebd0ff4d96a84a73096a376, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2781,17 +2781,17 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: -99
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 0
-  m_fontSizeMax: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -2802,17 +2802,17 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 0
+  m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
+  m_enableKerning: 1
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
   m_parseCtrlCharacters: 1
-  m_isOrthographic: 0
+  m_isOrthographic: 1
   m_isCullingEnabled: 0
   m_horizontalMapping: 0
   m_verticalMapping: 0
@@ -2822,10 +2822,10 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -5.959717, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5502928630066975174
@@ -3823,7 +3823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Prefab: {fileID: 784771038537814059, guid: ec2a9df1e0f525c4da5d571c78b31254, type: 3}
   Owner: {fileID: 0}
-  input: {fileID: 0}
+  input: {fileID: 11400000, guid: cce0215f9d96f7642a170f46be3f285a, type: 2}
 --- !u!1 &8386559529315601444
 GameObject:
   m_ObjectHideFlags: 0

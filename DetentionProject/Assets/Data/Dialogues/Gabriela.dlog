@@ -1,8 +1,63 @@
 {
     "AssetGuid": "8b693d647b38e6d4089d204c8f3905ff",
-    "IsBlackboardVisible": false,
+    "IsBlackboardVisible": true,
     "DialogueGraphVersion": "2.0.0",
-    "nodes": [],
-    "edges": [],
-    "serializedProperties": []
+    "nodes": [
+        {
+            "GUID": "884e81da-839d-4922-909a-7eb4d6ae3d43",
+            "Type": "DialogueGraph.NpcNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 1061.35595703125,
+                    "y": 785.4033813476563,
+                    "width": 200.0,
+                    "height": 150.0
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"lines\":\"[{\\\"Line\\\":\\\"Que dia lindo não? O que será que o mano ta fazendo.\\\",\\\"PortGuidA\\\":\\\"7241da5c-8afc-42c9-857e-e389bdc8b135\\\",\\\"PortGuidB\\\":\\\"ffa3ba26-8eca-4240-aab6-633260b2bc5b\\\",\\\"PortGuidC\\\":\\\"ed516722-45f6-4507-8574-002872e3d6ce\\\"}]\"}",
+            "PortData": [
+                "1e4014d9-7178-49bd-b8dd-c10ffdbed9e8",
+                "d66e8314-7d6e-488e-b994-9c9724d3f892",
+                "7241da5c-8afc-42c9-857e-e389bdc8b135",
+                "ffa3ba26-8eca-4240-aab6-633260b2bc5b",
+                "ed516722-45f6-4507-8574-002872e3d6ce"
+            ]
+        },
+        {
+            "GUID": "bda72e93-d403-4e87-8b41-43f71004634a",
+            "Type": "DialogueGraph.PropertyNode",
+            "DrawState": {
+                "Position": {
+                    "serializedVersion": "2",
+                    "x": 913.0,
+                    "y": 752.0000610351563,
+                    "width": 86.0,
+                    "height": 41.99993896484375
+                },
+                "Expanded": true
+            },
+            "NodeData": "{\"propertyGuid\":\"a4ad2aaa-da8a-45c4-a7d6-9afd19533a09\"}",
+            "PortData": [
+                "74adc589-00fb-487d-b1b3-f6086ef68fac"
+            ]
+        }
+    ],
+    "edges": [
+        {
+            "Input": "884e81da-839d-4922-909a-7eb4d6ae3d43",
+            "Output": "bda72e93-d403-4e87-8b41-43f71004634a",
+            "InputPort": "d66e8314-7d6e-488e-b994-9c9724d3f892",
+            "OutputPort": "74adc589-00fb-487d-b1b3-f6086ef68fac",
+            "InputCapacity": 0,
+            "OutputCapacity": 1
+        }
+    ],
+    "serializedProperties": [
+        {
+            "Type": "DialogueGraph.ActorProperty",
+            "Data": "{\"$type\":\"DialogueGraph.ActorProperty, DialogueGraph.Editor\",\"GUID\":\"a4ad2aaa-da8a-45c4-a7d6-9afd19533a09\",\"Type\":2,\"DisplayName\":\"Gabriela\",\"ReferenceName\":\"Actor_9C042575\",\"OverrideReferenceName\":null,\"Hidden\":false,\"ShortGuid\":\"9C042575\"}"
+        }
+    ]
 }
