@@ -42,7 +42,7 @@ EditorBuildSettings:
     path: Assets/Scenes/EastCampus/GolemBattle.unity
     guid: 48804d074620d6e45a569b812032cb84
   - enabled: 1
-    path: Assets/Scenes/Dungeon/DirectorBatlle.unity
+    path: Assets/Scenes/Dungeon/DirectorBossFight.unity
     guid: 207cd6196b1be4d4c8d809977cbf08c2
   - enabled: 1
     path: Assets/Scenes/School/SchoolInteriors.unity
