@@ -69,6 +69,7 @@ public class NPCDialogue : MonoBehaviour {
 
         if (!isInConversation || isPlayerChoosing) return;
         if (shouldShowText) {
+            playerInput.DisablePlayerAction();
             (showPlayer ? PlayerContainer : NpcContainer).SetActive(true);
             (showPlayer ? PlayerText : NpcText).gameObject.SetActive(true);
             (showPlayer ? PlayerText : NpcText).text = textToShow;
