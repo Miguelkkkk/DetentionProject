@@ -187,7 +187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 678.5, y: 421.4}
+  m_AnchoredPosition: {x: 545.1, y: 454.35}
   m_SizeDelta: {x: 576.792, y: 56.911}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3559299775780049066
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Derrote a Abelha Rainha
+  m_text: Derrote o Diretor
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 67dfbd6cef23c6c4ebda33afc829bef8, type: 2}
   m_sharedMaterial: {fileID: -2961052239318987651, guid: 67dfbd6cef23c6c4ebda33afc829bef8, type: 2}
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2893,7 +2893,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: '3
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 847b9ced9ebd0ff4d96a84a73096a376, type: 2}
   m_sharedMaterial: {fileID: -2961052239318987651, guid: 847b9ced9ebd0ff4d96a84a73096a376, type: 2}
@@ -3705,7 +3707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 888.12, y: 423.1}
+  m_AnchoredPosition: {x: 888.12, y: 454.35}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3911807165040217659
