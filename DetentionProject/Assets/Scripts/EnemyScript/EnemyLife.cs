@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyLife : MonoBehaviour, IDamageable
 {
@@ -103,7 +104,13 @@ public class EnemyLife : MonoBehaviour, IDamageable
 
     protected virtual void Die()
     {
+        StartCoroutine(DestroyAfterSeconds(0.6f));
         _animator.SetTrigger("Death");
+    }
+
+    protected IEnumerator DestroyAfterSeconds(float seconds) 
+    {
+        yield return new WaitForSeconds(seconds);
         Destroy(gameObject);
     }
 

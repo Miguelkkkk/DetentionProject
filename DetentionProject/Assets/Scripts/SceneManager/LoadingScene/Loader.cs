@@ -23,7 +23,9 @@ public static class Loader {
         GolemBattle,
         DirectorBattle,
         SchoolInteriors,
-
+        Cave,
+        SlimeCave,
+        PinkForestConectionCave,
     }
 
     private static Action onLoaderCallback;
